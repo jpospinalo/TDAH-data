@@ -30,4 +30,8 @@ build/
 
 # 6) Archivos de sistema
 .DS_Store
+<<<<<<< HEAD
 Thumbs.db
+=======
+Thumbs.db
+>>>>>>> ddb41b3 (chore: add license and gitignore, update raw dataset)
