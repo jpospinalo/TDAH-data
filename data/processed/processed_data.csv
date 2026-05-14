@@ -1,0 +1,876 @@
+﻿edad,sexo,escolaridad,lateralidad,antecedentes_familiares,antecedentes_obstetricos,retrasos_desarrollo,indice_tdah,indice_inatencion,indice_impuls_hiperac,cit,agresividad_basc3,hiperactividad_basc3,problemas_conducta_basc3,problemas_atencion_basc3,atipicidad_basc3,fluidez_fonologica,etiqueta
+12,Hombre,6,Diestro,Otro trastorno psicopatológico,No hay,Personal/social,0.39,0.67,0.11,89,42,50,46,73,51,18,TDAH inatento
+9,Mujer,4,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,0.39,0.67,0.11,88,47,50,46,76,58,14,TDAH inatento
+11,Hombre,5,Diestro,Familiares con TDAH,No hay,Personal/social,0.78,1.0,0.56,103,38,53,43,70,54,11,TDAH inatento
+10,Hombre,5,Diestro,Familiares con TDAH,No hay,Personal/social,0.78,1.0,0.56,103,53,43,43,72,51,11,TDAH inatento
+6,Hombre,1,Diestro,Otros,No hay,No reporta,0.61,0.89,0.33,93,49,38,38,72,42,10,TDAH inatento
+8,Hombre,3,Diestro,Otros,No hay,Motricidad fina/gruesa,0.72,1.0,0.44,83,45,48,40,67,49,16,TDAH inatento
+10,Hombre,5,Zurdo,Otros,No hay,No reporta,0.72,0.89,0.56,70,44,44,38,73,53,19,TDAH inatento
+11,Mujer,6,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.33,0.67,0.0,106,48,47,43,70,47,26,TDAH inatento
+12,Hombre,6,Diestro,Otros,No hay,Varios,0.72,0.89,0.56,80,45,62,61,84,48,25,TDAH inatento
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.56,0.67,0.44,79,45,41,43,71,39,30,TDAH inatento
+11,Mujer,6,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.72,0.89,0.56,113,50,51,48,77,43,19,TDAH inatento
+12,Mujer,6,Diestro,Otros,No hay,No reporta,0.61,0.78,0.44,76,49,52,45,76,38,29,TDAH inatento
+6,Mujer,1,Diestro,Otros,No hay,Varios,0.56,1.0,0.11,81,46,50,42,67,57,14,TDAH inatento
+6,Hombre,1,Diestro,Otros,No hay,Audición/lenguaje,0.44,0.78,0.11,89,46,53,42,66,49,12,TDAH inatento
+12,Mujer,7,Diestro,Familiares con TDAH,Ambos,No reporta,0.5,0.89,0.11,76,47,44,40,71,51,28,TDAH inatento
+8,Mujer,2,Diestro,Sin antecedentes,No hay,No reporta,0.5,0.67,0.33,88,43,43,45,78,46,17,TDAH inatento
+9,Mujer,4,Zurdo,Otros,Ambos,Varios,0.44,0.67,0.22,105,44,53,45,70,40,12,TDAH inatento
+6,Mujer,1,Diestro,Sin antecedentes,No hay,No reporta,0.44,0.67,0.22,89,49,51,54,70,48,22,TDAH inatento
+6,Mujer,1,Diestro,Otros,Ambos,No reporta,0.78,1.0,0.56,107,45,55,54,80,44,17,TDAH inatento
+12,Mujer,7,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.61,0.89,0.33,95,39,48,53,71,42,23,TDAH inatento
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.61,0.78,0.44,99,44,56,56,76,47,13,TDAH inatento
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.5,0.67,0.33,97,49,45,65,77,48,13,TDAH inatento
+9,Hombre,3,Diestro,Otro trastorno del neurodesarrollo,Ambos,Motricidad fina/gruesa,0.56,1.0,0.11,78,45,41,49,77,46,15,TDAH inatento
+12,Hombre,6,Diestro,Otros,Parto,Varios,0.33,0.67,0.0,81,45,38,50,72,43,24,TDAH inatento
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Personal/social,0.5,0.67,0.33,92,49,41,48,73,42,21,TDAH inatento
+9,Hombre,3,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,0.44,0.78,0.11,93,40,52,57,79,47,26,TDAH inatento
+11,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.5,0.67,0.33,87,42,39,58,73,53,12,TDAH inatento
+8,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.5,0.67,0.33,97,53,45,51,65,39,11,TDAH inatento
+11,Mujer,5,Diestro,Familiares con TDAH,No hay,No reporta,0.44,0.78,0.11,80,40,59,49,81,44,16,TDAH inatento
+6,Hombre,1,Diestro,Otros,No hay,Varios,0.72,1.0,0.44,75,47,52,40,67,46,13,TDAH inatento
+6,Mujer,1,Diestro,Sin antecedentes,No hay,Varios,0.44,0.67,0.22,96,40,63,40,83,46,15,TDAH inatento
+11,Hombre,6,Diestro,Otros,No hay,Varios,0.67,1.0,0.33,78,53,42,50,85,44,21,TDAH inatento
+6,Hombre,1,Diestro,Familiares con TDAH,Parto,Varios,0.67,1.0,0.33,121,50,38,46,79,57,24,TDAH inatento
+12,Hombre,7,Diestro,Otros,No hay,Personal/social,0.5,0.67,0.33,81,52,55,39,80,49,24,TDAH inatento
+7,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.5,0.67,0.33,74,42,39,45,86,42,13,TDAH inatento
+12,Mujer,7,Diestro,Otros,Parto,No reporta,0.39,0.67,0.11,92,49,48,48,67,38,27,TDAH inatento
+11,Hombre,5,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.5,1.0,0.0,102,43,48,51,76,46,24,TDAH inatento
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,No reporta,0.61,0.78,0.44,100,44,42,45,76,54,20,TDAH inatento
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.67,0.89,0.44,92,49,56,45,68,48,18,TDAH inatento
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.5,0.89,0.11,102,50,62,46,87,38,20,TDAH inatento
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.61,0.89,0.33,109,47,50,64,70,40,20,TDAH inatento
+12,Mujer,6,Diestro,Otros,Embarazo,No reporta,0.56,0.78,0.33,107,43,47,40,69,48,18,TDAH inatento
+7,Hombre,2,Diestro,Sin antecedentes,Ambos,Varios,0.5,0.89,0.11,88,42,48,50,76,52,12,TDAH inatento
+9,Mujer,4,Diestro,Otros,Ambos,No reporta,0.39,0.78,0.0,118,47,41,57,81,48,22,TDAH inatento
+12,Mujer,7,Diestro,Sin antecedentes,No hay,No reporta,0.5,0.78,0.22,93,49,46,50,70,48,29,TDAH inatento
+6,Hombre,1,Ambidiestro,Otro trastorno del neurodesarrollo,Parto,Audición/lenguaje,0.61,0.67,0.56,86,50,46,39,70,52,18,TDAH inatento
+7,Mujer,1,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.72,0.89,0.56,84,40,42,62,77,53,18,TDAH inatento
+10,Mujer,4,Diestro,Otros,Parto,Audición/lenguaje,0.5,0.89,0.11,81,42,52,38,65,44,27,TDAH inatento
+8,Mujer,2,Diestro,Otros,No hay,Varios,0.39,0.78,0.0,73,58,39,38,69,49,15,TDAH inatento
+10,Mujer,5,Diestro,Familiares con TDAH,No hay,No reporta,0.5,0.67,0.33,82,58,45,49,69,42,13,TDAH inatento
+7,Hombre,2,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.56,0.78,0.33,121,54,38,46,71,42,21,TDAH inatento
+6,Hombre,1,Diestro,Otros,No hay,Audición/lenguaje,0.39,0.67,0.11,88,50,50,43,73,50,18,TDAH inatento
+6,Hombre,1,Diestro,Otros,Ambos,Varios,0.33,0.67,0.0,73,43,51,38,86,40,14,TDAH inatento
+12,Hombre,7,Diestro,Familiares con TDAH,Embarazo,No reporta,0.44,0.89,0.0,114,51,50,40,80,48,18,TDAH inatento
+12,Hombre,6,Diestro,Sin antecedentes,No hay,No reporta,0.56,0.78,0.33,108,44,59,47,74,49,15,TDAH inatento
+7,Hombre,2,Diestro,Otros,No hay,Personal/social,0.5,1.0,0.0,81,46,52,46,73,51,12,TDAH inatento
+10,Hombre,5,Diestro,Familiares con TDAH,Ambos,Varios,0.67,0.78,0.56,106,45,42,49,80,41,19,TDAH inatento
+10,Hombre,4,Diestro,Otros,No hay,No reporta,0.56,0.67,0.44,119,47,65,54,77,49,21,TDAH inatento
+9,Hombre,3,Zurdo,Familiares con TDAH,No hay,No reporta,0.67,0.89,0.44,85,52,42,44,80,46,19,TDAH inatento
+12,Hombre,7,Diestro,Otro trastorno psicopatológico,No hay,Varios,0.78,1.0,0.56,86,43,51,48,83,54,10,TDAH inatento
+12,Mujer,7,Diestro,Sin antecedentes,No hay,No reporta,0.5,0.67,0.33,93,41,51,45,67,43,29,TDAH inatento
+12,Mujer,6,Diestro,Otros,Parto,Audición/lenguaje,0.5,0.89,0.11,101,41,42,44,65,41,15,TDAH inatento
+12,Hombre,7,Diestro,Otros,No hay,No reporta,0.61,0.89,0.33,70,41,55,45,74,50,19,TDAH inatento
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.67,1.0,0.33,99,39,49,51,75,43,17,TDAH inatento
+11,Hombre,6,Diestro,Sin antecedentes,No hay,No reporta,0.5,0.67,0.33,101,41,50,41,76,41,23,TDAH inatento
+10,Hombre,5,Diestro,Sin antecedentes,Embarazo,No reporta,0.44,0.78,0.11,78,52,43,52,70,52,15,TDAH inatento
+6,Hombre,1,Diestro,Otros,Ambos,Varios,0.56,0.89,0.22,83,43,54,53,72,49,14,TDAH inatento
+8,Hombre,3,Diestro,Otros,Ambos,No reporta,0.33,0.67,0.0,107,47,42,46,78,38,13,TDAH inatento
+10,Hombre,4,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.44,0.78,0.11,74,40,38,47,78,42,17,TDAH inatento
+12,Hombre,7,Diestro,Familiares con TDAH,Ambos,No reporta,0.61,0.67,0.56,80,47,55,39,83,41,20,TDAH inatento
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,No reporta,0.5,0.67,0.33,113,38,45,58,79,50,16,TDAH inatento
+12,Hombre,6,Diestro,Otros,No hay,Personal/social,0.78,1.0,0.56,88,43,47,51,65,54,13,TDAH inatento
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Motricidad fina/gruesa,0.78,1.0,0.56,90,57,58,47,84,57,21,TDAH inatento
+8,Hombre,2,Zurdo,Otros,No hay,No reporta,0.39,0.67,0.11,85,43,53,46,78,51,19,TDAH inatento
+7,Hombre,2,Diestro,Familiares con TDAH,Ambos,Varios,0.61,0.89,0.33,88,52,50,48,79,42,18,TDAH inatento
+8,Hombre,2,Diestro,Otros,Embarazo,Personal/social,0.5,0.67,0.33,86,48,53,43,72,41,12,TDAH inatento
+12,Hombre,7,Diestro,Familiares con TDAH,Ambos,Varios,0.5,0.67,0.33,77,45,43,47,71,42,22,TDAH inatento
+11,Hombre,6,Diestro,Otro trastorno psicopatológico,Embarazo,Personal/social,0.44,0.78,0.11,82,43,51,41,75,49,18,TDAH inatento
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.44,0.67,0.22,101,52,53,48,68,53,20,TDAH inatento
+12,Hombre,6,Diestro,Otros,No hay,Audición/lenguaje,0.5,0.78,0.22,97,45,51,43,78,38,20,TDAH inatento
+7,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.44,0.67,0.22,78,54,46,50,67,50,13,TDAH inatento
+12,Hombre,6,Diestro,Familiares con TDAH,Ambos,Personal/social,0.78,1.0,0.56,101,42,59,45,75,52,15,TDAH inatento
+12,Hombre,6,Diestro,Otro trastorno psicopatológico,Ambos,Motricidad fina/gruesa,0.67,1.0,0.33,83,46,50,47,78,49,25,TDAH inatento
+12,Hombre,6,Diestro,Sin antecedentes,Parto,Varios,0.61,1.0,0.22,117,48,48,58,85,58,13,TDAH inatento
+7,Hombre,2,Diestro,Familiares con TDAH,No hay,Varios,0.67,1.0,0.33,92,48,45,50,76,50,11,TDAH inatento
+11,Hombre,6,Diestro,Otros,Embarazo,Audición/lenguaje,0.44,0.67,0.22,104,40,51,47,77,47,18,TDAH inatento
+12,Hombre,6,Diestro,Sin antecedentes,No hay,No reporta,0.33,0.67,0.0,82,43,48,46,85,50,17,TDAH inatento
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.72,0.89,0.56,93,45,60,41,69,44,29,TDAH inatento
+12,Hombre,7,Diestro,Sin antecedentes,No hay,Varios,0.44,0.78,0.11,79,42,39,51,68,42,25,TDAH inatento
+9,Hombre,3,Diestro,Sin antecedentes,Embarazo,No reporta,0.39,0.67,0.11,92,35,39,54,71,49,12,TDAH inatento
+12,Hombre,7,Diestro,Sin antecedentes,Ambos,Varios,0.44,0.67,0.22,81,49,49,46,73,53,22,TDAH inatento
+12,Hombre,6,Diestro,Familiares con TDAH,Parto,No reporta,0.67,0.89,0.44,77,38,47,54,87,46,31,TDAH inatento
+8,Hombre,3,Diestro,Familiares con TDAH,Ambos,No reporta,0.5,0.89,0.11,113,38,48,45,72,52,12,TDAH inatento
+7,Mujer,1,Diestro,Otros,No hay,Personal/social,0.56,0.67,0.44,85,40,48,38,82,45,10,TDAH inatento
+11,Mujer,6,Diestro,Sin antecedentes,No hay,No reporta,0.33,0.67,0.0,77,47,49,43,71,55,15,TDAH inatento
+7,Mujer,1,Diestro,Familiares con TDAH,No hay,Varios,0.61,1.0,0.22,90,56,47,41,77,48,13,TDAH inatento
+8,Mujer,3,Zurdo,Sin antecedentes,Embarazo,Personal/social,0.44,0.78,0.11,93,44,48,45,78,50,14,TDAH inatento
+12,Mujer,6,Diestro,Otros,No hay,Audición/lenguaje,0.5,0.67,0.33,76,47,48,49,77,51,12,TDAH inatento
+10,Mujer,5,Diestro,Otro trastorno del neurodesarrollo,Ambos,No reporta,0.5,0.78,0.22,85,41,52,41,79,40,11,TDAH inatento
+11,Hombre,5,Diestro,Familiares con TDAH,Ambos,Varios,0.5,0.78,0.22,89,41,44,46,70,46,24,TDAH inatento
+9,Hombre,3,Diestro,Familiares con TDAH,No hay,No reporta,0.61,0.78,0.44,76,38,51,47,83,56,14,TDAH inatento
+9,Mujer,5,Diestro,Familiares con TDAH,No hay,No reporta,0.61,0.89,0.33,111,46,51,42,80,47,12,TDAH inatento
+8,Hombre,3,Diestro,Sin antecedentes,No hay,Varios,0.33,0.67,0.0,100,51,48,41,69,54,29,TDAH inatento
+12,Mujer,7,Diestro,Otros,Ambos,Audición/lenguaje,0.56,0.67,0.44,82,44,44,46,77,51,23,TDAH inatento
+12,Mujer,7,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.33,0.67,0.0,70,53,49,50,67,38,29,TDAH inatento
+11,Mujer,6,Diestro,Sin antecedentes,No hay,No reporta,0.33,0.67,0.0,77,47,52,43,75,51,15,TDAH inatento
+8,Hombre,3,Diestro,Otros,No hay,Motricidad fina/gruesa,0.72,1.0,0.44,83,46,41,42,66,42,15,TDAH inatento
+6,Hombre,1,Diestro,Sin antecedentes,Parto,No reporta,0.67,0.89,0.44,96,66,66,67,86,48,10,TDAH inatento + TND
+9,Mujer,4,Diestro,Otros,No hay,Varios,0.72,0.89,0.56,91,64,66,66,76,42,10,TDAH inatento + TND
+12,Hombre,7,Diestro,Sin antecedentes,Parto,No reporta,0.61,0.78,0.44,78,72,61,77,80,48,15,TDAH inatento + TND
+10,Hombre,4,Ambidiestro,Sin antecedentes,Parto,Personal/social,0.61,0.78,0.44,78,67,53,76,88,50,19,TDAH inatento + TND
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,No reporta,0.67,0.78,0.56,98,71,55,70,71,40,15,TDAH inatento + TND
+7,Hombre,2,Diestro,Familiares con TDAH,Embarazo,No reporta,0.72,0.89,0.56,95,62,62,68,77,44,17,TDAH inatento + TND
+12,Hombre,6,Diestro,Otros,Parto,No reporta,0.61,0.78,0.44,76,57,61,68,68,38,17,TDAH inatento + TND
+12,Hombre,7,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.56,0.78,0.33,93,69,50,72,78,46,15,TDAH inatento + TND
+12,Hombre,6,Diestro,Otros,No hay,Varios,0.5,0.67,0.33,90,57,58,64,80,44,23,TDAH inatento + TND
+12,Hombre,6,Diestro,Otros,Embarazo,Audición/lenguaje,0.72,0.89,0.56,78,71,66,68,88,53,20,TDAH inatento + TND
+12,Mujer,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.67,0.89,0.44,96,65,62,69,76,49,19,TDAH inatento + TND
+9,Hombre,5,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.5,0.67,0.33,107,65,58,65,68,41,15,TDAH inatento + TND
+10,Hombre,3,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.61,0.67,0.56,104,70,55,66,68,56,21,TDAH inatento + TND
+6,Hombre,1,Diestro,Otros,Embarazo,Audición/lenguaje,0.56,0.67,0.44,117,66,60,73,68,49,16,TDAH inatento + TND
+8,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,Ambos,No reporta,0.67,0.78,0.56,90,64,63,68,77,50,20,TDAH inatento + TND
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.72,0.89,0.56,76,63,55,76,68,40,17,TDAH inatento + TND
+12,Hombre,6,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.67,0.78,0.56,83,66,60,74,68,48,12,TDAH inatento + TND
+12,Hombre,6,Diestro,Otros,Parto,Personal/social,0.72,0.89,0.56,81,75,56,72,68,42,14,TDAH inatento + TND
+6,Hombre,1,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.56,0.67,0.44,87,72,58,76,80,36,21,TDAH inatento + TND
+12,Hombre,7,Diestro,Otro trastorno psicopatológico,Embarazo,Personal/social,0.5,0.67,0.33,89,66,60,60,77,50,16,TDAH inatento + TND
+9,Hombre,3,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.78,1.0,0.56,94,65,66,70,81,30,10,TDAH inatento + TND
+7,Hombre,2,Diestro,Familiares con TDAH,Ambos,Motricidad fina/gruesa,0.78,1.0,0.56,100,70,58,72,72,55,11,TDAH inatento + TND
+8,Hombre,2,Diestro,Familiares con TDAH,No hay,Personal/social,0.72,1.0,0.44,72,59,55,63,80,56,15,TDAH inatento + TND
+12,Hombre,6,Diestro,Otros,No hay,No reporta,0.56,0.67,0.44,73,82,65,72,80,49,19,TDAH inatento + TND
+11,Mujer,6,Diestro,Familiares con TDAH,No hay,No reporta,0.72,1.0,0.44,74,63,61,68,73,49,9,TDAH inatento + TND
+11,Mujer,5,Zurdo,Familiares con TDAH,Ambos,No reporta,0.67,0.89,0.44,87,73,51,67,74,43,23,TDAH inatento + TND
+9,Hombre,4,Diestro,Otro trastorno psicopatológico,Ambos,Varios,0.61,0.78,0.44,97,78,57,65,68,36,12,TDAH inatento + TND
+12,Mujer,7,Diestro,Familiares con TDAH,Embarazo,No reporta,0.72,0.89,0.56,97,76,55,67,68,51,34,TDAH inatento + TND
+11,Hombre,5,Diestro,Otros,No hay,Motricidad fina/gruesa,0.56,0.67,0.44,84,65,58,65,81,45,17,TDAH inatento + TND
+9,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.72,1.0,0.44,81,70,58,69,85,51,10,TDAH inatento + TND
+11,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Motricidad fina/gruesa,0.67,0.78,0.56,99,64,59,78,81,47,26,TDAH inatento + TND
+12,Hombre,7,Diestro,Otros,Parto,No reporta,0.72,1.0,0.44,77,74,53,65,88,42,11,TDAH inatento + TND
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.56,0.67,0.44,82,70,67,76,68,43,33,TDAH inatento + TND
+12,Mujer,7,Diestro,Otro trastorno psicopatológico,No hay,Audición/lenguaje,0.67,0.89,0.44,78,71,52,76,68,48,39,TDAH inatento + TND
+9,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.56,0.67,0.44,90,62,57,68,80,47,15,TDAH inatento + TND
+11,Hombre,6,Diestro,Sin antecedentes,Embarazo,No reporta,0.67,0.89,0.44,80,58,56,64,83,46,8,TDAH inatento + TND
+9,Mujer,5,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.72,1.0,0.44,89,68,52,75,80,42,16,TDAH inatento + TND
+7,Mujer,2,Zurdo,Sin antecedentes,No hay,Varios,0.72,0.89,0.56,99,68,61,67,74,48,15,TDAH inatento + TND
+8,Hombre,3,Diestro,Sin antecedentes,Embarazo,No reporta,0.56,0.78,0.33,70,72,47,67,75,42,13,TDAH inatento + TND
+6,Hombre,2,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.61,0.67,0.56,82,60,60,63,71,56,17,TDAH inatento + TND
+8,Hombre,2,Diestro,Sin antecedentes,No hay,Varios,0.67,0.78,0.56,74,58,63,73,69,45,13,TDAH inatento + TND
+11,Hombre,7,Diestro,Familiares con TDAH,No hay,Varios,0.61,0.78,0.44,90,61,70,71,81,40,10,TDAH inatento + TND
+7,Hombre,3,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.67,0.78,0.56,77,67,62,75,74,51,14,TDAH inatento + TND
+11,Hombre,6,Diestro,Otro trastorno psicopatológico,No hay,Motricidad fina/gruesa,0.61,0.67,0.56,101,75,57,65,74,49,16,TDAH inatento + TND
+7,Hombre,1,Zurdo,Familiares con TDAH,No hay,No reporta,0.67,0.89,0.44,104,58,56,71,72,55,15,TDAH inatento + TND
+8,Mujer,4,Zurdo,Familiares con TDAH,Embarazo,No reporta,0.67,0.89,0.44,112,69,52,67,90,45,17,TDAH inatento + TND
+7,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.78,1.0,0.56,87,60,68,83,75,48,15,TDAH inatento + TND
+7,Mujer,2,Diestro,Sin antecedentes,No hay,No reporta,0.72,1.0,0.44,105,65,66,74,75,44,13,TDAH inatento + TND
+10,Hombre,4,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.67,0.78,0.56,94,64,58,77,80,51,19,TDAH inatento + TND
+7,Hombre,1,Diestro,Sin antecedentes,Embarazo,No reporta,0.72,0.89,0.56,99,73,57,80,68,42,17,TDAH inatento + TND
+12,Hombre,7,Zurdo,Sin antecedentes,No hay,No reporta,0.56,0.78,0.33,99,66,55,65,72,56,8,TDAH inatento + TND
+10,Hombre,4,Diestro,Otros,Embarazo,No reporta,0.56,0.67,0.44,79,40,45,40,80,35,9,TDAH inatento + TEAZ
+9,Mujer,1,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.44,0.67,0.22,72,53,55,62,85,30,3,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Otros,Embarazo,Varios,0.5,0.67,0.33,83,50,40,40,96,50,5,TDAH inatento + TEAZ
+6,Hombre,1,Diestro,Familiares con TDAH,Parto,No reporta,0.56,0.67,0.44,94,47,60,40,80,55,0,TDAH inatento + TEAZ
+6,Mujer,1,Diestro,Otros,Ambos,Audición/lenguaje,0.33,0.67,0.0,79,49,30,65,65,45,8,TDAH inatento + TEAZ
+8,Mujer,1,Zurdo,Otros,Parto,No reporta,0.61,0.67,0.56,75,47,65,45,73,35,9,TDAH inatento + TEAZ
+7,Mujer,2,Diestro,Sin antecedentes,Parto,Audición/lenguaje,0.67,1.0,0.33,82,50,40,40,99,50,4,TDAH inatento + TEAZ
+7,Mujer,1,Diestro,Familiares con TDAH,Parto,Audición/lenguaje,0.44,0.78,0.11,81,45,60,43,70,30,7,TDAH inatento + TEAZ
+12,Mujer,6,Zurdo,Otros,Ambos,Motricidad fina/gruesa,0.67,0.89,0.44,89,55,64,55,85,47,5,TDAH inatento + TEAZ
+9,Hombre,4,Diestro,Sin antecedentes,Embarazo,No reporta,0.5,1.0,0.0,81,48,38,43,85,45,8,TDAH inatento + TEAZ
+7,Hombre,1,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.5,0.67,0.33,70,43,45,50,96,55,7,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Otro trastorno psicopatológico,Ambos,Audición/lenguaje,0.67,0.89,0.44,71,50,60,57,96,47,11,TDAH inatento + TEAZ
+12,Mujer,6,Diestro,Familiares con TDAH,No hay,No reporta,0.5,0.67,0.33,83,51,35,40,87,49,9,TDAH inatento + TEAZ
+8,Mujer,2,Diestro,Otro trastorno psicopatológico,Embarazo,Audición/lenguaje,0.61,0.67,0.56,73,45,38,45,75,30,7,TDAH inatento + TEAZ
+9,Hombre,4,Diestro,Otros,No hay,No reporta,0.61,0.78,0.44,84,47,50,55,80,45,5,TDAH inatento + TEAZ
+11,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.56,0.67,0.44,86,47,55,60,80,50,9,TDAH inatento + TEAZ
+11,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.56,0.78,0.33,82,48,40,50,99,40,7,TDAH inatento + TEAZ
+12,Hombre,7,Diestro,Otro trastorno del neurodesarrollo,Ambos,No reporta,0.5,0.67,0.33,76,55,60,65,96,47,7,TDAH inatento + TEAZ
+8,Mujer,3,Diestro,Sin antecedentes,No hay,No reporta,0.5,0.89,0.11,80,48,40,41,95,41,10,TDAH inatento + TEAZ
+7,Hombre,1,Diestro,Otros,No hay,No reporta,0.5,0.67,0.33,73,30,40,60,75,44,4,TDAH inatento + TEAZ
+9,Mujer,4,Diestro,Familiares con TDAH,Ambos,No reporta,0.61,1.0,0.22,81,45,35,60,99,38,8,TDAH inatento + TEAZ
+9,Hombre,2,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.89,0.44,80,50,68,64,99,45,8,TDAH inatento + TEAZ
+11,Hombre,5,Diestro,Sin antecedentes,No hay,No reporta,0.5,0.67,0.33,87,55,65,50,99,50,9,TDAH inatento + TEAZ
+9,Hombre,2,Diestro,Sin antecedentes,Ambos,Personal/social,0.67,0.89,0.44,73,45,55,40,80,41,7,TDAH inatento + TEAZ
+12,Mujer,7,Zurdo,Sin antecedentes,Embarazo,Personal/social,0.56,0.78,0.33,87,45,40,40,89,49,8,TDAH inatento + TEAZ
+11,Mujer,6,Zurdo,Otro trastorno psicopatológico,No hay,No reporta,0.61,0.67,0.56,70,60,60,55,93,55,9,TDAH inatento + TEAZ
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.56,0.78,0.33,77,30,45,30,70,50,0,TDAH inatento + TEAZ
+9,Hombre,2,Diestro,Familiares con TDAH,No hay,Personal/social,0.56,0.78,0.33,77,50,40,60,85,55,1,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Otros,Parto,Personal/social,0.67,0.89,0.44,70,40,40,40,80,45,3,TDAH inatento + TEAZ
+8,Hombre,2,Diestro,Otros,Parto,Audición/lenguaje,0.33,0.67,0.0,78,38,45,38,80,40,9,TDAH inatento + TEAZ
+10,Hombre,5,Diestro,Otros,Parto,Audición/lenguaje,0.67,0.89,0.44,77,43,50,43,93,30,6,TDAH inatento + TEAZ
+7,Hombre,2,Diestro,Otros,Parto,Audición/lenguaje,0.67,0.89,0.44,77,45,60,55,96,30,10,TDAH inatento + TEAZ
+12,Hombre,7,Diestro,Sin antecedentes,Ambos,Varios,0.67,0.89,0.44,78,47,60,50,93,52,11,TDAH inatento + TEAZ
+7,Hombre,2,Diestro,Otros,No hay,Varios,0.67,0.89,0.44,86,55,40,30,99,55,8,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Otros,No hay,No reporta,0.5,0.67,0.33,81,43,40,55,80,39,9,TDAH inatento + TEAZ
+8,Hombre,2,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.56,0.78,0.33,92,46,60,40,80,45,9,TDAH inatento + TEAZ
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.61,0.89,0.33,93,60,45,41,90,40,10,TDAH inatento + TEAZ
+12,Hombre,7,Diestro,Sin antecedentes,Ambos,Audición/lenguaje,0.33,0.67,0.0,76,51,40,63,85,55,12,TDAH inatento + TEAZ
+9,Mujer,3,Diestro,Familiares con TDAH,Ambos,No reporta,0.61,0.89,0.33,88,45,50,40,99,50,12,TDAH inatento + TEAZ
+9,Mujer,2,Diestro,Otro trastorno psicopatológico,Embarazo,Varios,0.73,1.0,0.44,73,30,65,41,99,50,11,TDAH inatento + TEAZ
+10,Hombre,4,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.73,1.0,0.44,81,50,60,60,99,55,9,TDAH inatento + TEAZ
+11,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.5,0.67,0.33,81,40,35,40,68,55,3,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.61,0.78,0.44,88,45,65,40,94,44,7,TDAH inatento + TEAZ
+10,Hombre,4,Diestro,Sin antecedentes,Ambos,Varios,0.5,0.89,0.11,75,45,60,30,80,45,6,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.5,0.67,0.33,72,40,30,46,75,45,9,TDAH inatento + TEAZ
+9,Hombre,2,Diestro,Sin antecedentes,Embarazo,Personal/social,0.67,0.89,0.44,76,50,65,40,99,55,9,TDAH inatento + TEAZ
+10,Mujer,5,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.5,0.89,0.11,75,45,45,43,85,30,3,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.33,0.67,0.0,70,37,50,41,80,52,5,TDAH inatento + TEAZ
+6,Hombre,1,Diestro,Otros,No hay,Audición/lenguaje,0.39,0.67,0.11,79,30,55,40,80,50,6,TDAH inatento + TEAZ
+7,Mujer,2,Zurdo,Sin antecedentes,Ambos,Motricidad fina/gruesa,0.44,0.78,0.11,85,35,45,45,85,35,9,TDAH inatento + TEAZ
+12,Mujer,6,Diestro,Familiares con TDAH,Embarazo,Personal/social,0.5,0.78,0.22,73,45,43,40,65,50,9,TDAH inatento + TEAZ
+8,Mujer,2,Diestro,Otros,No hay,No reporta,0.5,1.0,0.0,84,54,45,35,94,63,6,TDAH inatento + TEAZ
+9,Mujer,4,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.61,1.0,0.22,80,50,50,65,85,45,5,TDAH inatento + TEAZ
+9,Mujer,2,Diestro,Otros,No hay,No reporta,0.56,0.67,0.44,94,40,53,45,70,50,11,TDAH inatento + TEAZ
+12,Mujer,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Motricidad fina/gruesa,0.56,0.89,0.22,94,46,44,60,95,50,9,TDAH inatento + TEAZ
+10,Mujer,5,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.44,0.67,0.22,92,51,43,45,65,43,8,TDAH inatento + TEAZ
+6,Hombre,1,Diestro,Familiares con TDAH,Ambos,Audición/lenguaje,0.67,1.0,0.33,92,49,55,40,99,43,1,TDAH inatento + TEAZ
+10,Hombre,5,Diestro,Familiares con TDAH,No hay,Varios,0.73,1.0,0.44,83,45,55,45,99,30,11,TDAH inatento + TEAZ
+8,Hombre,3,Diestro,Sin antecedentes,Embarazo,No reporta,0.61,0.67,0.56,83,45,65,47,99,48,4,TDAH inatento + TEAZ
+7,Hombre,2,Diestro,Sin antecedentes,Parto,Varios,0.33,0.67,0.0,92,50,50,50,99,55,8,TDAH inatento + TEAZ
+7,Hombre,2,Diestro,Familiares con TDAH,Parto,No reporta,0.44,0.67,0.22,87,53,55,48,80,50,5,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,Varios,0.39,0.67,0.11,78,40,45,65,70,41,10,TDAH inatento + TEAZ
+11,Hombre,5,Diestro,Sin antecedentes,Embarazo,Varios,0.67,0.89,0.44,88,50,65,60,99,39,10,TDAH inatento + TEAZ
+8,Hombre,3,Diestro,Otros,No hay,No reporta,0.61,0.78,0.44,94,50,65,50,99,38,3,TDAH inatento + TEAZ
+11,Hombre,6,Diestro,Otros,Embarazo,Varios,0.56,0.89,0.22,90,40,52,40,99,37,6,TDAH inatento + TEAZ
+9,Hombre,4,Diestro,Otros,Embarazo,Varios,0.61,0.89,0.33,85,45,45,55,80,45,9,TDAH inatento + TEAZ
+11,Hombre,5,Diestro,Otros,Parto,No reporta,0.56,0.78,0.33,81,35,65,45,96,45,2,TDAH inatento + TEAZ
+9,Hombre,3,Diestro,Otros,No hay,Motricidad fina/gruesa,0.39,0.67,0.11,87,30,41,40,80,40,9,TDAH inatento + TEAZ
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.5,0.67,0.33,75,30,50,46,93,46,0,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Sin antecedentes,No hay,Varios,0.44,0.67,0.22,88,42,40,40,75,40,10,TDAH inatento + TEAZ
+12,Hombre,4,Diestro,Sin antecedentes,No hay,No reporta,0.56,0.89,0.22,75,40,50,55,85,55,7,TDAH inatento + TEAZ
+6,Hombre,1,Diestro,Otros,Embarazo,Audición/lenguaje,0.61,0.89,0.33,79,44,40,45,67,35,0,TDAH inatento + TEAZ
+8,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.5,0.67,0.33,81,43,45,35,60,38,2,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.33,0.67,0.0,76,45,44,45,80,39,3,TDAH inatento + TEAZ
+8,Hombre,3,Diestro,Otros,No hay,Audición/lenguaje,0.5,0.67,0.33,71,60,50,50,75,47,9,TDAH inatento + TEAZ
+11,Hombre,5,Diestro,Familiares con TDAH,Parto,Varios,0.61,0.89,0.33,80,53,50,55,99,42,12,TDAH inatento + TEAZ
+12,Hombre,6,Diestro,Familiares con TDAH,Parto,No reporta,0.67,0.89,0.44,80,38,65,55,99,47,12,TDAH inatento + TEAZ
+9,Hombre,3,Diestro,Sin antecedentes,Ambos,Audición/lenguaje,0.61,0.78,0.44,76,40,63,55,99,37,9,TDAH inatento + TEAZ
+11,Mujer,5,Diestro,Otros,Ambos,No reporta,0.61,0.78,0.44,80,40,50,40,93,50,9,TDAH inatento + TEAZ
+8,Mujer,3,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.39,0.67,0.11,95,45,63,65,70,51,8,TDAH inatento + TEAZ
+7,Mujer,1,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.44,0.78,0.11,78,65,55,55,99,40,7,TDAH inatento + TEAZ
+10,Mujer,4,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.56,0.89,0.22,74,39,30,65,92,40,8,TDAH inatento + TEAZ
+9,Hombre,4,Diestro,Otros,Embarazo,No reporta,0.61,0.78,0.44,85,40,50,35,70,49,9,TDAH inatento + TEAZ
+9,Hombre,4,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.61,0.89,0.33,86,40,40,40,96,40,7,TDAH inatento + TEAZ
+10,Mujer,5,Zurdo,Familiares con TDAH,Parto,Varios,0.67,1.0,0.33,73,60,60,60,99,50,8,TDAH inatento + TEAZ
+6,Mujer,1,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.61,0.78,0.44,115,45,65,45,99,52,3,TDAH inatento + TEAZ
+8,Mujer,2,Diestro,Familiares con TDAH,No hay,No reporta,0.5,0.78,0.22,86,35,50,55,70,40,12,TDAH inatento + TEAZ
+12,Mujer,5,Diestro,Otros,No hay,No reporta,0.5,0.67,0.33,80,50,50,50,85,55,10,TDAH inatento + TEAZ
+12,Hombre,7,Diestro,Sin antecedentes,Embarazo,No reporta,0.67,1.0,0.33,87,50,63,40,85,44,3,TDAH inatento + TEAZ
+8,Mujer,2,Diestro,Otro trastorno psicopatológico,Parto,Varios,0.5,0.67,0.33,71,30,65,65,85,40,10,TDAH inatento + TEAZ
+7,Mujer,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.5,0.67,0.33,97,43,45,65,70,46,10,TDAH inatento + TEAZ
+9,Mujer,4,Diestro,Otro trastorno del neurodesarrollo,No hay,Motricidad fina/gruesa,0.67,0.89,0.44,81,50,60,45,99,42,10,TDAH inatento + TEAZ
+7,Mujer,2,Diestro,Otros,Ambos,Varios,0.5,0.67,0.33,82,55,60,60,95,55,4,TDAH inatento + TEAZ
+12,Hombre,7,Diestro,Otro trastorno psicopatológico,Ambos,No reporta,0.39,0.78,0.0,70,50,60,65,80,58,3,TDAH inatento + TEAZ
+12,Mujer,7,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.56,1.0,0.11,70,30,55,55,95,45,9,TDAH inatento + TEAZ
+10,Mujer,3,Diestro,Otro trastorno del neurodesarrollo,No hay,Personal/social,0.33,0.67,0.0,80,40,30,60,70,50,7,TDAH inatento + TEAZ
+9,Mujer,4,Diestro,Familiares con TDAH,Parto,No reporta,0.61,0.89,0.33,78,60,65,55,94,45,5,TDAH inatento + TEAZ
+11,Hombre,6,Diestro,Otros,No hay,Personal/social,0.5,0.67,0.33,84,30,50,40,76,70,20,TDAH inatento + TEA
+11,Hombre,5,Diestro,Otros,No hay,Audición/lenguaje,0.44,0.67,0.22,96,50,40,50,80,78,14,TDAH inatento + TEA
+11,Hombre,6,Diestro,Otros,No hay,Audición/lenguaje,0.67,0.78,0.56,127,52,60,75,80,90,18,TDAH inatento + TEA
+12,Mujer,7,Diestro,Sin antecedentes,Ambos,Varios,0.33,0.67,0.0,91,34,60,65,85,90,21,TDAH inatento + TEA
+10,Hombre,5,Diestro,Sin antecedentes,Parto,Varios,0.33,0.67,0.0,70,30,30,55,80,90,15,TDAH inatento + TEA
+12,Hombre,7,Zurdo,Otros,No hay,No reporta,0.39,0.78,0.0,81,53,65,35,74,80,29,TDAH inatento + TEA
+12,Mujer,7,Diestro,Familiares con TDAH,No hay,Personal/social,0.5,0.78,0.22,98,46,45,65,70,99,13,TDAH inatento + TEA
+11,Hombre,5,Diestro,Otros,No hay,Varios,0.56,0.78,0.33,75,35,40,55,75,85,16,TDAH inatento + TEA
+11,Hombre,6,Diestro,Sin antecedentes,Embarazo,Varios,0.72,0.89,0.56,75,55,45,70,88,99,16,TDAH inatento + TEA
+10,Hombre,5,Diestro,Sin antecedentes,Ambos,Varios,0.5,0.67,0.33,92,30,70,40,80,90,15,TDAH inatento + TEA
+11,Hombre,6,Diestro,Sin antecedentes,No hay,Varios,0.44,0.78,0.11,105,40,45,30,80,93,54,TDAH inatento + TEA
+7,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.33,0.67,0.0,79,40,40,60,65,86,12,TDAH inatento + TEA
+12,Mujer,7,Diestro,Familiares con TDAH,Parto,No reporta,0.78,1.0,0.56,120,35,35,50,84,85,17,TDAH inatento + TEA
+8,Hombre,3,Zurdo,Familiares con TDAH,No hay,Varios,0.67,0.78,0.56,84,45,30,55,75,95,17,TDAH inatento + TEA
+7,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Audición/lenguaje,0.56,0.67,0.44,73,44,65,45,80,85,15,TDAH inatento + TEA
+12,Mujer,6,Diestro,Otros,No hay,Varios,0.56,0.78,0.33,91,40,70,45,75,99,23,TDAH inatento + TEA
+10,Hombre,5,Diestro,Otro trastorno del neurodesarrollo,Ambos,Personal/social,0.5,0.78,0.22,93,45,55,30,80,90,21,TDAH inatento + TEA
+10,Hombre,5,Diestro,Otros,No hay,No reporta,0.39,0.67,0.11,105,45,40,43,95,75,20,TDAH inatento + TEA
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Ambos,Personal/social,0.56,0.89,0.22,84,35,70,40,77,95,10,TDAH inatento + TEA
+7,Hombre,2,Diestro,Sin antecedentes,No hay,Varios,0.5,0.67,0.33,93,55,60,30,76,85,12,TDAH inatento + TEA
+10,Hombre,5,Diestro,Otros,Ambos,Audición/lenguaje,0.56,0.78,0.33,92,45,30,30,72,85,10,TDAH inatento + TEA
+10,Hombre,5,Diestro,Sin antecedentes,Ambos,Personal/social,0.44,0.67,0.22,93,40,55,60,70,80,11,TDAH inatento + TEA
+12,Hombre,6,Zurdo,Otro trastorno psicopatológico,No hay,Varios,0.39,0.67,0.11,118,45,50,45,80,75,24,TDAH inatento + TEA
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.5,0.89,0.11,89,50,65,50,85,75,18,TDAH inatento + TEA
+6,Hombre,1,Diestro,Sin antecedentes,Parto,Varios,0.39,0.67,0.11,70,40,40,55,75,75,15,TDAH inatento + TEA
+9,Hombre,3,Zurdo,Otros,No hay,Varios,0.44,0.67,0.22,92,40,35,40,71,75,28,TDAH inatento + TEA
+9,Hombre,3,Zurdo,Otros,No hay,Varios,0.44,0.67,0.22,92,45,35,40,72,75,28,TDAH inatento + TEA
+10,Hombre,5,Diestro,Familiares con TDAH,Embarazo,Varios,0.44,0.67,0.22,93,45,50,65,76,96,14,TDAH inatento + TEA
+10,Hombre,5,Diestro,Sin antecedentes,Ambos,No reporta,0.39,0.67,0.11,107,43,50,75,75,80,34,TDAH inatento + TEA
+6,Mujer,1,Diestro,Sin antecedentes,Ambos,Varios,0.61,0.89,0.33,123,40,50,54,69,92,14,TDAH inatento + TEA
+9,Hombre,4,Diestro,Otros,No hay,Varios,0.72,0.89,0.56,76,45,55,70,67,70,14,TDAH inatento + TEA
+12,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,Ambos,Personal/social,0.61,0.89,0.33,81,60,50,35,69,95,30,TDAH inatento + TEA
+8,Mujer,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.67,0.89,0.44,76,45,30,70,68,99,17,TDAH inatento + TEA
+10,Mujer,5,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.89,0.44,94,45,40,75,90,90,30,TDAH inatento + TEA
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.56,0.67,0.44,80,44,65,30,70,92,27,TDAH inatento + TEA
+9,Hombre,5,Diestro,Otro trastorno del neurodesarrollo,Ambos,No reporta,0.5,0.78,0.22,107,47,60,40,70,75,18,TDAH inatento + TEA
+12,Hombre,6,Diestro,Otros,No hay,Varios,0.5,0.67,0.33,80,39,60,65,80,80,11,TDAH inatento + TEA
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Ambos,Varios,0.67,0.89,0.44,78,65,55,35,85,99,20,TDAH inatento + TEA
+7,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.33,0.67,0.0,93,55,50,37,80,94,11,TDAH inatento + TEA
+12,Mujer,6,Diestro,Otros,Embarazo,Personal/social,0.67,0.89,0.44,106,44,40,70,80,65,14,TDAH inatento + TEA
+12,Hombre,5,Diestro,Sin antecedentes,Parto,Personal/social,0.61,0.78,0.44,85,46,40,47,88,75,22,TDAH inatento + TEA
+9,Mujer,4,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.78,0.56,77,45,60,60,75,70,20,TDAH inatento + TEA
+12,Hombre,6,Diestro,Sin antecedentes,Ambos,Varios,0.5,0.67,0.33,91,49,60,45,60,80,21,TDAH inatento + TEA
+9,Hombre,4,Diestro,Sin antecedentes,Embarazo,Varios,0.61,0.78,0.44,101,55,60,65,80,80,23,TDAH inatento + TEA
+10,Hombre,4,Diestro,Otros,Ambos,No reporta,0.5,0.67,0.33,70,35,30,40,60,75,36,TDAH inatento + TEA
+8,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.44,0.67,0.22,90,45,65,70,80,85,11,TDAH inatento + TEA
+10,Hombre,5,Diestro,Familiares con TDAH,No hay,No reporta,0.67,0.56,0.78,86,45,90,58,55,50,16,TDAH hiperactivo/impulsivo
+10,Hombre,5,Diestro,Sin antecedentes,No hay,No reporta,0.61,0.56,0.67,94,75,96,99,40,20,14,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Diestro,Otros,No hay,No reporta,0.72,0.56,0.89,118,47,85,59,57,40,14,TDAH hiperactivo/impulsivo
+7,Hombre,2,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.56,0.44,0.67,95,51,85,58,55,45,16,TDAH hiperactivo/impulsivo
+6,Hombre,1,Diestro,Sin antecedentes,Parto,No reporta,0.67,0.44,0.89,96,75,81,99,64,50,10,TDAH hiperactivo/impulsivo + TND
+12,Mujer,6,Diestro,Sin antecedentes,No hay,No reporta,0.61,0.44,0.78,92,73,91,99,40,20,15,TDAH hiperactivo/impulsivo + TND
+6,Mujer,1,Diestro,Sin antecedentes,No hay,Personal/social,0.72,0.44,1.0,123,45,80,60,45,45,18,TDAH hiperactivo/impulsivo
+8,Mujer,3,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.44,0.0,0.89,102,49,80,60,57,40,15,TDAH hiperactivo/impulsivo
+6,Mujer,2,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.61,0.33,0.89,83,82,90,93,50,10,15,TDAH hiperactivo/impulsivo + TND
+6,Mujer,1,Diestro,Familiares con TDAH,Parto,No reporta,0.56,0.22,0.89,93,80,94,95,40,40,13,TDAH hiperactivo/impulsivo + TND
+7,Mujer,2,Diestro,Sin antecedentes,No hay,No reporta,0.44,0.22,0.67,105,46,70,63,55,50,17,TDAH hiperactivo/impulsivo
+6,Mujer,1,Diestro,Sin antecedentes,No hay,No reporta,0.56,0.33,0.78,109,70,83,90,70,40,12,TDAH hiperactivo/impulsivo + TND
+12,Hombre,5,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.33,1.0,80,71,98,96,75,45,28,TDAH hiperactivo/impulsivo + TND
+7,Hombre,2,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.67,0.56,0.78,90,80,85,75,62,38,12,TDAH hiperactivo/impulsivo + TND
+10,Hombre,4,Ambidiestro,Sin antecedentes,Parto,Personal/social,0.67,0.33,1.0,81,80,80,80,61,43,19,TDAH hiperactivo/impulsivo + TND
+12,Hombre,7,Zurdo,Familiares con TDAH,Ambos,Varios,0.72,0.56,0.89,79,72,93,84,60,40,17,TDAH hiperactivo/impulsivo + TND
+7,Hombre,2,Zurdo,Sin antecedentes,No hay,Varios,0.67,0.44,0.89,105,72,85,95,50,45,22,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Diestro,Sin antecedentes,Parto,Personal/social,0.67,0.33,1.0,102,75,81,79,55,45,11,TDAH hiperactivo/impulsivo + TND
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,No reporta,0.61,0.33,0.89,98,80,87,88,66,30,15,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.56,0.78,108,57,75,55,56,30,10,TDAH hiperactivo/impulsivo
+6,Hombre,1,Diestro,Sin antecedentes,Parto,Varios,0.72,0.44,1.0,94,50,85,65,55,51,10,TDAH hiperactivo/impulsivo
+9,Mujer,3,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.56,0.33,0.78,109,65,85,60,61,50,14,TDAH hiperactivo/impulsivo
+7,Hombre,2,Diestro,Familiares con TDAH,Embarazo,No reporta,0.61,0.33,0.89,95,85,79,99,63,50,17,TDAH hiperactivo/impulsivo + TND
+12,Hombre,6,Diestro,Familiares con TDAH,Parto,No reporta,0.61,0.44,0.78,80,70,83,99,60,49,17,TDAH hiperactivo/impulsivo + TND
+12,Hombre,7,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.61,0.33,0.89,93,90,84,82,63,30,15,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.78,0.56,1.0,101,45,70,64,62,50,10,TDAH hiperactivo/impulsivo
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,Varios,0.78,0.67,0.89,90,80,80,83,64,48,23,TDAH hiperactivo/impulsivo + TND
+7,Hombre,2,Diestro,Otros,Embarazo,Audición/lenguaje,0.67,0.33,1.0,94,69,80,94,60,49,15,TDAH hiperactivo/impulsivo + TND
+11,Mujer,6,Diestro,Familiares con TDAH,Ambos,No reporta,0.61,0.33,0.89,87,45,76,58,60,53,26,TDAH hiperactivo/impulsivo
+6,Hombre,1,Diestro,Sin antecedentes,No hay,Varios,0.67,0.44,0.89,103,85,80,90,50,55,12,TDAH hiperactivo/impulsivo + TND
+7,Hombre,2,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.72,0.56,0.89,110,90,93,93,60,47,14,TDAH hiperactivo/impulsivo + TND
+7,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.56,0.78,112,60,70,62,62,45,14,TDAH hiperactivo/impulsivo
+10,Mujer,6,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.56,0.44,0.67,91,68,90,90,60,10,24,TDAH hiperactivo/impulsivo + TND
+12,Hombre,6,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.56,0.33,0.78,78,70,80,80,60,25,20,TDAH hiperactivo/impulsivo + TND
+12,Mujer,7,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.33,1.0,99,69,90,99,30,20,19,TDAH hiperactivo/impulsivo + TND
+12,Mujer,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.72,0.44,1.0,96,73,78,85,61,55,19,TDAH hiperactivo/impulsivo + TND
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.67,0.44,0.89,96,81,93,99,57,50,12,TDAH hiperactivo/impulsivo + TND
+10,Hombre,4,Diestro,Sin antecedentes,No hay,Varios,0.5,0.33,0.67,93,55,75,55,50,54,15,TDAH hiperactivo/impulsivo
+9,Hombre,5,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.83,0.67,1.0,107,80,77,96,62,50,15,TDAH hiperactivo/impulsivo + TND
+10,Hombre,3,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.78,0.67,0.89,104,75,77,80,63,51,21,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Diestro,Otros,Embarazo,Audición/lenguaje,0.83,0.67,1.0,117,72,89,85,60,45,16,TDAH hiperactivo/impulsivo + TND
+8,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,Ambos,No reporta,0.72,0.44,1.0,90,73,80,80,61,48,20,TDAH hiperactivo/impulsivo + TND
+9,Hombre,3,Diestro,Familiares con TDAH,No hay,No reporta,0.67,0.44,0.89,82,80,78,96,65,55,17,TDAH hiperactivo/impulsivo + TND
+7,Hombre,2,Diestro,Familiares con TDAH,No hay,No reporta,0.5,0.22,0.78,100,80,75,82,55,15,19,TDAH hiperactivo/impulsivo + TND
+8,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,0.44,0.22,0.67,101,50,80,57,55,35,17,TDAH hiperactivo/impulsivo
+12,Hombre,6,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.72,0.44,1.0,83,73,90,99,66,45,12,TDAH hiperactivo/impulsivo + TND
+7,Hombre,1,Diestro,Otros,No hay,Varios,0.56,0.44,0.67,84,60,75,59,61,30,10,TDAH hiperactivo/impulsivo
+10,Hombre,5,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.61,0.33,0.89,88,65,80,58,60,51,19,TDAH hiperactivo/impulsivo
+6,Hombre,1,Diestro,Otros,Embarazo,No reporta,0.5,0.22,0.78,118,60,76,55,50,47,10,TDAH hiperactivo/impulsivo
+7,Hombre,2,Diestro,Otros,No hay,No reporta,0.61,0.33,0.89,108,70,86,77,67,30,22,TDAH hiperactivo/impulsivo + TND
+9,Hombre,5,Diestro,Otros,No hay,No reporta,0.61,0.33,0.89,103,65,77,55,45,49,13,TDAH hiperactivo/impulsivo
+12,Hombre,6,Diestro,Familiares con TDAH,Embarazo,Personal/social,0.72,0.44,1.0,81,75,84,80,60,45,14,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.83,0.67,1.0,87,77,85,99,62,30,21,TDAH hiperactivo/impulsivo + TND
+12,Hombre,7,Diestro,Otro trastorno psicopatológico,Embarazo,Personal/social,0.83,0.67,1.0,89,78,88,78,60,49,16,TDAH hiperactivo/impulsivo + TND
+9,Hombre,3,Diestro,Otros,No hay,No reporta,0.61,0.33,0.89,83,75,70,75,60,43,20,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.61,0.33,0.89,100,80,95,95,60,45,10,TDAH hiperactivo/impulsivo + TND
+9,Hombre,3,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.5,0.11,0.89,94,75,78,99,61,60,10,TDAH hiperactivo/impulsivo + TND
+6,Hombre,1,Zurdo,Sin antecedentes,No hay,No reporta,0.61,0.44,0.78,103,45,85,55,60,40,11,TDAH hiperactivo/impulsivo
+7,Hombre,1,Diestro,Otros,No hay,No reporta,0.72,0.56,0.89,92,45,75,61,62,42,15,TDAH hiperactivo/impulsivo
+7,Hombre,2,Diestro,Familiares con TDAH,Ambos,Motricidad fina/gruesa,0.5,0.22,0.78,100,85,77,80,60,38,11,TDAH hiperactivo/impulsivo + TND
+12,Hombre,6,Zurdo,Sin antecedentes,No hay,Varios,0.67,0.33,1.0,81,78,91,99,58,55,13,TDAH hiperactivo/impulsivo + TND
+8,Hombre,2,Diestro,Familiares con TDAH,No hay,Personal/social,0.56,0.22,0.89,83,70,87,99,59,45,15,TDAH hiperactivo/impulsivo + TND
+9,Mujer,3,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,0.5,0.22,0.78,102,70,90,99,52,50,11,TDAH hiperactivo/impulsivo + TND
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.72,0.67,0.78,73,74,77,94,58,58,19,TDAH hiperactivo/impulsivo + TND
+12,Mujer,6,Zurdo,Sin antecedentes,No hay,No reporta,0.72,0.44,1.0,84,75,80,80,60,45,11,TDAH hiperactivo/impulsivo + TND
+10,Mujer,3,Diestro,Familiares con TDAH,No hay,No reporta,0.61,0.33,0.89,86,70,77,91,61,57,14,TDAH hiperactivo/impulsivo + TND
+11,Mujer,5,Zurdo,Familiares con TDAH,Ambos,No reporta,0.67,0.44,0.89,87,81,76,99,62,60,23,TDAH hiperactivo/impulsivo + TND
+6,Mujer,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Varios,0.61,0.44,0.78,78,60,85,55,60,44,10,TDAH hiperactivo/impulsivo
+12,Mujer,5,Diestro,Otros,Embarazo,Personal/social,0.33,0.0,0.67,81,63,74,64,62,45,20,TDAH hiperactivo/impulsivo
+9,Hombre,4,Diestro,Otro trastorno psicopatológico,Ambos,Varios,0.61,0.33,0.89,97,90,80,99,58,54,12,TDAH hiperactivo/impulsivo + TND
+12,Mujer,7,Diestro,Familiares con TDAH,Embarazo,No reporta,0.61,0.33,0.89,97,85,83,75,60,50,23,TDAH hiperactivo/impulsivo + TND
+11,Hombre,5,Diestro,Otros,No hay,Motricidad fina/gruesa,0.78,0.67,0.89,84,80,75,99,60,60,17,TDAH hiperactivo/impulsivo + TND
+9,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.72,0.44,1.0,81,80,75,99,60,45,12,TDAH hiperactivo/impulsivo + TND
+11,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Motricidad fina/gruesa,0.61,0.22,1.0,99,83,80,75,62,52,26,TDAH hiperactivo/impulsivo + TND
+9,Hombre,2,Diestro,Otros,No hay,No reporta,0.61,0.33,0.89,83,80,80,90,61,48,11,TDAH hiperactivo/impulsivo + TND
+12,Mujer,7,Diestro,Otro trastorno psicopatológico,No hay,Audición/lenguaje,0.67,0.44,0.89,78,85,70,80,60,40,26,TDAH hiperactivo/impulsivo + TND
+6,Mujer,1,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.78,0.56,1.0,122,50,85,62,50,40,22,TDAH hiperactivo/impulsivo
+8,Mujer,2,Diestro,Familiares con TDAH,Parto,No reporta,0.67,0.56,0.78,88,60,80,60,63,40,20,TDAH hiperactivo/impulsivo
+6,Mujer,1,Diestro,Otros,No hay,Varios,0.56,0.33,0.78,97,50,90,65,55,46,17,TDAH hiperactivo/impulsivo
+6,Hombre,1,Diestro,Sin antecedentes,No hay,Personal/social,0.5,0.33,0.67,100,56,70,64,60,55,15,TDAH hiperactivo/impulsivo
+6,Hombre,1,Diestro,Otro trastorno psicopatológico,Embarazo,Audición/lenguaje,0.61,0.56,0.67,127,55,90,55,55,50,10,TDAH hiperactivo/impulsivo
+6,Hombre,1,Diestro,Otros,No hay,Varios,0.56,0.44,0.67,95,40,78,55,45,45,17,TDAH hiperactivo/impulsivo
+8,Hombre,2,Zurdo,Sin antecedentes,No hay,No reporta,0.67,0.33,1.0,100,55,73,58,60,46,19,TDAH hiperactivo/impulsivo
+7,Hombre,1,Diestro,Familiares con TDAH,No hay,No reporta,0.67,0.33,1.0,98,50,70,57,62,41,21,TDAH hiperactivo/impulsivo
+9,Mujer,3,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.56,0.22,0.89,103,54,79,58,60,40,18,TDAH hiperactivo/impulsivo
+10,Hombre,4,Diestro,Sin antecedentes,Embarazo,No reporta,0.61,0.44,0.78,107,55,80,57,61,40,21,TDAH hiperactivo/impulsivo
+9,Hombre,3,Zurdo,Otro trastorno del neurodesarrollo,No hay,No reporta,0.61,0.33,0.89,103,67,76,56,60,45,23,TDAH hiperactivo/impulsivo
+9,Hombre,2,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.61,0.33,0.89,106,65,77,57,58,40,22,TDAH hiperactivo/impulsivo
+11,Mujer,4,Diestro,Sin antecedentes,No hay,No reporta,0.56,0.33,0.78,88,68,78,58,56,50,17,TDAH hiperactivo/impulsivo
+12,Hombre,5,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.56,0.22,0.89,89,60,80,65,60,52,18,TDAH hiperactivo/impulsivo
+8,Mujer,3,Zurdo,Otro trastorno del neurodesarrollo,No hay,No reporta,0.5,0.22,0.78,98,55,80,57,60,52,21,TDAH hiperactivo/impulsivo
+9,Hombre,4,Diestro,Familiares con TDAH,Embarazo,No reporta,0.72,0.44,1.0,93,52,70,55,55,55,22,TDAH hiperactivo/impulsivo
+9,Mujer,3,Zurdo,Otro trastorno del neurodesarrollo,No hay,Motricidad fina/gruesa,0.56,0.33,0.78,73,49,90,50,55,55,5,TDAH hiperactivo/impulsivo + TEAZ
+6,Hombre,1,Diestro,Otros,No hay,No reporta,0.67,0.44,0.89,76,48,90,50,67,40,8,TDAH hiperactivo/impulsivo + TEAZ
+10,Hombre,4,Diestro,Otro trastorno psicopatológico,No hay,Varios,0.61,0.33,0.89,71,46,75,50,40,45,4,TDAH hiperactivo/impulsivo + TEAZ
+7,Mujer,2,Diestro,Otros,No hay,No reporta,0.61,0.44,0.78,80,58,82,55,52,48,11,TDAH hiperactivo/impulsivo + TEAZ
+11,Mujer,5,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.33,1.0,81,60,85,45,68,40,5,TDAH hiperactivo/impulsivo + TEAZ
+7,Mujer,2,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.67,0.44,0.89,80,43,89,47,56,40,3,TDAH hiperactivo/impulsivo + TEAZ
+10,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.61,0.44,0.78,81,61,90,55,54,41,2,TDAH hiperactivo/impulsivo + TEAZ
+7,Mujer,2,Diestro,Otros,No hay,No reporta,0.56,0.44,0.67,82,64,80,50,67,40,4,TDAH hiperactivo/impulsivo + TEAZ
+6,Mujer,1,Diestro,Otros,Embarazo,No reporta,0.61,0.33,0.89,76,63,90,67,60,45,5,TDAH hiperactivo/impulsivo + TEAZ
+8,Hombre,3,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.72,0.56,0.89,79,63,80,50,67,45,7,TDAH hiperactivo/impulsivo + TEAZ
+9,Hombre,3,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.72,0.44,1.0,81,60,75,65,53,43,7,TDAH hiperactivo/impulsivo + TEAZ
+12,Hombre,7,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.33,1.0,83,60,90,55,66,45,5,TDAH hiperactivo/impulsivo + TEAZ
+8,Mujer,2,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.72,0.44,1.0,86,70,86,60,62,49,6,TDAH hiperactivo/impulsivo + TEAZ
+6,Hombre,1,Diestro,Familiares con TDAH,Embarazo,No reporta,0.72,0.44,1.0,86,70,90,45,59,30,7,TDAH hiperactivo/impulsivo + TEAZ
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.61,0.33,0.89,80,57,90,40,55,50,7,TDAH hiperactivo/impulsivo + TEAZ
+7,Hombre,3,Diestro,Familiares con TDAH,No hay,No reporta,0.67,0.44,0.89,76,47,90,60,54,47,4,TDAH hiperactivo/impulsivo + TEAZ
+10,Hombre,4,Diestro,Familiares con TDAH,No hay,No reporta,0.56,0.44,0.67,81,49,65,45,49,45,2,TDAH hiperactivo/impulsivo + TEAZ
+9,Hombre,3,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.61,0.44,0.78,80,57,90,40,45,40,9,TDAH hiperactivo/impulsivo + TEAZ
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.72,0.56,0.89,75,58,50,46,67,46,0,TDAH hiperactivo/impulsivo + TEAZ
+12,Hombre,6,Diestro,Sin antecedentes,No hay,Varios,0.72,0.44,1.0,83,42,86,40,50,40,10,TDAH hiperactivo/impulsivo + TEAZ
+12,Hombre,4,Diestro,Sin antecedentes,No hay,No reporta,0.72,0.44,1.0,75,61,50,55,56,55,7,TDAH hiperactivo/impulsivo + TEAZ
+6,Mujer,1,Diestro,Sin antecedentes,Embarazo,Audición/lenguaje,0.72,0.44,1.0,79,44,80,45,67,35,0,TDAH hiperactivo/impulsivo + TEAZ
+8,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.61,0.44,0.78,81,43,85,47,60,38,2,TDAH hiperactivo/impulsivo + TEAZ
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Varios,0.72,0.56,0.89,76,45,84,45,65,39,3,TDAH hiperactivo/impulsivo + TEAZ
+8,Hombre,3,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.56,0.33,0.78,71,60,50,50,57,47,9,TDAH hiperactivo/impulsivo + TEAZ
+11,Hombre,5,Diestro,Familiares con TDAH,Parto,Varios,0.56,0.33,0.78,80,70,50,55,54,42,10,TDAH hiperactivo/impulsivo + TEAZ
+12,Hombre,6,Diestro,Familiares con TDAH,Parto,No reporta,0.67,0.44,0.89,80,62,65,55,60,47,8,TDAH hiperactivo/impulsivo + TEAZ
+10,Hombre,4,Diestro,Sin antecedentes,Embarazo,Audición/lenguaje,0.61,0.44,0.78,76,60,63,55,67,37,12,TDAH hiperactivo/impulsivo + TEAZ
+11,Mujer,5,Diestro,Otros,Embarazo,No reporta,0.61,0.44,0.78,75,50,50,40,66,50,9,TDAH hiperactivo/impulsivo + TEAZ
+8,Mujer,3,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.72,0.56,0.89,83,45,63,65,63,51,8,TDAH hiperactivo/impulsivo + TEAZ
+7,Mujer,1,Diestro,Otro trastorno del neurodesarrollo,Parto,Varios,0.61,0.56,0.67,78,65,55,55,58,40,7,TDAH hiperactivo/impulsivo + TEAZ
+7,Mujer,2,Diestro,Sin antecedentes,Embarazo,Personal/social,0.78,0.56,1.0,86,60,93,51,59,40,9,TDAH hiperactivo/impulsivo + TEAZ
+6,Mujer,1,Diestro,Sin antecedentes,Embarazo,Audición/lenguaje,0.72,0.44,1.0,76,45,84,50,70,40,7,TDAH hiperactivo/impulsivo + TEAZ
+10,Mujer,4,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.61,0.56,0.67,74,53,83,65,60,40,11,TDAH hiperactivo/impulsivo + TEAZ
+9,Hombre,4,Diestro,Familiares con TDAH,Embarazo,No reporta,0.67,0.56,0.78,85,50,50,52,61,49,10,TDAH hiperactivo/impulsivo + TEAZ
+9,Hombre,4,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.61,0.44,0.78,77,45,82,40,65,40,7,TDAH hiperactivo/impulsivo + TEAZ
+10,Mujer,5,Diestro,Familiares con TDAH,No hay,Varios,0.61,0.44,0.78,73,60,60,60,64,50,9,TDAH hiperactivo/impulsivo + TEAZ
+6,Mujer,1,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.61,0.44,0.78,85,45,65,45,65,52,3,TDAH hiperactivo/impulsivo + TEAZ
+9,Mujer,4,Diestro,Sin antecedentes,Ambos,Motricidad fina/gruesa,0.56,0.33,0.78,76,58,85,60,60,40,7,TDAH hiperactivo/impulsivo + TEAZ
+8,Mujer,2,Zurdo,Familiares con TDAH,No hay,No reporta,0.61,0.44,0.78,80,64,50,55,70,40,7,TDAH hiperactivo/impulsivo + TEAZ
+12,Mujer,5,Diestro,Otros,Embarazo,No reporta,0.72,0.44,1.0,80,50,50,50,54,55,10,TDAH hiperactivo/impulsivo + TEAZ
+11,Hombre,5,Diestro,Sin antecedentes,No hay,No reporta,0.72,0.44,1.0,84,50,63,40,56,44,3,TDAH hiperactivo/impulsivo + TEAZ
+8,Mujer,2,Diestro,Otro trastorno psicopatológico,Parto,Varios,0.72,0.56,0.89,71,60,65,65,60,40,10,TDAH hiperactivo/impulsivo + TEAZ
+7,Mujer,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.67,0.56,0.78,81,43,80,65,66,46,10,TDAH hiperactivo/impulsivo + TEAZ
+9,Mujer,4,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.78,0.56,1.0,81,50,60,45,65,42,10,TDAH hiperactivo/impulsivo + TEAZ
+7,Mujer,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.78,0.56,1.0,82,55,60,60,60,55,4,TDAH hiperactivo/impulsivo + TEAZ
+12,Hombre,7,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.72,0.56,0.89,70,62,60,65,60,58,3,TDAH hiperactivo/impulsivo + TEAZ
+10,Mujer,4,Zurdo,Otro trastorno del neurodesarrollo,No hay,No reporta,0.72,0.56,0.89,70,50,55,55,65,45,9,TDAH hiperactivo/impulsivo + TEAZ
+9,Mujer,3,Diestro,Otro trastorno del neurodesarrollo,No hay,Personal/social,0.78,0.56,1.0,80,40,75,60,67,50,7,TDAH hiperactivo/impulsivo + TEAZ
+6,Mujer,1,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.56,0.44,0.67,81,49,80,49,50,39,1,TDAH hiperactivo/impulsivo + TEAZ
+9,Mujer,4,Diestro,Familiares con TDAH,Embarazo,No reporta,0.67,0.56,0.78,78,60,65,55,67,45,5,TDAH hiperactivo/impulsivo + TEAZ
+12,Hombre,7,Diestro,Otros,Ambos,Motricidad fina/gruesa,0.67,0.56,0.78,87,67,79,55,50,96,15,TDAH hiperactivo/impulsivo + TEA
+6,Hombre,1,Diestro,Otros,No hay,Motricidad fina/gruesa,0.5,0.22,0.78,106,58,90,45,50,75,17,TDAH hiperactivo/impulsivo + TEA
+7,Mujer,2,Diestro,Familiares con TDAH,Parto,Audición/lenguaje,0.44,0.22,0.67,91,60,80,65,50,94,16,TDAH hiperactivo/impulsivo + TEA
+7,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Audición/lenguaje,0.5,0.33,0.67,89,57,65,45,50,85,15,TDAH hiperactivo/impulsivo + TEA
+12,Mujer,6,Diestro,Otros,No hay,Varios,0.56,0.44,0.67,91,59,70,45,52,88,23,TDAH hiperactivo/impulsivo + TEA
+10,Hombre,5,Diestro,Otro trastorno del neurodesarrollo,Parto,Personal/social,0.56,0.33,0.78,93,55,78,61,67,90,21,TDAH hiperactivo/impulsivo + TEA
+10,Hombre,5,Diestro,Otros,No hay,No reporta,0.61,0.44,0.78,105,50,76,43,63,75,20,TDAH hiperactivo/impulsivo + TEA
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Ambos,Personal/social,0.67,0.44,0.89,84,68,70,60,59,95,16,TDAH hiperactivo/impulsivo + TEA
+7,Hombre,2,Diestro,Sin antecedentes,No hay,Varios,0.67,0.44,0.89,93,55,78,50,62,85,12,TDAH hiperactivo/impulsivo + TEA
+10,Hombre,5,Diestro,Familiares con TDAH,Ambos,Audición/lenguaje,0.78,0.56,1.0,92,45,79,55,60,85,17,TDAH hiperactivo/impulsivo + TEA
+10,Hombre,5,Diestro,Sin antecedentes,Ambos,Personal/social,0.67,0.56,0.78,93,52,81,60,65,80,11,TDAH hiperactivo/impulsivo + TEA
+10,Hombre,4,Diestro,Sin antecedentes,No hay,Varios,0.72,0.56,0.89,83,43,93,57,65,85,26,TDAH hiperactivo/impulsivo + TEA
+12,Mujer,6,Diestro,Otro trastorno psicopatológico,No hay,Personal/social,0.72,0.56,0.89,76,54,90,55,68,95,21,TDAH hiperactivo/impulsivo + TEA
+6,Hombre,1,Diestro,Sin antecedentes,Embarazo,No reporta,0.61,0.33,0.89,140,55,92,58,55,89,20,TDAH hiperactivo/impulsivo + TEA
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.56,0.78,89,50,65,50,64,75,18,TDAH hiperactivo/impulsivo + TEA
+7,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.5,0.22,0.78,81,50,80,60,60,85,17,TDAH hiperactivo/impulsivo + TEA
+9,Hombre,3,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.56,0.78,92,62,75,60,54,75,28,TDAH hiperactivo/impulsivo + TEA
+9,Hombre,3,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.56,0.78,92,45,76,65,56,75,28,TDAH hiperactivo/impulsivo + TEA
+10,Hombre,5,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.67,0.56,0.78,93,45,74,65,61,96,14,TDAH hiperactivo/impulsivo + TEA
+10,Hombre,5,Diestro,Sin antecedentes,Embarazo,No reporta,0.61,0.44,0.78,107,43,77,59,56,80,20,TDAH hiperactivo/impulsivo + TEA
+6,Mujer,1,Diestro,Sin antecedentes,Ambos,Varios,0.67,0.44,0.89,123,54,73,54,54,92,14,TDAH hiperactivo/impulsivo + TEA
+12,Mujer,6,Diestro,Otro trastorno psicopatológico,Ambos,Personal/social,0.61,0.56,0.67,91,52,81,58,63,72,27,TDAH hiperactivo/impulsivo + TEA
+12,Mujer,6,Diestro,Otro trastorno psicopatológico,Ambos,Personal/social,0.67,0.56,0.78,101,45,90,65,60,95,26,TDAH hiperactivo/impulsivo + TEA
+9,Hombre,4,Diestro,Familiares con TDAH,No hay,Varios,0.67,0.44,0.89,76,45,79,61,67,89,14,TDAH hiperactivo/impulsivo + TEA
+12,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,0.67,0.56,0.78,81,60,76,63,55,95,19,TDAH hiperactivo/impulsivo + TEA
+8,Mujer,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.61,0.56,0.67,76,45,75,63,58,96,17,TDAH hiperactivo/impulsivo + TEA
+10,Mujer,5,Diestro,Familiares con TDAH,No hay,Varios,0.61,0.44,0.78,94,45,70,60,59,90,21,TDAH hiperactivo/impulsivo + TEA
+6,Hombre,1,Diestro,Sin antecedentes,No hay,Varios,0.61,0.44,0.78,80,44,65,62,60,92,27,TDAH hiperactivo/impulsivo + TEA
+9,Hombre,5,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.61,0.44,0.78,107,47,71,59,61,75,18,TDAH hiperactivo/impulsivo + TEA
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Varios,0.67,0.33,1.0,78,50,69,59,56,94,20,TDAH hiperactivo/impulsivo + TEA
+7,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.78,0.56,1.0,93,55,72,58,50,94,11,TDAH hiperactivo/impulsivo + TEA
+12,Mujer,5,Diestro,Familiares con TDAH,Embarazo,Personal/social,0.61,0.44,0.78,106,44,68,59,54,67,14,TDAH hiperactivo/impulsivo + TEA
+11,Hombre,5,Diestro,Sin antecedentes,Embarazo,Motricidad fina/gruesa,0.78,0.78,0.78,96,55,65,64,78,50,19,TDAH combinado
+11,Hombre,5,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.72,0.67,0.78,96,45,71,65,70,45,17,TDAH combinado
+9,Hombre,3,Diestro,Otros,Ambos,Personal/social,0.89,1.0,0.78,86,42,70,69,80,25,15,TDAH combinado
+8,Mujer,3,Diestro,Familiares con TDAH,Embarazo,No reporta,0.83,1.0,0.67,81,69,91,65,73,43,17,TDAH combinado
+12,Hombre,5,Diestro,Otros,No hay,Motricidad fina/gruesa,0.89,1.0,0.78,90,48,66,66,96,48,37,TDAH combinado
+12,Hombre,6,Diestro,Sin antecedentes,No hay,Personal/social,0.67,0.67,0.67,81,68,99,70,69,49,31,TDAH combinado
+8,Mujer,3,Diestro,Sin antecedentes,No hay,No reporta,0.83,1.0,0.67,122,65,85,67,80,47,36,TDAH combinado
+11,Mujer,6,Diestro,Otros,No hay,No reporta,0.89,0.78,1.0,83,50,94,73,72,45,25,TDAH combinado
+10,Mujer,5,Diestro,Sin antecedentes,Ambos,No reporta,0.94,0.89,1.0,117,56,99,72,79,44,37,TDAH combinado
+12,Hombre,7,Zurdo,Familiares con TDAH,No hay,No reporta,0.78,0.78,0.78,88,49,68,70,70,48,22,TDAH combinado
+8,Mujer,3,Diestro,Otros,Ambos,Motricidad fina/gruesa,0.67,0.67,0.67,91,67,93,71,70,45,15,TDAH combinado
+9,Hombre,4,Diestro,Otros,No hay,No reporta,0.78,0.67,0.89,92,48,75,55,65,42,15,TDAH combinado
+6,Hombre,1,Diestro,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.89,1.0,0.78,84,53,65,55,75,55,17,TDAH combinado
+6,Mujer,1,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.67,0.67,110,67,99,65,66,50,15,TDAH combinado
+6,Mujer,1,Diestro,Otro trastorno psicopatológico,No hay,No reporta,1.0,1.0,1.0,116,53,99,67,70,38,14,TDAH combinado
+6,Hombre,1,Diestro,Otros,No hay,No reporta,0.83,0.89,0.78,110,45,67,74,79,49,12,TDAH combinado
+12,Hombre,6,Diestro,Otros,Ambos,No reporta,0.67,0.67,0.67,99,65,70,65,67,48,33,TDAH combinado
+7,Mujer,2,Diestro,Otros,No hay,No reporta,0.83,0.89,0.78,104,52,71,69,79,55,13,TDAH combinado
+9,Hombre,3,Diestro,Sin antecedentes,No hay,Personal/social,0.83,0.89,0.78,108,52,70,65,78,48,16,TDAH combinado
+6,Hombre,1,Diestro,Familiares con TDAH,Ambos,Varios,0.94,0.89,1.0,96,51,72,69,79,45,11,TDAH combinado
+12,Mujer,6,Diestro,Otro trastorno psicopatológico,Ambos,Audición/lenguaje,0.83,0.78,0.89,102,65,79,69,74,55,14,TDAH combinado
+10,Hombre,5,Diestro,Otros,Ambos,No reporta,0.83,0.78,0.89,82,54,70,67,73,45,15,TDAH combinado
+8,Hombre,1,Diestro,Sin antecedentes,Ambos,Personal/social,0.78,0.78,0.78,81,55,71,60,67,47,11,TDAH combinado
+9,Mujer,4,Diestro,Sin antecedentes,Embarazo,Varios,0.83,1.0,0.67,91,69,99,71,81,49,18,TDAH combinado
+6,Hombre,1,Diestro,Otro trastorno psicopatológico,Parto,No reporta,0.78,0.67,0.89,96,54,72,70,69,52,15,TDAH combinado
+11,Hombre,6,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.78,0.89,0.67,85,70,99,70,78,50,10,TDAH combinado
+7,Mujer,1,Diestro,Sin antecedentes,No hay,No reporta,0.78,0.78,0.78,86,46,70,71,95,48,18,TDAH combinado
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.67,0.67,0.67,79,64,85,65,81,45,10,TDAH combinado
+6,Mujer,1,Diestro,Familiares con TDAH,No hay,Varios,0.78,0.78,0.78,107,47,71,75,65,45,22,TDAH combinado
+6,Hombre,1,Diestro,Sin antecedentes,Embarazo,No reporta,0.78,0.67,0.89,100,50,75,67,80,45,13,TDAH combinado
+8,Hombre,2,Diestro,Sin antecedentes,Parto,Personal/social,0.67,0.67,0.67,121,65,99,70,80,49,22,TDAH combinado
+7,Hombre,2,Diestro,Otros,Parto,Motricidad fina/gruesa,0.94,1.0,0.89,92,49,73,71,80,45,14,TDAH combinado
+6,Hombre,1,Ambidiestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.94,1.0,0.89,96,45,70,70,76,47,15,TDAH combinado
+7,Hombre,1,Diestro,Sin antecedentes,Embarazo,No reporta,0.94,0.89,1.0,94,50,80,66,81,48,11,TDAH combinado
+12,Hombre,7,Diestro,Sin antecedentes,No hay,No reporta,0.83,0.89,0.78,103,51,72,68,77,40,28,TDAH combinado
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.78,0.89,0.67,89,65,93,67,80,45,16,TDAH combinado
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Personal/social,0.89,0.78,1.0,82,50,95,69,71,55,13,TDAH combinado
+7,Hombre,1,Diestro,Otros,No hay,Varios,0.83,0.89,0.78,78,45,70,75,80,41,16,TDAH combinado
+11,Hombre,6,Zurdo,Otros,No hay,Personal/social,0.83,0.89,0.78,97,47,69,68,70,40,22,TDAH combinado
+8,Hombre,1,Diestro,Otros,No hay,Varios,0.67,0.67,0.67,86,67,95,75,79,54,12,TDAH combinado
+9,Hombre,4,Diestro,Otro trastorno psicopatológico,No hay,Personal/social,0.89,0.78,1.0,114,46,67,69,63,39,23,TDAH combinado
+12,Hombre,6,Diestro,Familiares con TDAH,No hay,No reporta,0.67,0.67,0.67,80,68,93,65,78,40,11,TDAH combinado
+7,Mujer,1,Diestro,Otros,Embarazo,Personal/social,0.83,0.78,0.89,84,57,76,67,70,46,15,TDAH combinado
+7,Hombre,2,Diestro,Otros,No hay,Varios,0.67,0.67,0.67,91,68,94,67,78,45,20,TDAH combinado
+6,Hombre,1,Diestro,Familiares con TDAH,Ambos,Motricidad fina/gruesa,0.83,0.78,0.89,98,47,71,68,75,49,12,TDAH combinado
+7,Hombre,3,Diestro,Otros,No hay,Varios,0.83,0.67,1.0,110,47,93,67,79,50,25,TDAH combinado
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.83,0.78,0.89,93,48,79,69,63,45,17,TDAH combinado
+10,Mujer,6,Diestro,Otros,Embarazo,No reporta,1.0,1.0,1.0,105,45,70,70,80,55,31,TDAH combinado
+8,Mujer,2,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,1.0,1.0,1.0,79,67,93,69,93,40,12,TDAH combinado
+8,Hombre,2,Diestro,Sin antecedentes,Parto,No reporta,0.67,0.67,0.67,87,67,90,75,80,51,14,TDAH combinado
+12,Hombre,7,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.67,0.67,97,68,85,66,80,55,40,TDAH combinado
+12,Hombre,4,Diestro,Sin antecedentes,No hay,Personal/social,0.94,0.89,1.0,110,65,99,65,70,40,15,TDAH combinado
+12,Hombre,6,Diestro,Otros,Parto,Varios,1.0,1.0,1.0,76,53,93,70,97,40,31,TDAH combinado
+9,Hombre,3,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.83,1.0,0.67,80,65,75,69,80,45,16,TDAH combinado
+8,Hombre,2,Zurdo,Otro trastorno del neurodesarrollo,Embarazo,Audición/lenguaje,0.78,0.78,0.78,81,67,67,75,65,45,12,TDAH combinado
+7,Hombre,1,Diestro,Otros,Ambos,Motricidad fina/gruesa,0.83,0.67,1.0,87,50,85,67,79,38,11,TDAH combinado
+12,Hombre,7,Diestro,Familiares con TDAH,Ambos,Motricidad fina/gruesa,0.78,0.89,0.67,100,66,96,69,70,39,36,TDAH combinado
+7,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.89,0.78,1.0,136,45,96,68,67,47,25,TDAH combinado
+6,Mujer,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,1.0,1.0,1.0,101,66,95,68,99,48,16,TDAH combinado
+12,Hombre,7,Zurdo,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.94,0.89,1.0,86,51,99,67,71,53,18,TDAH combinado
+12,Hombre,7,Diestro,Otros,Ambos,Audición/lenguaje,0.83,1.0,0.67,110,67,99,65,90,55,39,TDAH combinado
+12,Hombre,6,Diestro,Sin antecedentes,No hay,Personal/social,0.94,0.89,1.0,83,67,99,65,68,49,27,TDAH combinado
+12,Hombre,7,Diestro,Otros,No hay,No reporta,0.94,1.0,0.89,83,49,70,67,96,51,15,TDAH combinado
+10,Hombre,5,Diestro,Familiares con TDAH,Embarazo,No reporta,0.72,0.78,0.67,103,68,67,68,67,45,18,TDAH combinado
+12,Hombre,6,Diestro,Familiares con TDAH,Parto,Motricidad fina/gruesa,0.78,0.89,0.67,88,67,99,69,67,50,19,TDAH combinado
+7,Hombre,2,Diestro,Otro trastorno psicopatológico,No hay,Motricidad fina/gruesa,1.0,1.0,1.0,88,50,95,70,81,55,11,TDAH combinado
+6,Hombre,1,Diestro,Sin antecedentes,No hay,Varios,0.83,0.67,1.0,80,53,90,66,78,47,15,TDAH combinado
+7,Hombre,2,Diestro,Familiares con TDAH,Embarazo,No reporta,0.83,0.78,0.89,123,55,71,70,70,45,18,TDAH combinado
+7,Hombre,2,Diestro,Otros,No hay,Varios,0.67,0.67,0.67,91,69,94,65,70,54,20,TDAH combinado
+8,Hombre,2,Diestro,Otro trastorno psicopatológico,Ambos,Motricidad fina/gruesa,0.72,0.67,0.78,102,45,71,65,79,41,18,TDAH combinado
+7,Hombre,2,Diestro,Otros,Embarazo,No reporta,0.67,0.67,0.67,89,70,93,60,77,37,15,TDAH combinado
+6,Hombre,1,Diestro,Otro trastorno psicopatológico,No hay,Personal/social,0.67,0.67,0.67,95,69,65,67,70,50,17,TDAH combinado
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.94,1.0,0.89,87,55,70,67,85,39,16,TDAH combinado
+7,Hombre,2,Diestro,Familiares con TDAH,No hay,No reporta,0.94,1.0,0.89,88,60,70,69,80,50,16,TDAH combinado
+7,Hombre,2,Diestro,Sin antecedentes,Ambos,No reporta,0.78,0.67,0.89,92,50,71,66,68,45,17,TDAH combinado
+7,Hombre,3,Diestro,Familiares con TDAH,No hay,Varios,1.0,1.0,1.0,103,62,80,75,75,37,16,TDAH combinado
+12,Hombre,7,Diestro,Otros,Parto,No reporta,0.83,1.0,0.67,84,71,65,70,75,55,18,TDAH combinado
+9,Hombre,3,Diestro,Sin antecedentes,Parto,No reporta,0.78,0.67,0.89,101,66,70,75,69,30,16,TDAH combinado
+9,Hombre,4,Diestro,Familiares con TDAH,No hay,No reporta,1.0,1.0,1.0,91,50,91,64,96,45,16,TDAH combinado
+7,Hombre,2,Zurdo,Otros,No hay,No reporta,0.78,0.78,0.78,78,49,70,63,65,40,13,TDAH combinado
+10,Hombre,4,Diestro,Otro trastorno psicopatológico,Embarazo,No reporta,0.78,0.78,0.78,79,61,69,67,70,25,12,TDAH combinado
+6,Hombre,1,Diestro,Familiares con TDAH,Embarazo,No reporta,1.0,1.0,1.0,111,50,90,70,99,55,19,TDAH combinado
+6,Mujer,1,Diestro,Otros,Ambos,No reporta,0.83,0.67,1.0,107,45,85,60,72,35,30,TDAH combinado
+12,Hombre,6,Diestro,Otros,Embarazo,No reporta,0.83,1.0,0.67,75,69,70,70,75,55,26,TDAH combinado
+8,Mujer,2,Diestro,Sin antecedentes,Embarazo,No reporta,0.67,0.67,0.67,78,68,70,69,70,40,12,TDAH combinado
+9,Hombre,3,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.89,0.89,0.89,110,64,71,67,70,43,24,TDAH combinado
+8,Mujer,3,Diestro,Otro trastorno del neurodesarrollo,No hay,Personal/social,0.67,0.67,0.67,84,67,65,68,70,45,12,TDAH combinado
+7,Hombre,1,Diestro,Familiares con TDAH,Parto,No reporta,0.67,0.67,0.67,91,74,75,85,75,50,18,TDAH combinado + TND
+12,Mujer,6,Diestro,Otro trastorno psicopatológico,Parto,Personal/social,0.94,1.0,0.89,104,90,80,90,85,52,31,TDAH combinado + TND
+9,Hombre,2,Diestro,Otros,No hay,Varios,0.78,0.67,0.89,78,70,82,98,74,50,17,TDAH combinado + TND
+8,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,1.0,1.0,1.0,82,76,93,99,94,52,15,TDAH combinado + TND
+10,Hombre,5,Diestro,Sin antecedentes,No hay,No reporta,0.78,0.89,0.67,101,99,78,99,87,48,23,TDAH combinado + TND
+12,Hombre,6,Diestro,Otro trastorno psicopatológico,Parto,Personal/social,0.89,0.89,0.89,81,79,89,91,90,39,13,TDAH combinado + TND
+6,Hombre,1,Diestro,Sin antecedentes,Embarazo,Audición/lenguaje,0.67,0.67,0.67,83,83,79,93,77,49,15,TDAH combinado + TND
+6,Hombre,1,Ambidiestro,Familiares con TDAH,No hay,No reporta,0.94,1.0,0.89,94,80,87,99,93,51,14,TDAH combinado + TND
+9,Hombre,4,Diestro,Otros,No hay,No reporta,0.89,1.0,0.78,78,84,80,99,99,55,14,TDAH combinado + TND
+11,Hombre,3,Zurdo,Otros,Embarazo,No reporta,0.94,0.89,1.0,87,75,86,85,86,35,10,TDAH combinado + TND
+9,Hombre,4,Diestro,Otros,No hay,No reporta,1.0,1.0,1.0,106,72,93,99,99,54,24,TDAH combinado + TND
+11,Hombre,6,Diestro,Otros,No hay,No reporta,1.0,1.0,1.0,96,76,93,80,99,56,36,TDAH combinado + TND
+7,Mujer,1,Diestro,Otros,No hay,Varios,0.89,0.89,0.89,85,99,76,91,80,55,14,TDAH combinado + TND
+12,Hombre,6,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.83,1.0,0.67,109,74,70,87,85,57,17,TDAH combinado + TND
+12,Hombre,7,Diestro,Familiares con TDAH,Ambos,Audición/lenguaje,0.94,0.89,1.0,84,99,99,99,88,48,27,TDAH combinado + TND
+11,Hombre,6,Diestro,Familiares con TDAH,Ambos,No reporta,0.78,0.67,0.89,104,99,89,75,76,50,18,TDAH combinado + TND
+12,Hombre,6,Diestro,Otros,Ambos,Personal/social,0.78,0.78,0.78,85,99,76,99,79,47,12,TDAH combinado + TND
+11,Hombre,6,Diestro,Otros,Embarazo,Personal/social,0.89,0.89,0.89,88,80,76,90,87,54,11,TDAH combinado + TND
+7,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Varios,0.67,0.67,0.67,84,99,80,85,78,52,16,TDAH combinado + TND
+12,Hombre,7,Diestro,Otros,Ambos,Personal/social,1.0,1.0,1.0,86,99,93,90,75,55,16,TDAH combinado + TND
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,0.89,1.0,0.78,114,70,76,93,99,45,18,TDAH combinado + TND
+12,Hombre,7,Diestro,Sin antecedentes,Parto,No reporta,0.83,0.89,0.78,108,99,77,99,86,53,16,TDAH combinado + TND
+12,Hombre,7,Diestro,Otros,Embarazo,Personal/social,1.0,1.0,1.0,87,80,85,88,80,55,24,TDAH combinado + TND
+11,Mujer,6,Zurdo,Otros,Embarazo,Audición/lenguaje,0.67,0.67,0.67,91,91,79,99,70,40,24,TDAH combinado + TND
+10,Hombre,4,Diestro,Familiares con TDAH,Parto,No reporta,0.78,0.78,0.78,91,80,79,94,78,45,13,TDAH combinado + TND
+6,Hombre,1,Diestro,Otros,Ambos,Varios,0.83,0.78,0.89,84,90,85,80,79,48,13,TDAH combinado + TND
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,No reporta,0.89,0.89,0.89,120,72,88,99,80,49,15,TDAH combinado + TND
+11,Hombre,6,Zurdo,Sin antecedentes,Embarazo,No reporta,0.89,1.0,0.78,84,90,85,99,99,55,24,TDAH combinado + TND
+7,Mujer,2,Diestro,Familiares con TDAH,Parto,Motricidad fina/gruesa,0.78,0.78,0.78,109,95,79,85,81,51,15,TDAH combinado + TND
+8,Mujer,3,Diestro,Familiares con TDAH,Parto,Motricidad fina/gruesa,0.94,0.89,1.0,96,95,99,92,87,59,16,TDAH combinado + TND
+6,Mujer,1,Diestro,Otro trastorno del neurodesarrollo,Parto,Motricidad fina/gruesa,0.83,0.89,0.78,96,99,86,99,80,65,11,TDAH combinado + TND
+8,Hombre,2,Zurdo,Otro trastorno psicopatológico,Embarazo,Personal/social,0.89,0.89,0.89,78,70,82,79,85,61,12,TDAH combinado + TND
+7,Hombre,2,Diestro,Otro trastorno psicopatológico,Embarazo,Audición/lenguaje,0.89,1.0,0.78,98,72,80,99,96,60,15,TDAH combinado + TND
+9,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,0.67,0.67,0.67,95,90,78,99,75,45,20,TDAH combinado + TND
+8,Mujer,2,Diestro,Familiares con TDAH,Ambos,No reporta,0.83,1.0,0.67,109,95,75,93,99,47,13,TDAH combinado + TND
+7,Mujer,1,Zurdo,Familiares con TDAH,Parto,Audición/lenguaje,0.72,0.67,0.78,106,75,81,78,78,43,17,TDAH combinado + TND
+12,Hombre,6,Zurdo,Familiares con TDAH,Embarazo,Motricidad fina/gruesa,0.83,1.0,0.67,125,99,75,99,96,46,24,TDAH combinado + TND
+7,Hombre,2,Diestro,Familiares con TDAH,No hay,Varios,0.89,0.89,0.89,91,99,83,93,80,48,12,TDAH combinado + TND
+6,Mujer,1,Diestro,Familiares con TDAH,No hay,Varios,0.89,1.0,0.78,87,78,80,79,99,55,15,TDAH combinado + TND
+6,Hombre,1,Diestro,Otros,Embarazo,Personal/social,0.89,0.89,0.89,101,76,82,84,80,45,14,TDAH combinado + TND
+8,Hombre,3,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.89,1.0,0.78,94,78,82,99,99,49,15,TDAH combinado + TND
+6,Hombre,1,Diestro,Familiares con TDAH,Embarazo,No reporta,0.94,0.89,1.0,129,83,99,85,83,45,14,TDAH combinado + TND
+10,Hombre,4,Diestro,Otros,Parto,Varios,1.0,1.0,1.0,80,99,99,99,99,47,28,TDAH combinado + TND
+6,Hombre,1,Diestro,Familiares con TDAH,Parto,Varios,1.0,1.0,1.0,108,85,85,75,99,49,20,TDAH combinado + TND
+8,Hombre,3,Diestro,Otros,No hay,Motricidad fina/gruesa,0.83,0.89,0.78,101,90,83,99,85,55,25,TDAH combinado + TND
+7,Hombre,2,Diestro,Otro trastorno psicopatológico,No hay,Varios,0.67,0.67,0.67,93,90,80,92,76,47,14,TDAH combinado + TND
+6,Hombre,1,Diestro,Familiares con TDAH,Ambos,Varios,0.78,0.89,0.67,83,99,81,99,84,48,15,TDAH combinado + TND
+12,Hombre,7,Diestro,Otros,No hay,No reporta,0.83,0.78,0.89,81,99,80,99,80,47,20,TDAH combinado + TND
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.83,0.78,0.89,96,87,80,93,80,55,11,TDAH combinado + TND
+12,Hombre,7,Diestro,Sin antecedentes,No hay,No reporta,0.94,1.0,0.89,84,91,93,99,94,43,12,TDAH combinado + TND
+7,Hombre,2,Diestro,Sin antecedentes,Embarazo,Personal/social,0.94,0.89,1.0,91,80,91,90,86,45,11,TDAH combinado + TND
+10,Hombre,5,Diestro,Sin antecedentes,Parto,Personal/social,0.94,0.89,1.0,100,93,99,84,93,50,21,TDAH combinado + TND
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.89,0.89,0.89,79,75,93,85,91,51,22,TDAH combinado + TND
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Ambos,Motricidad fina/gruesa,0.89,1.0,0.78,122,90,85,87,99,55,15,TDAH combinado + TND
+9,Hombre,4,Diestro,Familiares con TDAH,Parto,Personal/social,0.89,0.89,0.89,87,99,87,86,89,50,13,TDAH combinado + TND
+8,Hombre,3,Diestro,Otro trastorno psicopatológico,Ambos,Varios,0.67,0.67,0.67,81,90,88,80,75,54,16,TDAH combinado + TND
+10,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,Ambos,Audición/lenguaje,0.89,0.78,1.0,78,99,99,87,78,49,22,TDAH combinado + TND
+8,Hombre,3,Diestro,Otros,No hay,Personal/social,0.89,0.78,1.0,95,88,88,85,77,38,13,TDAH combinado + TND
+11,Hombre,6,Diestro,Familiares con TDAH,Ambos,No reporta,1.0,1.0,1.0,85,89,80,92,99,39,12,TDAH combinado + TND
+7,Hombre,1,Diestro,Otro trastorno psicopatológico,Embarazo,Personal/social,0.67,0.67,0.67,106,96,83,91,76,55,14,TDAH combinado + TND
+12,Hombre,7,Diestro,Familiares con TDAH,Ambos,Audición/lenguaje,0.67,0.67,0.67,96,82,79,88,78,56,23,TDAH combinado + TND
+9,Hombre,4,Diestro,Familiares con TDAH,Parto,Motricidad fina/gruesa,0.89,0.89,0.89,83,99,99,86,92,57,11,TDAH combinado + TND
+12,Hombre,7,Diestro,Otros,No hay,No reporta,0.78,0.67,0.89,88,93,93,79,70,62,19,TDAH combinado + TND
+12,Hombre,5,Diestro,Sin antecedentes,Parto,Personal/social,0.78,0.89,0.67,86,92,78,80,87,54,20,TDAH combinado + TND
+11,Hombre,4,Zurdo,Sin antecedentes,No hay,No reporta,0.83,0.67,1.0,84,99,95,87,79,67,18,TDAH combinado + TND
+12,Hombre,6,Diestro,Otros,No hay,No reporta,0.78,0.89,0.67,91,99,77,87,86,40,30,TDAH combinado + TND
+11,Hombre,5,Diestro,Familiares con TDAH,No hay,Personal/social,0.83,0.89,0.78,81,99,80,89,87,65,23,TDAH combinado + TND
+12,Hombre,5,Diestro,Familiares con TDAH,Embarazo,Personal/social,1.0,1.0,1.0,103,99,99,86,93,64,27,TDAH combinado + TND
+12,Hombre,6,Diestro,Otros,No hay,Varios,0.89,0.89,0.89,88,90,93,99,90,54,11,TDAH combinado + TND
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Varios,1.0,1.0,1.0,79,85,93,99,99,49,14,TDAH combinado + TND
+12,Hombre,7,Diestro,Sin antecedentes,No hay,Varios,0.94,0.89,1.0,90,80,93,87,85,45,22,TDAH combinado + TND
+6,Hombre,1,Diestro,Otros,No hay,Varios,0.78,0.67,0.89,105,96,87,89,80,49,19,TDAH combinado + TND
+6,Hombre,1,Diestro,Otros,Ambos,Varios,0.67,0.67,0.67,104,90,78,75,80,50,18,TDAH combinado + TND
+12,Hombre,7,Diestro,Otros,No hay,Personal/social,0.89,0.78,1.0,87,80,85,96,76,45,10,TDAH combinado + TND
+9,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,Parto,No reporta,0.67,0.67,0.67,95,95,76,91,83,47,12,TDAH combinado + TND
+10,Hombre,5,Diestro,Sin antecedentes,Ambos,Personal/social,0.83,1.0,0.67,115,93,78,94,99,46,12,TDAH combinado + TND
+9,Hombre,4,Diestro,Otros,No hay,No reporta,0.83,1.0,0.67,87,96,81,93,75,45,13,TDAH combinado + TND
+6,Hombre,1,Diestro,Sin antecedentes,Ambos,Varios,0.78,0.67,0.89,94,78,90,95,84,43,16,TDAH combinado + TND
+12,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.67,0.67,0.67,85,80,83,80,87,49,12,TDAH combinado + TND
+12,Hombre,7,Zurdo,Otros,No hay,Motricidad fina/gruesa,0.89,0.89,0.89,86,80,93,97,87,53,13,TDAH combinado + TND
+12,Hombre,7,Diestro,Otros,Embarazo,No reporta,0.83,0.78,0.89,84,99,87,98,78,59,28,TDAH combinado + TND
+12,Hombre,6,Zurdo,Otros,No hay,No reporta,0.78,0.78,0.78,83,80,76,86,80,54,15,TDAH combinado + TND
+7,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.89,0.78,1.0,95,99,93,80,79,57,13,TDAH combinado + TND
+11,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,Parto,Varios,0.67,0.67,0.67,82,99,87,96,74,57,34,TDAH combinado + TND
+12,Mujer,6,Diestro,Sin antecedentes,No hay,No reporta,0.89,1.0,0.78,93,75,77,99,95,56,39,TDAH combinado + TND
+6,Mujer,1,Diestro,Familiares con TDAH,Embarazo,Varios,0.89,0.78,1.0,89,99,99,98,76,57,12,TDAH combinado + TND
+7,Hombre,2,Diestro,Sin antecedentes,Ambos,No reporta,0.78,0.67,0.89,103,85,90,75,76,58,14,TDAH combinado + TND
+11,Mujer,6,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.89,1.0,0.78,78,77,75,85,92,49,20,TDAH combinado + TND
+12,Mujer,6,Diestro,Otro trastorno del neurodesarrollo,Parto,Personal/social,0.78,0.67,0.89,78,90,89,90,79,40,37,TDAH combinado + TND
+6,Mujer,1,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.89,0.89,0.89,101,94,95,85,87,56,17,TDAH combinado + TND
+7,Mujer,2,Diestro,Familiares con TDAH,No hay,No reporta,0.83,0.89,0.78,84,99,77,89,85,43,14,TDAH combinado + TND
+12,Hombre,7,Diestro,Otros,No hay,Motricidad fina/gruesa,0.83,0.89,0.78,79,42,72,65,80,35,7,TDAH combinado + TEAZ
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.94,1.0,0.89,77,80,72,67,90,55,17,TDAH combinado + TEAZ
+12,Hombre,7,Diestro,Otros,No hay,Audición/lenguaje,0.83,1.0,0.67,73,46,93,62,93,62,4,TDAH combinado + TEAZ
+10,Mujer,4,Diestro,Sin antecedentes,Ambos,Varios,0.83,1.0,0.67,82,43,90,58,99,54,6,TDAH combinado + TEAZ
+10,Hombre,5,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,1.0,1.0,1.0,84,47,90,55,93,50,0,TDAH combinado + TEAZ
+8,Hombre,1,Diestro,Otro trastorno psicopatológico,Embarazo,Personal/social,0.67,0.67,0.67,74,51,85,54,99,51,7,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Otro trastorno psicopatológico,Embarazo,Varios,0.89,1.0,0.78,76,54,80,60,80,25,9,TDAH combinado + TEAZ
+11,Hombre,6,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.83,1.0,0.67,74,45,74,59,93,52,2,TDAH combinado + TEAZ
+8,Hombre,2,Diestro,Sin antecedentes,No hay,Personal/social,0.94,1.0,0.89,78,52,80,62,93,55,12,TDAH combinado + TEAZ
+8,Hombre,2,Diestro,Sin antecedentes,No hay,No reporta,0.83,0.78,0.89,89,44,80,60,65,35,4,TDAH combinado + TEAZ
+9,Mujer,3,Zurdo,Sin antecedentes,Parto,No reporta,1.0,1.0,1.0,80,60,93,64,99,50,11,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Familiares con TDAH,Embarazo,No reporta,0.89,0.89,0.89,86,50,82,67,83,61,10,TDAH combinado + TEAZ
+12,Hombre,7,Diestro,Otros,No hay,Motricidad fina/gruesa,0.78,0.89,0.67,73,49,99,65,83,61,7,TDAH combinado + TEAZ
+11,Hombre,4,Diestro,Otros,No hay,No reporta,0.72,0.78,0.67,88,48,76,61,70,65,11,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.94,1.0,0.89,85,70,70,59,99,63,6,TDAH combinado + TEAZ
+7,Hombre,2,Diestro,Otros,Embarazo,Motricidad fina/gruesa,1.0,1.0,1.0,75,77,94,60,99,66,9,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Otros,No hay,Varios,0.83,0.89,0.78,89,55,75,62,93,50,7,TDAH combinado + TEAZ
+11,Hombre,5,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.94,1.0,0.89,75,76,77,64,99,45,6,TDAH combinado + TEAZ
+8,Hombre,3,Zurdo,Familiares con TDAH,Embarazo,No reporta,0.67,0.67,0.67,75,75,96,63,80,63,5,TDAH combinado + TEAZ
+7,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Varios,0.83,0.78,0.89,84,49,85,62,99,60,9,TDAH combinado + TEAZ
+9,Hombre,2,Diestro,Otro trastorno psicopatológico,No hay,Varios,0.89,0.89,0.89,84,47,74,70,99,60,10,TDAH combinado + TEAZ
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,No reporta,0.89,1.0,0.78,73,45,99,63,96,51,6,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Familiares con TDAH,Embarazo,Varios,0.78,0.89,0.67,86,47,78,70,69,60,8,TDAH combinado + TEAZ
+10,Hombre,4,Diestro,Familiares con TDAH,No hay,Varios,0.83,1.0,0.67,78,45,75,60,80,35,5,TDAH combinado + TEAZ
+9,Hombre,4,Diestro,Otro trastorno psicopatológico,Ambos,No reporta,0.94,0.89,1.0,79,45,99,68,89,56,4,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Otros,No hay,Personal/social,0.83,0.89,0.78,78,60,90,70,90,40,7,TDAH combinado + TEAZ
+9,Hombre,4,Zurdo,Otro trastorno psicopatológico,Ambos,Audición/lenguaje,0.83,0.89,0.78,93,49,75,61,89,50,6,TDAH combinado + TEAZ
+12,Mujer,6,Zurdo,Otros,Parto,Varios,0.89,1.0,0.78,76,43,85,65,85,48,7,TDAH combinado + TEAZ
+7,Mujer,2,Diestro,Sin antecedentes,No hay,No reporta,1.0,1.0,1.0,75,54,99,66,99,48,8,TDAH combinado + TEAZ
+6,Mujer,1,Diestro,Otros,No hay,Varios,0.83,0.89,0.78,79,70,90,68,77,50,9,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Otros,Embarazo,Audición/lenguaje,0.83,0.89,0.78,70,44,99,59,79,45,8,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.72,0.78,0.67,84,56,99,60,99,51,7,TDAH combinado + TEAZ
+7,Hombre,2,Zurdo,Familiares con TDAH,Parto,No reporta,0.83,0.89,0.78,82,56,96,68,80,54,9,TDAH combinado + TEAZ
+8,Mujer,3,Zurdo,Sin antecedentes,No hay,Audición/lenguaje,0.83,1.0,0.67,73,60,70,67,99,60,7,TDAH combinado + TEAZ
+11,Hombre,6,Diestro,Otro trastorno psicopatológico,No hay,Personal/social,1.0,1.0,1.0,89,67,93,68,96,55,8,TDAH combinado + TEAZ
+7,Hombre,2,Diestro,Otros,No hay,Personal/social,0.83,1.0,0.67,84,70,85,69,99,45,6,TDAH combinado + TEAZ
+7,Hombre,1,Diestro,Familiares con TDAH,Ambos,Varios,0.78,0.89,0.67,78,72,72,65,85,56,7,TDAH combinado + TEAZ
+6,Mujer,1,Diestro,Familiares con TDAH,Embarazo,Varios,0.78,0.67,0.89,78,50,80,66,85,70,8,TDAH combinado + TEAZ
+9,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.78,0.89,0.67,83,45,70,62,80,45,9,TDAH combinado + TEAZ
+7,Hombre,2,Diestro,Otros,Ambos,Varios,0.94,0.89,1.0,82,55,94,61,85,53,7,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Otros,Ambos,Varios,0.94,0.89,1.0,84,42,99,65,80,47,5,TDAH combinado + TEAZ
+8,Hombre,2,Diestro,Sin antecedentes,Ambos,Varios,0.78,0.78,0.78,85,55,75,60,99,45,7,TDAH combinado + TEAZ
+9,Hombre,4,Diestro,Otros,Ambos,Varios,0.72,0.67,0.78,76,55,71,60,99,55,7,TDAH combinado + TEAZ
+10,Hombre,5,Diestro,Otro trastorno del neurodesarrollo,No hay,Motricidad fina/gruesa,0.83,1.0,0.67,80,48,74,59,99,56,13,TDAH combinado + TEAZ
+8,Mujer,3,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,1.0,1.0,1.0,83,47,95,59,94,57,8,TDAH combinado + TEAZ
+9,Hombre,3,Ambidiestro,Sin antecedentes,Parto,No reporta,0.83,1.0,0.67,80,48,70,68,90,59,9,TDAH combinado + TEAZ
+8,Hombre,1,Diestro,Familiares con TDAH,Ambos,Personal/social,0.83,1.0,0.67,72,47,99,69,93,62,5,TDAH combinado + TEAZ
+11,Hombre,5,Diestro,Familiares con TDAH,No hay,No reporta,0.83,0.89,0.78,81,54,99,68,85,49,6,TDAH combinado + TEAZ
+10,Hombre,5,Diestro,Familiares con TDAH,Ambos,Motricidad fina/gruesa,0.78,0.89,0.67,81,53,93,63,86,61,5,TDAH combinado + TEAZ
+12,Hombre,6,Zurdo,Otro trastorno psicopatológico,No hay,No reporta,0.78,0.89,0.67,71,55,99,67,87,69,3,TDAH combinado + TEAZ
+11,Hombre,5,Diestro,Otros,No hay,No reporta,0.78,0.89,0.67,83,53,99,68,80,63,5,TDAH combinado + TEAZ
+10,Hombre,4,Zurdo,Otros,No hay,Motricidad fina/gruesa,0.89,0.78,1.0,82,50,93,59,99,45,9,TDAH combinado + TEAZ
+8,Hombre,3,Zurdo,Otro trastorno psicopatológico,Embarazo,No reporta,0.83,0.78,0.89,76,54,75,60,75,70,12,TDAH combinado + TEAZ
+9,Hombre,4,Diestro,Familiares con TDAH,Parto,Varios,0.83,1.0,0.67,83,55,99,66,99,60,7,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Familiares con TDAH,Embarazo,Varios,0.83,0.78,0.89,81,55,90,54,99,70,1,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Otro trastorno psicopatológico,Parto,Personal/social,0.72,0.78,0.67,86,41,65,65,80,45,9,TDAH combinado + TEAZ
+9,Hombre,3,Diestro,Sin antecedentes,No hay,Varios,0.94,0.89,1.0,76,46,99,59,81,56,5,TDAH combinado + TEAZ
+7,Hombre,2,Diestro,Otros,No hay,Varios,0.72,0.78,0.67,88,70,91,67,90,30,6,TDAH combinado + TEAZ
+8,Mujer,2,Diestro,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.89,0.89,0.89,78,45,80,66,84,55,5,TDAH combinado + TEAZ
+10,Hombre,3,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,0.78,0.78,0.78,73,43,85,69,99,47,12,TDAH combinado + TEAZ
+10,Mujer,4,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,1.0,1.0,1.0,83,70,99,70,92,49,6,TDAH combinado + TEAZ
+8,Mujer,2,Zurdo,Otro trastorno del neurodesarrollo,No hay,Varios,0.78,0.89,0.67,85,70,85,69,80,57,7,TDAH combinado + TEAZ
+11,Mujer,5,Zurdo,Familiares con TDAH,No hay,No reporta,0.94,1.0,0.89,83,49,94,68,99,49,8,TDAH combinado + TEAZ
+8,Mujer,3,Zurdo,Sin antecedentes,Parto,No reporta,0.83,0.78,0.89,89,49,77,68,76,40,7,TDAH combinado + TEAZ
+8,Mujer,2,Diestro,Familiares con TDAH,Parto,Audición/lenguaje,0.72,0.78,0.67,81,50,85,70,80,45,3,TDAH combinado + TEAZ
+10,Mujer,3,Diestro,Sin antecedentes,Ambos,No reporta,1.0,1.0,1.0,70,52,99,69,99,47,9,TDAH combinado + TEAZ
+8,Hombre,2,Diestro,Otros,No hay,Audición/lenguaje,1.0,1.0,1.0,73,40,73,75,99,49,4,TDAH combinado + TEAZ
+9,Hombre,3,Diestro,Familiares con TDAH,No hay,Varios,0.78,0.89,0.67,79,54,72,65,87,62,7,TDAH combinado + TEAZ
+7,Hombre,2,Diestro,Otros,Parto,Varios,1.0,1.0,1.0,75,55,95,60,99,43,4,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Otros,No hay,Varios,0.83,0.89,0.78,88,55,90,60,85,60,11,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Otros,No hay,Audición/lenguaje,0.89,1.0,0.78,80,56,90,64,99,45,3,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Varios,0.78,0.89,0.67,83,47,70,60,84,59,4,TDAH combinado + TEAZ
+7,Hombre,1,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.72,0.78,0.67,82,58,90,61,93,55,7,TDAH combinado + TEAZ
+9,Hombre,4,Zurdo,Sin antecedentes,Parto,No reporta,0.78,0.89,0.67,77,61,93,64,81,45,4,TDAH combinado + TEAZ
+8,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Personal/social,0.94,1.0,0.89,71,45,72,60,92,47,0,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Varios,0.83,0.89,0.78,81,70,80,62,87,65,7,TDAH combinado + TEAZ
+8,Hombre,2,Diestro,Familiares con TDAH,Embarazo,Audición/lenguaje,0.94,1.0,0.89,86,55,74,65,99,39,12,TDAH combinado + TEAZ
+7,Hombre,1,Diestro,Otros,No hay,Varios,0.78,0.89,0.67,70,56,85,60,85,63,5,TDAH combinado + TEAZ
+8,Mujer,4,Zurdo,Otros,Embarazo,Motricidad fina/gruesa,0.89,0.89,0.89,78,59,78,65,87,60,7,TDAH combinado + TEAZ
+8,Hombre,3,Diestro,Otros,Embarazo,Varios,0.89,0.78,1.0,81,70,93,64,93,43,9,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Otros,No hay,No reporta,0.78,0.89,0.67,78,55,90,71,88,35,9,TDAH combinado + TEAZ
+9,Mujer,3,Zurdo,Otro trastorno del neurodesarrollo,No hay,Audición/lenguaje,0.94,0.89,1.0,83,70,94,65,86,50,8,TDAH combinado + TEAZ
+10,Mujer,4,Diestro,Otros,Embarazo,Personal/social,0.89,0.89,0.89,82,40,79,67,83,65,7,TDAH combinado + TEAZ
+9,Hombre,3,Diestro,Sin antecedentes,Embarazo,Varios,0.78,0.89,0.67,78,60,85,69,85,53,4,TDAH combinado + TEAZ
+7,Hombre,1,Zurdo,Otro trastorno psicopatológico,Parto,Audición/lenguaje,0.89,1.0,0.78,78,55,96,68,93,70,1,TDAH combinado + TEAZ
+6,Hombre,1,Diestro,Sin antecedentes,No hay,Varios,0.78,0.78,0.78,89,42,75,61,84,75,11,TDAH combinado + TEA
+6,Hombre,1,Diestro,Otros,Embarazo,Varios,0.67,0.67,0.67,86,55,80,76,69,90,15,TDAH combinado + TEA
+6,Hombre,1,Diestro,Otro trastorno psicopatológico,Embarazo,Varios,0.67,0.67,0.67,102,53,85,75,67,75,14,TDAH combinado + TEA
+12,Hombre,6,Diestro,Otro trastorno psicopatológico,Embarazo,Personal/social,0.78,0.78,0.78,98,54,99,64,77,80,24,TDAH combinado + TEA
+7,Hombre,2,Diestro,Sin antecedentes,Parto,Varios,1.0,1.0,1.0,108,55,90,75,99,84,21,TDAH combinado + TEA
+7,Hombre,1,Zurdo,Sin antecedentes,Ambos,Varios,0.89,1.0,0.78,104,49,99,64,99,96,14,TDAH combinado + TEA
+12,Hombre,7,Diestro,Otro trastorno psicopatológico,No hay,Varios,0.89,1.0,0.78,96,45,99,65,80,93,16,TDAH combinado + TEA
+9,Hombre,3,Diestro,Otro trastorno del neurodesarrollo,No hay,Varios,0.83,1.0,0.67,87,48,93,63,99,80,10,TDAH combinado + TEA
+6,Hombre,1,Diestro,Sin antecedentes,Parto,Varios,0.78,0.67,0.89,108,55,80,75,76,92,17,TDAH combinado + TEA
+8,Hombre,3,Diestro,Sin antecedentes,No hay,Varios,0.89,1.0,0.78,97,45,77,64,93,75,23,TDAH combinado + TEA
+7,Hombre,1,Diestro,Sin antecedentes,Embarazo,Varios,0.83,1.0,0.67,108,43,70,59,80,75,12,TDAH combinado + TEA
+11,Hombre,5,Diestro,Otros,No hay,Motricidad fina/gruesa,0.83,1.0,0.67,89,47,72,65,99,96,19,TDAH combinado + TEA
+7,Hombre,1,Diestro,Sin antecedentes,No hay,Varios,0.94,1.0,0.89,92,50,87,67,93,82,13,TDAH combinado + TEA
+12,Hombre,6,Diestro,Familiares con TDAH,Parto,Varios,0.94,1.0,0.89,112,54,86,70,85,99,14,TDAH combinado + TEA
+12,Hombre,7,Diestro,Otros,No hay,Varios,0.67,0.67,0.67,96,52,73,57,77,96,37,TDAH combinado + TEA
+12,Hombre,6,Diestro,Sin antecedentes,Embarazo,Audición/lenguaje,0.89,0.89,0.89,78,43,84,65,82,96,21,TDAH combinado + TEA
+7,Hombre,1,Diestro,Otros,Embarazo,Varios,0.83,0.89,0.78,116,40,75,58,83,81,20,TDAH combinado + TEA
+12,Hombre,7,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.72,0.67,0.78,108,54,79,66,78,99,26,TDAH combinado + TEA
+9,Hombre,3,Zurdo,Otros,Parto,Personal/social,0.67,0.67,0.67,80,54,75,75,79,99,12,TDAH combinado + TEA
+11,Mujer,6,Diestro,Familiares con TDAH,Embarazo,Personal/social,0.67,0.67,0.67,96,55,70,64,79,99,25,TDAH combinado + TEA
+11,Hombre,6,Zurdo,Familiares con TDAH,Ambos,Motricidad fina/gruesa,0.89,1.0,0.78,98,30,78,55,80,85,30,TDAH combinado + TEA
+9,Hombre,4,Diestro,Otros,Embarazo,Varios,0.94,1.0,0.89,100,54,83,75,99,93,15,TDAH combinado + TEA
+7,Hombre,1,Diestro,Sin antecedentes,No hay,Audición/lenguaje,0.89,0.78,1.0,97,56,99,67,75,84,15,TDAH combinado + TEA
+12,Hombre,4,Diestro,Otro trastorno del neurodesarrollo,No hay,Personal/social,0.67,0.67,0.67,80,49,71,66,80,93,10,TDAH combinado + TEA
+8,Hombre,3,Zurdo,Sin antecedentes,No hay,No reporta,0.22,0.33,0.11,100,51,35,40,30,40,9,Desarrollo típico
+10,Mujer,5,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.22,0.33,0.11,100,35,35,30,45,30,30,Desarrollo típico
+12,Mujer,6,Diestro,Sin antecedentes,No hay,No reporta,0.11,0.11,0.11,89,27,40,20,35,35,21,Desarrollo típico
+6,Hombre,1,Diestro,Familiares con TDAH,Parto,No reporta,0.22,0.22,0.22,100,50,45,20,40,45,15,Desarrollo típico
+6,Mujer,1,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,121,45,40,43,40,40,18,Desarrollo típico
+12,Hombre,7,Diestro,Familiares con TDAH,No hay,Motricidad fina/gruesa,0.11,0.22,0.0,103,35,40,45,29,38,25,Desarrollo típico
+6,Hombre,1,Diestro,Otro trastorno psicopatológico,Parto,Varios,0.11,0.11,0.11,97,40,39,40,20,45,10,Desarrollo típico
+6,Hombre,1,Diestro,Sin antecedentes,Ambos,Personal/social,0.28,0.22,0.33,124,45,45,20,25,30,13,Desarrollo típico
+7,Hombre,2,Ambidiestro,Sin antecedentes,Parto,Audición/lenguaje,0.11,0.11,0.11,101,40,40,50,20,40,20,Desarrollo típico
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,83,45,40,30,20,30,17,Desarrollo típico
+9,Hombre,2,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.17,0.22,0.11,131,40,45,20,35,35,10,Desarrollo típico
+12,Mujer,6,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.17,0.22,0.11,97,40,43,20,29,35,32,Desarrollo típico
+9,Mujer,3,Diestro,Familiares con TDAH,No hay,Varios,0.28,0.33,0.22,80,45,30,35,50,25,9,Desarrollo típico
+7,Hombre,1,Zurdo,Otro trastorno del neurodesarrollo,Ambos,Audición/lenguaje,0.17,0.0,0.33,132,43,47,49,49,47,29,Desarrollo típico
+12,Hombre,6,Zurdo,Sin antecedentes,Ambos,Motricidad fina/gruesa,0.11,0.0,0.22,108,42,35,47,41,39,23,Desarrollo típico
+9,Mujer,3,Zurdo,Otro trastorno del neurodesarrollo,No hay,No reporta,0.06,0.11,0.0,84,46,47,42,40,43,20,Desarrollo típico
+8,Hombre,2,Zurdo,Sin antecedentes,No hay,No reporta,0.33,0.22,0.44,105,45,41,42,52,30,18,Desarrollo típico
+12,Hombre,7,Zurdo,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,126,41,43,38,49,38,16,Desarrollo típico
+11,Mujer,5,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,115,46,38,51,46,43,17,Desarrollo típico
+8,Hombre,2,Diestro,Otros,Embarazo,No reporta,0.22,0.33,0.11,129,48,46,44,51,47,15,Desarrollo típico
+12,Hombre,6,Diestro,Sin antecedentes,Embarazo,Audición/lenguaje,0.06,0.11,0.0,127,45,45,48,51,39,18,Desarrollo típico
+11,Hombre,5,Diestro,Otro trastorno del neurodesarrollo,Embarazo,Motricidad fina/gruesa,0.22,0.11,0.33,112,43,43,42,52,40,17,Desarrollo típico
+8,Hombre,2,Diestro,Sin antecedentes,No hay,No reporta,0.33,0.22,0.44,135,46,38,38,44,43,21,Desarrollo típico
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,Audición/lenguaje,0.28,0.22,0.33,133,43,45,48,42,43,19,Desarrollo típico
+9,Mujer,3,Diestro,Familiares con TDAH,Parto,No reporta,0.28,0.22,0.33,87,44,43,50,46,46,14,Desarrollo típico
+7,Hombre,1,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.22,0.22,0.22,117,41,39,52,48,42,13,Desarrollo típico
+6,Hombre,1,Diestro,Otros,No hay,Audición/lenguaje,0.17,0.11,0.22,120,39,38,44,39,44,10,Desarrollo típico
+8,Hombre,2,Diestro,Otros,Parto,No reporta,0.22,0.33,0.11,126,46,39,42,38,45,12,Desarrollo típico
+8,Hombre,2,Diestro,Familiares con TDAH,Parto,No reporta,0.17,0.22,0.11,113,40,46,45,48,42,14,Desarrollo típico
+6,Hombre,1,Diestro,Familiares con TDAH,Ambos,No reporta,0.17,0.22,0.11,128,42,41,39,53,24,12,Desarrollo típico
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.17,0.22,0.11,103,44,38,40,47,45,10,Desarrollo típico
+12,Hombre,7,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,109,46,44,47,45,43,9,Desarrollo típico
+7,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.44,0.0,117,46,47,43,47,41,18,Desarrollo típico
+9,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.44,0.0,125,44,47,42,47,25,19,Desarrollo típico
+10,Hombre,5,Diestro,Sin antecedentes,No hay,No reporta,0.28,0.33,0.22,115,38,38,46,40,48,21,Desarrollo típico
+11,Mujer,6,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.22,0.33,0.11,117,43,42,42,48,44,20,Desarrollo típico
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,113,41,38,54,53,40,19,Desarrollo típico
+7,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.17,0.22,0.11,128,43,40,43,48,49,16,Desarrollo típico
+12,Hombre,6,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.22,0.22,0.22,133,48,48,51,45,44,13,Desarrollo típico
+6,Mujer,1,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.11,0.11,0.11,117,48,45,47,50,49,11,Desarrollo típico
+12,Hombre,7,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.17,0.0,0.33,118,45,38,48,49,45,17,Desarrollo típico
+7,Mujer,1,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.11,0.0,0.22,111,46,49,46,40,28,15,Desarrollo típico
+11,Hombre,6,Zurdo,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,124,38,47,43,53,45,14,Desarrollo típico
+7,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.22,0.22,0.22,101,45,48,44,51,37,9,Desarrollo típico
+7,Hombre,1,Diestro,Familiares con TDAH,No hay,No reporta,0.17,0.11,0.22,141,47,46,41,48,49,17,Desarrollo típico
+10,Mujer,4,Diestro,Sin antecedentes,Parto,No reporta,0.11,0.11,0.11,108,41,48,46,49,39,18,Desarrollo típico
+11,Mujer,5,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,125,46,45,48,47,44,11,Desarrollo típico
+8,Hombre,3,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.17,0.22,0.11,118,42,49,38,42,49,14,Desarrollo típico
+11,Hombre,6,Diestro,Sin antecedentes,Embarazo,No reporta,0.28,0.44,0.11,115,49,49,38,50,46,16,Desarrollo típico
+12,Hombre,7,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,128,49,41,39,46,43,17,Desarrollo típico
+11,Hombre,6,Diestro,Sin antecedentes,No hay,No reporta,0.28,0.44,0.11,141,42,42,47,52,45,14,Desarrollo típico
+8,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,109,40,43,47,43,42,16,Desarrollo típico
+10,Hombre,4,Zurdo,Sin antecedentes,No hay,No reporta,0.17,0.33,0.0,131,43,44,42,42,47,17,Desarrollo típico
+8,Hombre,2,Diestro,Sin antecedentes,Parto,No reporta,0.22,0.44,0.0,131,45,46,51,41,44,14,Desarrollo típico
+11,Mujer,5,Diestro,Sin antecedentes,Embarazo,No reporta,0.28,0.44,0.11,109,42,27,42,52,38,13,Desarrollo típico
+6,Hombre,1,Diestro,Familiares con TDAH,No hay,No reporta,0.17,0.22,0.11,117,44,38,46,46,50,18,Desarrollo típico
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.17,0.22,0.11,86,45,47,48,43,41,15,Desarrollo típico
+7,Mujer,2,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.28,0.22,0.33,107,41,44,43,39,49,17,Desarrollo típico
+10,Hombre,5,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,108,38,38,49,27,38,15,Desarrollo típico
+7,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.33,0.22,0.44,112,40,43,42,47,42,16,Desarrollo típico
+8,Hombre,2,Diestro,Sin antecedentes,Embarazo,No reporta,0.17,0.22,0.11,120,49,44,44,43,41,17,Desarrollo típico
+9,Mujer,3,Diestro,Sin antecedentes,No hay,No reporta,0.28,0.22,0.33,119,43,48,44,43,49,13,Desarrollo típico
+8,Hombre,2,Diestro,Sin antecedentes,Parto,No reporta,0.22,0.44,0.0,143,43,48,47,53,42,14,Desarrollo típico
+10,Hombre,5,Diestro,Familiares con TDAH,No hay,No reporta,0.22,0.44,0.0,106,40,45,50,44,48,15,Desarrollo típico
+8,Hombre,2,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.22,0.22,0.22,102,46,41,41,40,47,12,Desarrollo típico
+9,Hombre,4,Diestro,Sin antecedentes,No hay,No reporta,0.17,0.22,0.11,137,47,49,38,46,46,13,Desarrollo típico
+10,Mujer,4,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.22,0.22,0.22,123,48,42,47,43,41,14,Desarrollo típico
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.28,0.22,0.33,117,40,39,38,53,44,15,Desarrollo típico
+12,Hombre,7,Diestro,Sin antecedentes,No hay,No reporta,0.17,0.22,0.11,85,45,42,44,53,40,16,Desarrollo típico
+11,Hombre,6,Zurdo,Sin antecedentes,Parto,No reporta,0.22,0.22,0.22,100,45,42,47,42,49,14,Desarrollo típico
+8,Hombre,2,Diestro,Familiares con TDAH,No hay,No reporta,0.28,0.11,0.44,119,43,44,38,38,48,15,Desarrollo típico
+6,Hombre,1,Diestro,Otro trastorno del neurodesarrollo,No hay,No reporta,0.11,0.11,0.11,128,39,43,40,44,46,18,Desarrollo típico
+9,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.11,0.33,130,46,43,43,44,40,14,Desarrollo típico
+6,Hombre,1,Diestro,Sin antecedentes,No hay,No reporta,0.17,0.22,0.11,135,38,49,43,46,38,16,Desarrollo típico
+9,Hombre,4,Diestro,Sin antecedentes,Embarazo,No reporta,0.28,0.44,0.11,106,40,49,44,51,43,17,Desarrollo típico
+9,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,0.28,0.44,0.11,114,40,48,46,43,44,15,Desarrollo típico
+8,Mujer,2,Diestro,Sin antecedentes,No hay,No reporta,0.28,0.22,0.33,102,42,43,47,42,41,19,Desarrollo típico
+10,Hombre,4,Diestro,Sin antecedentes,No hay,No reporta,0.11,0.22,0.0,144,48,42,38,40,41,18,Desarrollo típico
+11,Mujer,5,Diestro,Sin antecedentes,No hay,No reporta,0.17,0.11,0.22,118,45,44,50,50,43,17,Desarrollo típico
+8,Hombre,2,Diestro,Sin antecedentes,Parto,No reporta,0.17,0.22,0.11,131,34,44,43,48,49,15,Desarrollo típico
+11,Hombre,5,Zurdo,Sin antecedentes,No hay,No reporta,0.28,0.22,0.33,114,48,49,42,51,38,9,Desarrollo típico
+7,Hombre,2,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,121,46,44,49,39,43,11,Desarrollo típico
+11,Hombre,6,Zurdo,Sin antecedentes,No hay,No reporta,0.11,0.11,0.11,140,38,39,42,43,49,17,Desarrollo típico
+10,Mujer,5,Diestro,Familiares con TDAH,No hay,No reporta,0.17,0.22,0.11,108,49,41,40,53,38,19,Desarrollo típico
+10,Hombre,4,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.33,0.11,109,32,48,38,48,44,20,Desarrollo típico
+10,Hombre,5,Zurdo,Sin antecedentes,Embarazo,No reporta,0.06,0.11,0.0,111,46,40,50,53,45,21,Desarrollo típico
+9,Hombre,3,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.33,0.11,117,45,39,38,51,45,20,Desarrollo típico
+9,Mujer,3,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.33,0.11,101,47,44,38,50,49,18,Desarrollo típico
+12,Mujer,7,Diestro,Sin antecedentes,No hay,No reporta,0.11,0.11,0.11,84,47,47,38,43,45,17,Desarrollo típico
+6,Mujer,1,Zurdo,Familiares con TDAH,No hay,No reporta,0.17,0.11,0.22,109,45,45,42,45,42,16,Desarrollo típico
+6,Mujer,1,Diestro,Familiares con TDAH,No hay,No reporta,0.11,0.22,0.0,128,42,46,38,48,43,16,Desarrollo típico
+12,Mujer,6,Zurdo,Familiares con TDAH,No hay,No reporta,0.22,0.44,0.0,124,46,38,49,38,45,17,Desarrollo típico
+10,Mujer,5,Diestro,Sin antecedentes,No hay,No reporta,0.06,0.11,0.0,128,38,38,41,50,41,14,Desarrollo típico
+9,Hombre,4,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,116,38,45,39,45,38,13,Desarrollo típico
+8,Hombre,3,Diestro,Sin antecedentes,Embarazo,Motricidad fina/gruesa,0.28,0.33,0.22,120,50,43,46,47,41,17,Desarrollo típico
+11,Hombre,6,Diestro,Sin antecedentes,Parto,Motricidad fina/gruesa,0.11,0.0,0.22,120,42,47,39,48,44,19,Desarrollo típico
+10,Hombre,5,Zurdo,Sin antecedentes,No hay,Motricidad fina/gruesa,0.11,0.0,0.22,114,47,39,43,45,41,17,Desarrollo típico
+7,Hombre,2,Diestro,Sin antecedentes,No hay,No reporta,0.28,0.11,0.44,118,30,38,48,50,42,15,Desarrollo típico
+11,Hombre,5,Diestro,Familiares con TDAH,No hay,No reporta,0.22,0.33,0.11,121,49,27,40,52,42,9,Desarrollo típico
+10,Mujer,4,Diestro,Sin antecedentes,No hay,No reporta,0.17,0.22,0.11,123,42,38,42,40,39,12,Desarrollo típico
+7,Mujer,2,Diestro,Sin antecedentes,No hay,No reporta,0.11,0.11,0.11,104,43,49,47,46,40,15,Desarrollo típico
+10,Mujer,4,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,80,46,48,45,43,43,17,Desarrollo típico
+10,Hombre,4,Diestro,Sin antecedentes,No hay,No reporta,0.06,0.0,0.11,101,44,43,49,46,46,11,Desarrollo típico
+10,Hombre,4,Diestro,Sin antecedentes,Parto,No reporta,0.28,0.33,0.22,102,50,46,44,50,45,10,Desarrollo típico
+10,Hombre,5,Diestro,Otro trastorno del neurodesarrollo,Embarazo,No reporta,0.22,0.22,0.22,123,45,38,45,54,39,14,Desarrollo típico
+11,Hombre,5,Diestro,Sin antecedentes,Parto,No reporta,0.17,0.11,0.22,106,46,41,46,47,45,17,Desarrollo típico
+10,Hombre,4,Diestro,Sin antecedentes,No hay,Motricidad fina/gruesa,0.22,0.44,0.0,134,43,48,43,46,47,14,Desarrollo típico
+7,Mujer,2,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.33,0.11,113,50,38,39,48,40,15,Desarrollo típico
+10,Mujer,4,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.22,0.22,100,38,45,52,46,46,17,Desarrollo típico
+10,Mujer,4,Zurdo,Sin antecedentes,Embarazo,No reporta,0.22,0.44,0.0,107,43,45,48,42,38,15,Desarrollo típico
+8,Hombre,2,Diestro,Otro trastorno psicopatológico,No hay,No reporta,0.28,0.22,0.33,142,39,47,38,46,38,10,Desarrollo típico
+12,Hombre,6,Diestro,Sin antecedentes,No hay,No reporta,0.22,0.11,0.33,109,48,38,40,53,46,13,Desarrollo típico

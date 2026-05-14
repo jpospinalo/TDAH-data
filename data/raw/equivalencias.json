@@ -1,0 +1,228 @@
+{
+  "Carpetas": [
+    {
+      "codigo": "",
+      "etiqueta": "TDAH niños (hasta los 17 años)",
+      "tipo": "categoria",
+      "notas": ""
+    },
+    {
+      "codigo": "",
+      "etiqueta": "TDAH 18 - 26",
+      "tipo": "categoria",
+      "notas": ""
+    },
+    {
+      "codigo": "",
+      "etiqueta": "TDAH de 27 en adelante",
+      "tipo": "categoria",
+      "notas": ""
+    }
+  ],
+  "SEXO": [
+    {
+      "codigo": 1,
+      "etiqueta": "Hombre",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 2,
+      "etiqueta": "Mujer",
+      "tipo": "equivalencia",
+      "notas": ""
+    }
+  ],
+  "LATERALIDAD": [
+    {
+      "codigo": 1,
+      "etiqueta": "Diestro",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 2,
+      "etiqueta": "Zurdo",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 3,
+      "etiqueta": "Ambidiestro",
+      "tipo": "equivalencia",
+      "notas": ""
+    }
+  ],
+  "ANTECEDENTES FAMILIARES": [
+    {
+      "codigo": 0,
+      "etiqueta": "Sin antecedentes",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 1,
+      "etiqueta": "Familiares con TDAH",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 2,
+      "etiqueta": "Otro trastorno del neurodesarrollo",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 3,
+      "etiqueta": "Otro trastorno psicopatológico",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 4,
+      "etiqueta": "Otros",
+      "tipo": "equivalencia",
+      "notas": ""
+    }
+  ],
+  "RETRASOS EN EL DESARROLLO": [
+    {
+      "codigo": 0,
+      "etiqueta": "No reporta",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 1,
+      "etiqueta": "Motricidad fina/gruesa",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 2,
+      "etiqueta": "Audición/lenguaje",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 3,
+      "etiqueta": "Personal/social",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 4,
+      "etiqueta": "Varios",
+      "tipo": "equivalencia",
+      "notas": ""
+    }
+  ],
+  "Diagnóstico 1": [
+    {
+      "codigo": 1,
+      "etiqueta": "TDAH inatento",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 2,
+      "etiqueta": "TDAH hiperactivo/impulsivo",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 3,
+      "etiqueta": "TDAH combinado",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 4,
+      "etiqueta": "TDAH indeterminado",
+      "tipo": "equivalencia",
+      "notas": ""
+    }
+  ],
+  "Diagnóstico 2": [
+    {
+      "codigo": 0,
+      "etiqueta": "No hay",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 1,
+      "etiqueta": "Trastornos de conducta",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 2,
+      "etiqueta": "Trastorno específico del aprendizaje",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 3,
+      "etiqueta": "Autismo",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 4,
+      "etiqueta": "Otros trastornos en salud mental",
+      "tipo": "equivalencia",
+      "notas": ""
+    }
+  ],
+  "ANTECEDENTES OBSTETRICOS": [
+    {
+      "codigo": 0,
+      "etiqueta": "No hay",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 1,
+      "etiqueta": "Embarazo",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 2,
+      "etiqueta": "Parto",
+      "tipo": "equivalencia",
+      "notas": ""
+    },
+    {
+      "codigo": 3,
+      "etiqueta": "Ambos",
+      "tipo": "equivalencia",
+      "notas": ""
+    }
+  ],
+  "INDICE INATENCIÓN": [
+    {
+      "codigo": "",
+      "etiqueta": "6 o más síntomas",
+      "tipo": "criterio",
+      "notas": "Criterio indicado en la imagen"
+    }
+  ],
+  "INDICE COMBINADO": [
+    {
+      "codigo": "",
+      "etiqueta": "6 o más síntomas en ambos",
+      "tipo": "criterio",
+      "notas": "Criterio indicado en la imagen"
+    }
+  ],
+  "INDICE HIPERACTIVIDAD": [
+    {
+      "codigo": "",
+      "etiqueta": "6 o más síntomas",
+      "tipo": "criterio",
+      "notas": "Criterio indicado en la imagen"
+    }
+  ]
+}
