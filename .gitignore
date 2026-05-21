@@ -1,8 +1,8 @@
-# 1) Entorno virtual
+# ── Entorno virtual ───────────────────────────────────────────────────────────
 .venv/
 venv/
 
-# 2) Cachés y archivos temporales de Python
+# ── Cachés Python ─────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
@@ -13,25 +13,24 @@ dist/
 build/
 .eggs/
 
-# 3) Configuración de IDE / editor
+# ── IDE / editor ──────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# 4) Datos del RAG (no subir PDFs ni artefactos generados)
+# ── Archivos temporales de Word/Office (~$*.docx) ────────────────────────────
+~$*
 
-
-# 5) Configuración sensible / secretos
+# ── Configuración sensible ────────────────────────────────────────────────────
 .env
 *.pem
 *.key
 *.crt
 
-# 6) Archivos de sistema
+# ── Sistema ───────────────────────────────────────────────────────────────────
 .DS_Store
-<<<<<<< HEAD
 Thumbs.db
-=======
-Thumbs.db
->>>>>>> ddb41b3 (chore: add license and gitignore, update raw dataset)
+
+# ── Checkpoints de Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
