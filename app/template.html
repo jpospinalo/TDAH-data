@@ -1,8 +1,6 @@
 <title>Perfil TDAH</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style id="fonts">/*__FONTS__*/</style>
 <style>
 /* Layout: the case record sits directly on the page; the model's reading lives in one quiet tinted panel. No nested boxes. */
 :root{
@@ -112,6 +110,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 
 /* Reading panel */
 .reading{background:var(--panel);border-radius:20px;padding:28px 30px 22px;display:flex;flex-direction:column;gap:22px}
+.verdict .eyebrow{display:block;line-height:1.4}
 .verdict{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;align-items:end}
 .verdict h2{font-family:var(--f-display);font-weight:750;font-size:clamp(1.75rem,2.4vw,2.4rem);line-height:1.05;letter-spacing:-.015em;margin:8px 0 6px;text-wrap:balance}
 .comorb{color:var(--ink-2);font-size:1.02rem}
@@ -125,7 +124,7 @@ input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;bac
 .verdict.nc h2,.verdict.oor h2{color:var(--risk)}
 .duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .opt{background:var(--raise);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.opt .eyebrow{font-size:.68rem}
+.opt .eyebrow{font-size:.72rem}
 .opt b{font-family:var(--f-display);font-weight:650;font-size:1.12rem;line-height:1.2}
 .opt .co{font-size:.88rem;color:var(--ink-2)}
 .opt .n{font-family:var(--f-data);font-size:1.6rem;margin-top:6px}
@@ -280,7 +279,7 @@ body.present .intro{display:none!important}
 .overlay{position:fixed;inset:0;z-index:40;background:color-mix(in srgb,var(--ink) 40%,transparent);display:flex;justify-content:flex-end}
 .sheet{width:min(620px,100%);height:100%;overflow:auto;background:var(--page);
   padding:calc(26px + env(safe-area-inset-top,0px)) max(28px,env(safe-area-inset-right,0px)) calc(32px + env(safe-area-inset-bottom,0px)) 32px}
-.sheet header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.sheet .sheethead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .sheet h2{font-family:var(--f-display);font-weight:750;font-size:1.6rem;margin:6px 0 0;letter-spacing:-.01em}
 .sheet h3{font-family:var(--f-display);font-weight:650;font-size:1.02rem;margin:28px 0 8px}
 .sheet p,.sheet li{color:var(--ink-2);max-width:62ch}
@@ -356,6 +355,44 @@ body.present .foot .short{display:inline}
 @media (max-width:1039px){body.present .grid{grid-template-columns:minmax(0,1fr)}}
 #presentBtn[aria-pressed="true"]{color:var(--accent)}
 
+/* Phones: one column of reading, header actions on one line, all tabs visible */
+@media (max-width:600px){
+  .brand{align-items:flex-start} .brand>svg{margin-top:2px}
+  #presentBtn{display:none}
+  .examples{display:grid;grid-template-columns:1fr 1fr;gap:6px;overflow:visible}
+  .ex{display:block;padding:10px 12px;font-size:.88rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left} .ex .spark{display:none}
+  .ex .warn{display:inline-block;margin-right:6px;vertical-align:1px}
+  .ex b{margin-right:5px} .ex{padding-inline:10px}
+}
+@media (max-width:400px){
+  .ex .sub{font-size:.8rem} .ex{padding-inline:8px} .ex .warn{margin-right:4px} .ex b{margin-right:4px}
+  .examples select{grid-column:1/-1;width:100%;text-align:left}
+  .verdict{grid-template-columns:minmax(0,1fr);align-items:start}
+  .pct{text-align:left;display:flex;align-items:baseline;gap:10px} .pct .c{margin-top:0}
+  .record h2{flex-wrap:wrap;row-gap:2px}
+}
+@media (max-width:480px){
+  #tabsBlock .tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;border-bottom:0;overflow:visible}
+  #tabsBlock .tabs button{padding:10px 8px;margin:0;border:1px solid var(--line);border-radius:10px;text-align:center;white-space:normal}
+  #tabsBlock .tabs button[aria-selected="true"]{background:var(--raise);border-color:var(--ink-2)}
+}
+/* Touch screens: targets of about 44 px */
+@media (pointer:coarse){
+  .link,.ex,.examples select,.intro .x{min-height:44px}
+  .intro .x{width:44px}
+  .mbar a{padding:12px 8px;margin:-12px -8px}
+  #tabsBlock .tabs button{min-height:44px}
+  .gtabs button{padding-top:12px}
+  .golink{min-height:40px;display:inline-flex;align-items:center}
+  .intro .golink{min-height:0;display:inline}
+  .stepper button{width:40px;height:40px}
+  .seg button{min-height:42px}
+  .missing button{min-height:40px}
+  .scale input[type=number]{min-height:40px}
+  input[type=range]{height:36px}
+  input[type=range]::-webkit-slider-thumb{width:24px;height:24px;margin-top:-10px}
+  input[type=range]::-moz-range-thumb{width:22px;height:22px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @keyframes fadein{from{opacity:.35}to{opacity:1}}
 .flash .verdict,.flash .status{animation:fadein .4s ease-out}
@@ -381,6 +418,7 @@ body.present .foot .short{display:inline}
       <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="7.2" y="7" width="1.6" height="4.6" rx=".8" fill="currentColor"/><circle cx="8" cy="4.8" r="1" fill="currentColor"/></svg>Guía</button>
   </header>
 
+  <main id="main">
   <div class="intro" id="intro" hidden><p>Prototipo de investigación para apoyar la evaluación clínica: sugiere una categoría a partir de 14 datos del caso. Prueba los ejemplos o <button type="button" class="golink" id="introGuide">mira cómo se usa</button>.</p><button type="button" class="x" id="introClose" aria-label="Cerrar este aviso">×</button></div>
 
   <nav class="examples" aria-label="Casos de ejemplo">
@@ -443,7 +481,7 @@ body.present .foot .short{display:inline}
         <div class="verdict" id="verdict">
           <div>
             <span class="eyebrow" id="vEyebrow">Sugerencia del modelo para revisión clínica</span>
-            <h2 id="vTitle">—</h2>
+            <h2 id="vTitle">Cargando el modelo…</h2>
             <div class="comorb" id="vComorb"></div>
           </div>
           <div class="pct" id="vPctBox"><div class="n" id="vPct">—</div><div class="c">puntaje del modelo</div></div>
@@ -508,16 +546,17 @@ body.present .foot .short{display:inline}
       <p class="foot"><span class="long">Sugerencia de un modelo con validación interna (875 casos, un centro). No es un diagnóstico: la decisión es del profesional.</span><span class="short">Validación interna (875 casos, un centro). No es un diagnóstico.</span></p>
     </aside>
   </div>
+  </main>
 </div>
 
-<div class="mbar" id="mbar"><span class="t" id="mTitle">—</span><span class="p" id="mPct"></span><a href="#reading">Ver</a></div>
+<aside class="mbar" id="mbar" aria-label="Resumen del resultado"><span class="t" id="mTitle">Cargando…</span><span class="p" id="mPct"></span><a href="#reading">Ver</a></aside>
 
 <div class="overlay" id="about" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
-    <header>
+    <div class="sheethead">
       <div><span class="eyebrow">Perfil TDAH · prototipo de investigación</span><h2 id="aboutTitle">Guía de uso</h2></div>
       <button class="link" type="button" id="aboutClose">Cerrar</button>
-    </header>
+    </div>
     <div class="tabs gtabs" role="tablist" aria-label="Secciones de la guía">
       <button type="button" role="tab" id="g-t-use" aria-controls="g-use" aria-selected="true">Cómo se usa</button>
       <button type="button" role="tab" id="g-t-read" aria-controls="g-read" aria-selected="false" tabindex="-1">Leer el resultado</button>
@@ -615,6 +654,7 @@ body.present .foot .short{display:inline}
 </div>
 
 <script>
+if(!document.documentElement.lang) document.documentElement.lang="es";
 const M = /*__MODEL__*/null;
 
 /* ---------- Vocabulary (single place to edit clinical labels) ---------- */
@@ -712,7 +752,7 @@ function buildForm(){
       r.style.setProperty("--trk",`linear-gradient(90deg,transparent calc(${p(70)}% - 1px),var(--clin) calc(${p(70)}% - 1px) calc(${p(70)}% + 1px),transparent calc(${p(70)}% + 1px) calc(${p(80)}% - 1px),var(--risk) calc(${p(80)}% - 1px) calc(${p(80)}% + 1px),transparent calc(${p(80)}% + 1px)),var(--track)`);}});
   const spark=d=>{const ys=BASC.map(([f])=>d[f]);const pts=ys.map((v,i)=>`${(2+i*10).toFixed(0)},${(16-(Math.min(100,Math.max(30,v))-30)/70*14).toFixed(1)}`).join(" ");
     return `<svg class="spark" width="44" height="18" viewBox="0 0 44 18" aria-hidden="true"><line x1="0" x2="44" y1="${(16-(70-30)/70*14).toFixed(1)}" y2="${(16-(70-30)/70*14).toFixed(1)}" stroke="currentColor" stroke-opacity=".25" stroke-width="1"/><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`;};
-  $("caseChips").innerHTML=CASES.map(c=>`<button type="button" class="ex" data-case="${c.id}" aria-pressed="false" title="Perfil BASC-3 del ${c.label.toLowerCase()} (línea tenue: T = 70)">${c.warn?'<span class="warn" aria-hidden="true"></span>':""}<b>${c.label}</b>${c.sub}${spark(c.data)}</button>`).join("");
+  $("caseChips").innerHTML=CASES.map(c=>`<button type="button" class="ex" data-case="${c.id}" aria-pressed="false" title="Perfil BASC-3 del ${c.label.toLowerCase()} (línea tenue: T = 70)">${c.warn?'<span class="warn" aria-hidden="true"></span>':""}<b>${c.label}</b><span class="sub">${c.sub}</span>${spark(c.data)}</button>`).join("");
   $("caseChips").addEventListener("click",e=>{const b=e.target.closest("[data-case]");if(!b)return;const c=CASES.find(x=>x.id===b.dataset.case);load(c.data,c.id);});
   $("moreProfiles").innerHTML+=M.classes.map(c=>`<option value="${c}">${shortName(c)}</option>`).join("");
   $("moreProfiles").addEventListener("change",e=>{if(e.target.value)load(M.profiles[e.target.value],"p:"+e.target.value);});
@@ -938,7 +978,7 @@ function drawCompare(c1,c2){
   let s=`<rect x="${L}" y="${y(1)}" width="${W-L-R}" height="${y(-1)-y(1)}" fill="var(--track)" opacity=".45"/>`;
   for(let t=lo;t<=hi;t++){s+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="${t===0?1.6:1}"/>`+
     `<text x="${L-8}" y="${y(t)+4}" text-anchor="end" font-size="11" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace">${t>0?"+"+t:t===0?"0":"−"+(-t)}</text>`;}
-  s+=`<text x="${L+6}" y="${y(-1)-5}" font-size="10.5" fill="var(--ink-3)">±1 DE: rango promedio</text>`;
+  s+=`<text x="${L+6}" y="${y(-1)-5}" font-size="11.5" fill="var(--ink-3)">±1 DE: rango promedio</text>`;
   const xf=x(ZV.indexOf("fluidez_fonologica"));
   s+=`<text x="${L}" y="12" font-size="11" font-weight="700" fill="var(--ink-2)">Referencia normativa: BASC-3 (T 50, DE 10) · CIT (100, DE 15)</text>`;
   s+=`<rect x="${xf-(W-L-R)/ZV.length/2+2}" y="${Tp-6}" width="${(W-L-R)/ZV.length-4}" height="${H-Tp-B+6}" fill="var(--risk-soft)" opacity=".55" rx="4"/>`;
@@ -950,7 +990,7 @@ function drawCompare(c1,c2){
     s+=`<g><title>${LABEL[f]}: ${S[f]} (${fmtz(zc)} DE) · ${shortName(c1)}: ${P1[f]} · ${shortName(c2)}: ${P2[f]}</title><circle cx="${x(i)}" cy="${y(zc)}" r="12" fill="transparent"/>`+
        `<circle cx="${x(i)}" cy="${y(zc)}" r="5.5" fill="var(--accent)" stroke="var(--panel)" stroke-width="2"/></g>`+
        `<text x="${x(i)}" y="${H-24}" text-anchor="middle" font-size="${W<420?11:12}" fill="var(--ink-2)">${W<420?ZLAB_XS[f]:W<720?ZLAB[f]:ZLAB_L[f]}</text>`+
-       (f==="fluidez_fonologica"?`<text x="${x(i)}" y="${H-9}" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--risk)">ref.: muestra</text>`:"");});
+       (f==="fluidez_fonologica"?`<text x="${x(i)}" y="${H-9}" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--risk)">ref.: muestra</text>`:"");});
   $("cmpChart").innerHTML=s;
   $("cmpLegend").innerHTML=`<span><i></i>Este caso</span><span><i class="ref"></i>1.ª: ${shortName(c1)}</span><span><i class="ref2"></i>2.ª: ${shortName(c2)}</span>`;
   // what separates the two options, and which one the case is closer to on that variable

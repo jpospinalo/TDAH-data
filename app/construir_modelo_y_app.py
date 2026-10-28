@@ -182,13 +182,48 @@ for target, lo_, hi_ in [("Desarrollo típico", .75, .92), ("TDAH inatento + TEA
 payload["demoCases"] = demo
 (OUT / "payload.json").write_text(json.dumps(payload, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
 
+# Fuentes incrustadas (SIL OFL 1.1; ver fonts/README.md): la página no depende de servidores externos
+FONTS = [("Atkinson Hyperlegible", "400", "atkinson-hyperlegible-latin-400-normal.woff2"),
+         ("Atkinson Hyperlegible", "700", "atkinson-hyperlegible-latin-700-normal.woff2"),
+         ("Bricolage Grotesque", "200 800", "bricolage-grotesque-latin-opsz-normal.woff2"),
+         ("IBM Plex Mono", "400", "ibm-plex-mono-latin-400-normal.woff2"),
+         ("IBM Plex Mono", "500", "ibm-plex-mono-latin-500-normal.woff2")]
+
+
+def fonts_css(folder):
+    import base64
+    return "".join(
+        f'@font-face{{font-family:"{fam}";font-style:normal;font-weight:{w};font-display:swap;'
+        f'src:url(data:font/woff2;base64,{base64.b64encode((folder / f).read_bytes()).decode()}) format("woff2")}}'
+        for fam, w, f in FONTS)
+
+
 # ---- 5. Construir la página autónoma ----
-tpl = (HERE / "template.html").read_text(encoding="utf-8")
+tpl = (HERE / "template.html").read_text(encoding="utf-8").replace("/*__FONTS__*/", fonts_css(HERE / "fonts"))
 body = tpl.replace("/*__MODEL__*/null", json.dumps(payload, separators=(",", ":"), ensure_ascii=False))
+# Metadatos del sitio: descripción, vista previa al compartir el enlace, color del tema e ícono
+SITE = "https://jpospinalo.github.io/TDAH-data/"
+DESC = ("Prototipo de investigación para apoyar la evaluación clínica de TDAH en niñas y niños de 6 a 12 años. "
+        "Validación interna; no es una herramienta diagnóstica.")
+ICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='11' fill='%230D6672'/%3E"
+        "%3Cpolyline points='8,27 14,21 20,24 26,12 33,17' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+HEAD = (f'<meta name="description" content="{DESC}">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
+        '<meta name="theme-color" content="#FAFBFB" media="(prefers-color-scheme: light)">\n'
+        '<meta name="theme-color" content="#0E1519" media="(prefers-color-scheme: dark)">\n'
+        f'<link rel="icon" href="{ICON}">\n'
+        '<meta property="og:type" content="website">\n'
+        '<meta property="og:locale" content="es_CO">\n'
+        '<meta property="og:title" content="Perfil TDAH · prototipo de investigación">\n'
+        f'<meta property="og:description" content="{DESC}">\n'
+        f'<meta property="og:url" content="{SITE}">\n'
+        f'<meta property="og:image" content="{SITE}og.png">\n'
+        '<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+        '<meta property="og:image:alt" content="Interfaz Perfil TDAH con un caso de ejemplo y su sugerencia">\n'
+        '<meta name="twitter:card" content="summary_large_image">\n')
+
 html = ('<!doctype html>\n<html lang="es">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="robots" content="noindex, nofollow">\n'
-        '<meta name="description" content="Prototipo de investigación: apoyo a la decisión clínica para perfiles de TDAH en niñas y niños de 6 a 12 años.">\n'
-        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
-        '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
+        + HEAD + '</head>\n<body>\n' + body + '\n</body>\n</html>\n')
 HTML_OUT.write_text(html, encoding="utf-8")
 print(f"\nListo: {HTML_OUT}")
