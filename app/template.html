@@ -1,0 +1,931 @@
+<title>Perfil TDAH</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the case record sits directly on the page; the model's reading lives in one quiet tinted panel. No nested boxes. */
+:root{
+  --segc:#C3CFD5; --risk-soft:#FAEFD6; --clin-soft:#F8E0DA;
+  --page:#FAFBFB; --panel:#EFF4F5; --raise:#FFFFFF; --track:#DCE4E7;
+  --ink:#13212B; --ink-2:#4E5E69; --ink-3:#5F6D77; --line:#E1E8EB;
+  --accent:#0D6672; --accent-ink:#FFFFFF; --accent-soft:#DCEDEF;
+  --risk:#8A5A00; --clin:#B63A27; --ok:#2C7A4B;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-data:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --page:#0E1519; --panel:#152027; --raise:#1B2830; --track:#2A3A44; --segc:#33454F; --risk-soft:#352A12; --clin-soft:#3C1E19;
+  --ink:#E4ECF0; --ink-2:#A3B2BC; --ink-3:#8597A2; --line:#22313A;
+  --accent:#4DB3C0; --accent-ink:#06171B; --accent-soft:#143840;
+  --risk:#E2A63A; --clin:#EE7058; --ok:#5DC28B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --page:#0E1519; --panel:#152027; --raise:#1B2830; --track:#2A3A44; --segc:#33454F; --risk-soft:#352A12; --clin-soft:#3C1E19;
+  --ink:#E4ECF0; --ink-2:#A3B2BC; --ink-3:#8597A2; --line:#22313A;
+  --accent:#4DB3C0; --accent-ink:#06171B; --accent-soft:#143840;
+  --risk:#E2A63A; --clin:#EE7058; --ok:#5DC28B; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--page)}
+body{color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;
+  padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:1440px;margin:0 auto}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.eyebrow{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.num{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+
+/* Header */
+.top{display:flex;align-items:center;gap:8px 20px;flex-wrap:wrap;padding-block:22px 18px}
+.brand{display:flex;align-items:center;gap:12px;margin-right:auto;min-width:0}
+.brand h1{font-family:var(--f-display);font-weight:750;font-size:1.4rem;letter-spacing:-.01em;margin:0;line-height:1.1}
+.brand p{margin:2px 0 0;color:var(--ink-3);font-size:.86rem}
+.link{border:0;background:none;padding:6px 2px;cursor:pointer;color:var(--ink-2);font-weight:700;font-size:.92rem;display:inline-flex;align-items:center;gap:7px}
+.link:hover{color:var(--accent)}
+
+/* Examples row */
+.examples{display:flex;align-items:center;gap:6px 6px;flex-wrap:wrap;padding-bottom:6px}
+.examples .eyebrow{margin-right:10px}
+.ex{border:0;background:none;border-radius:999px;padding:7px 14px;cursor:pointer;font-size:.92rem;color:var(--ink-2);display:inline-flex;gap:6px;align-items:baseline}
+.ex b{font-weight:700;color:var(--ink)}
+.ex:hover{background:var(--panel)}
+.ex[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent)}
+.ex[aria-pressed="true"] b{color:var(--accent)}
+.ex .warn{width:7px;height:7px;border-radius:50%;background:var(--risk);align-self:center}
+.examples select{border:0;background:none;color:var(--ink-2);font-weight:700;font-size:.92rem;padding:7px 4px;cursor:pointer;width:9.5em;max-width:100%}
+.note{font-size:.84rem;color:var(--ink-3);min-height:1.4em;margin:2px 0 18px 2px}
+.note b{color:var(--ink-2);font-weight:700}
+
+/* Main grid */
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px 56px;align-items:start}
+@media (min-width:1040px){.grid{grid-template-columns:minmax(0,.92fr) minmax(0,1fr)}
+  .reading{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);max-height:calc(100dvh - 32px - env(safe-area-inset-top,0px));overflow:auto}}
+
+/* Record */
+.record h2{font-family:var(--f-display);font-weight:650;font-size:1.05rem;margin:0;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.record h2 small{font-family:var(--f-body);font-weight:400;font-size:.8rem;color:var(--ink-3)}
+.sec{padding-block:6px 26px}
+.sec+.sec{border-top:1px solid var(--line);padding-top:22px}
+.summary{display:flex;align-items:flex-start;gap:16px;margin-top:10px}
+.summary p{margin:0;color:var(--ink-2);font-size:.95rem;min-width:0}
+.summary p span{color:var(--ink-3)}
+.summary .link{margin-left:auto;flex:none;color:var(--accent)}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px 24px;margin-top:14px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field>label,.field>.lbl{font-size:.86rem;color:var(--ink-2)}
+.seg{display:flex;flex-wrap:wrap;gap:2px;border-bottom:1px solid var(--line)}
+.seg button{border:0;background:none;padding:6px 10px 8px;cursor:pointer;font-size:.92rem;color:var(--ink-2);border-bottom:2px solid transparent;margin-bottom:-1px}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:700}
+.stepper{display:flex;align-items:center;gap:6px}
+.stepper button{width:32px;height:32px;border:1px solid var(--line);background:var(--raise);border-radius:50%;cursor:pointer;font-size:1rem;line-height:1;color:var(--ink-2)}
+.stepper button:hover{border-color:var(--accent);color:var(--accent)}
+.stepper output{min-width:84px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+select.sel{border:0;border-bottom:1px solid var(--line);background:none;border-radius:0;padding:6px 2px 8px;width:100%;font-size:.95rem;cursor:pointer}
+
+.scales{display:flex;flex-direction:column;gap:14px;margin-top:12px}
+.scale{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:0 14px;align-items:baseline}
+.scale .name{font-size:.95rem;min-width:0}
+.scale .name small{color:var(--ink-3);font-size:.8rem;margin-left:6px}
+.bandtxt{font-size:.8rem;font-weight:700}
+.bandtxt.r{color:var(--risk)} .bandtxt.c{color:var(--clin)}
+.scale input[type=number]{width:3.6em;text-align:right;border:0;border-bottom:1px solid transparent;background:none;padding:0 2px;
+  font-family:var(--f-data);font-size:1.12rem;font-weight:500;-moz-appearance:textfield}
+.scale input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+.scale input[type=number]:hover,.scale input[type=number]:focus{border-bottom-color:var(--ink-3)}
+.scale input[type=range]{grid-column:1/-1}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:22px;background:transparent;cursor:pointer;margin:2px 0 0}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:999px;background:var(--trk,var(--track))}
+input[type=range]::-moz-range-track{height:4px;border-radius:999px;background:var(--trk,var(--track))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;margin-top:-6px;border-radius:50%;background:var(--accent);border:2px solid var(--page);box-shadow:0 0 0 1px var(--accent)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--accent);border:2px solid var(--page)}
+.unset input[type=range]::-webkit-slider-thumb{opacity:0}
+.unset input[type=range]::-moz-range-thumb{opacity:0}
+.unset input[type=number]{border-bottom:1px dashed var(--ink-3)}
+.prog{color:var(--accent);font-weight:700;margin-left:4px}
+.warnline{margin:8px 0 0;font-size:.86rem;color:var(--risk)}
+.oor{grid-column:1/-1;font-size:.8rem;color:var(--risk)}
+.cog{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 32px;margin-top:12px}
+
+/* Reading panel */
+.reading{background:var(--panel);border-radius:20px;padding:28px 30px 22px;display:flex;flex-direction:column;gap:22px}
+.verdict{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;align-items:end}
+.verdict h2{font-family:var(--f-display);font-weight:750;font-size:clamp(1.75rem,2.4vw,2.4rem);line-height:1.05;letter-spacing:-.015em;margin:8px 0 6px;text-wrap:balance}
+.comorb{color:var(--ink-2);font-size:1.02rem}
+.comorb b{color:var(--ink);font-weight:700}
+.pct{text-align:right}
+.pct .n{font-family:var(--f-data);font-size:clamp(2rem,3vw,2.6rem);font-weight:400;line-height:1;letter-spacing:-.02em}
+.pct .n small{font-size:.5em;color:var(--ink-3);margin-left:2px}
+.pct .c{font-size:.76rem;color:var(--ink-3);margin-top:6px}
+.pending{font-size:.76rem;color:var(--risk);white-space:nowrap}
+.pct .c2{font-size:.72rem;color:var(--ink-3);cursor:help}
+.verdict.nc h2,.verdict.oor h2{color:var(--risk)}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.opt{background:var(--raise);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.opt .eyebrow{font-size:.68rem}
+.opt b{font-family:var(--f-display);font-weight:650;font-size:1.12rem;line-height:1.2}
+.opt .co{font-size:.88rem;color:var(--ink-2)}
+.opt .n{font-family:var(--f-data);font-size:1.6rem;margin-top:6px}
+.opt .n small{font-size:.75rem;color:var(--ink-3);font-family:var(--f-body);margin-left:6px}
+.opt .bar{height:4px;background:var(--track);border-radius:999px;overflow:hidden}
+.opt .bar span{display:block;height:100%;background:var(--ink-2);border-radius:999px}
+.scorenote{margin:-8px 0 0;font-size:.84rem;color:var(--ink-2)}
+.scorenote b{color:var(--ink)}
+.review{background:var(--raise);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.review h3{font-family:var(--f-display);font-weight:650;font-size:1rem;margin:0}
+.review p{margin:0;color:var(--ink-2);font-size:.93rem}
+.review p b{color:var(--ink)}
+.review .muted{color:var(--ink-3);font-size:.84rem}
+.reading[data-state="nc"] .review h3::before,.reading[data-state="oor"] .review h3::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--risk);margin-right:8px;vertical-align:1px}
+.golink{align-self:flex-start;border:0;background:none;padding:2px 0;color:var(--accent);font-weight:700;font-size:.9rem;cursor:pointer}
+.golink:hover{text-decoration:underline}
+.rv-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(120px,1.4fr) auto;gap:6px 14px;align-items:center;padding:6px 0;border-top:1px solid var(--line)}
+.rv-lab{font-size:.92rem;min-width:0}
+.rv-lab span{color:var(--ink-3);font-size:.84rem;margin-left:6px}
+.rv-txt{font-size:.84rem;color:var(--ink-2);white-space:nowrap}
+.strip{position:relative;height:22px;background:linear-gradient(var(--track),var(--track)) center/100% 3px no-repeat}
+.strip .zero{position:absolute;top:3px;bottom:3px;width:1px;background:var(--ink-3)}
+.strip .mk{position:absolute;top:50%;transform:translate(-50%,-50%);width:17px;height:17px;border-radius:50%;font-size:.66rem;font-weight:700;display:grid;place-items:center;
+  background:var(--raise);border:1.5px solid var(--ink-3);color:var(--ink-2);font-family:var(--f-data)}
+.strip .mk.o2{border-style:dashed}
+.strip .mk.me{width:13px;height:13px;background:var(--accent);border:2px solid var(--raise);box-shadow:0 0 0 1px var(--accent);z-index:2}
+@media (max-width:600px){.rv-row{grid-template-columns:minmax(0,1fr) auto}.strip{grid-column:1/-1}}
+.caveat{font-size:.84rem;color:var(--ink-2);margin:14px 0 0;padding-top:10px;border-top:1px solid var(--line)}
+.callout{font-size:.88rem;color:var(--ink-2);background:var(--raise);border-radius:10px;padding:10px 12px;margin:0 0 12px}
+.callout b{color:var(--ink)}
+.oornote{margin:0;font-size:.9rem;color:var(--ink-2);background:var(--raise);border-radius:10px;padding:12px 14px}
+.provisional{margin:0;font-size:.9rem;color:var(--ink-2);border-top:1px solid var(--line);padding-top:12px}
+@media (max-width:480px){.duo{grid-template-columns:minmax(0,1fr)}}
+
+.status{display:block}
+.status .dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--ok);transform:translateY(1px)}
+.status.low .dot{background:var(--risk)}
+.status strong{font-weight:700}
+.status.low strong{color:var(--risk)}
+.status p{margin:0;color:var(--ink-2);font-size:.95rem}
+
+.rule{height:1px;background:var(--line);margin:0}
+.conf .meter{position:relative;height:6px;border-radius:999px;background:var(--accent-soft);margin-top:12px}
+.conf.low .meter{background:color-mix(in srgb,var(--risk) 20%,transparent)}
+.meter .fill{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:var(--accent);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.conf.low .meter .fill{background:var(--risk)}
+.meter .thr{position:absolute;left:60%;top:-5px;bottom:-5px;width:2px;margin-left:-1px;background:var(--ink-2);border-radius:1px}
+.mscale{position:relative;height:1.3em;font-size:.74rem;color:var(--ink-3);margin-top:5px}
+.mscale span{position:absolute;top:0}
+.mscale .a{left:0}.mscale .b{right:0}.mscale .c{left:60%;transform:translateX(-50%);white-space:nowrap}
+.sechead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.sechead h3{font-family:var(--f-display);font-weight:650;font-size:1rem;margin:0}
+.sechead small{font-size:.8rem;color:var(--ink-3)}
+.comp{display:flex;flex-direction:column;gap:10px}
+.crow{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:center}
+.crow .clab{font-size:.86rem;color:var(--ink-2)}
+.cbar{display:flex;gap:2px;height:26px;background:var(--panel)}
+.cbar .seg{position:relative;min-width:0;background:var(--segc);display:flex;align-items:center;padding:0 8px;transition:flex-grow .5s cubic-bezier(.2,.7,.2,1);border:0;flex-wrap:nowrap}
+.cbar .seg:first-child{border-radius:5px 0 0 5px}.cbar .seg:last-child{border-radius:0 5px 5px 0}.cbar .seg:only-child{border-radius:5px}
+.cbar .seg.top{background:var(--accent)}
+.cbar .seg.second{background:color-mix(in srgb,var(--accent) 38%,var(--segc))}
+.cbar .seg em{font-style:normal;font-size:.8rem;white-space:nowrap;color:var(--ink)}
+.cbar .seg.top em{color:var(--accent-ink);font-weight:700}
+.cbar .seg.nolab em{visibility:hidden}
+.ctext{font-size:.8rem;color:var(--ink-3);grid-column:2}
+.spark{display:inline-block;vertical-align:middle;margin-left:4px}
+.bandtxt.m{color:var(--ink-3);font-weight:400}
+.cbins{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.cbin{display:grid;grid-template-columns:110px minmax(0,1fr) 120px;gap:12px;align-items:center;font-size:.88rem;color:var(--ink-2)}
+.cbin .bar{height:8px;background:var(--track);border-radius:999px;overflow:hidden}
+.cbin .bar span{display:block;height:100%;background:var(--accent);border-radius:999px}
+.cbin .v{font-family:var(--f-data);font-size:.84rem;text-align:right;white-space:nowrap}
+.cbin .v small{color:var(--ink-3);font-family:var(--f-body)}
+@media (max-width:600px){.cbin{grid-template-columns:90px minmax(0,1fr) 92px}.crow{grid-template-columns:minmax(0,1fr);gap:4px}.crow .clab{font-size:.8rem}.ctext{grid-column:1}}
+.alts{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.alt{display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:5px 12px;align-items:baseline}
+.alt .lab{font-size:.95rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink-2)}
+.alt:first-child .lab{color:var(--ink);font-weight:700}
+.alt .v{text-align:right;font-family:var(--f-data);font-size:.92rem;color:var(--ink-2)}
+.alt .bar{grid-column:1/-1;height:4px;background:var(--track);border-radius:999px;overflow:hidden}
+.alt .bar span{display:block;height:100%;background:var(--ink-3);border-radius:999px;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.alt:first-child .bar span{background:var(--accent)}
+#nnList .alt{grid-template-columns:minmax(0,1fr) 72px}
+#nnList .alt .v{white-space:nowrap}
+#nnList .alt .bar span{background:var(--ink-3)}
+#nnList .alt.match .bar span{background:var(--accent)}
+#nnList .alt .lab{font-weight:400;color:var(--ink-2)}
+#nnList .alt.match .lab{font-weight:700;color:var(--ink)}
+.tag-s{font-size:.72rem;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:1px 7px;border-radius:999px;margin-left:6px}
+abbr{text-decoration:none;border-bottom:1px dotted var(--ink-3);cursor:help}
+
+.tabs{display:flex;gap:22px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.tabs button{white-space:nowrap;flex:none}
+@media (max-width:600px){.tabs{gap:16px}.tabs button{font-size:.92rem}}
+.tabs button{border:0;background:none;padding:0 0 10px;cursor:pointer;font-family:var(--f-display);font-weight:650;font-size:1rem;color:var(--ink-3);border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.tabpanel{padding-top:4px}
+.tabhint{font-size:.84rem;color:var(--ink-3);margin:0 0 12px}
+
+.why{display:flex;flex-direction:column;gap:12px;margin:0;padding:0;list-style:none}
+.why li{display:grid;grid-template-columns:minmax(0,1fr) minmax(80px,140px) 36px;gap:14px;align-items:center}
+.why .t{min-width:0;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.why .t span{color:var(--ink-3);margin-left:8px;font-size:.88rem}
+.why .d{font-family:var(--f-data);font-size:.88rem;text-align:right;color:var(--ink-2)}
+.div{position:relative;height:6px;background:var(--track);border-radius:999px}
+.div::after{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;width:1px;background:var(--ink-3)}
+.div span{position:absolute;top:0;bottom:0;border-radius:999px;transition:all .5s cubic-bezier(.2,.7,.2,1)}
+.div span.pos{left:50%;background:var(--accent)} .div span.neg{right:50%;background:var(--ink-3)}
+@media (max-width:600px){.why li{grid-template-columns:minmax(0,1fr) 36px;gap:6px 10px}.why .t{white-space:normal}.why .div{grid-row:2;grid-column:1/-1}}
+
+.chart svg{width:100%;height:auto;display:block}
+.chart .lg{display:flex;gap:18px;flex-wrap:wrap;font-size:.82rem;color:var(--ink-3);margin-top:8px}
+.chart .lg i{display:inline-block;width:18px;height:0;border-top:2.5px solid var(--accent);margin-right:6px;vertical-align:4px}
+.chart .lg i.ref{border-top:2px dashed var(--ink-3)}
+.chart .lg i.ref2{border-top:2px dotted var(--ink-3)}
+.cmpnote{font-size:.9rem;color:var(--ink-2);margin:12px 0 0;max-width:62ch}
+.cmpnote b{color:var(--ink)}
+
+.foot{font-size:.8rem;color:var(--ink-3);margin:0}
+
+.empty{display:flex;flex-direction:column;gap:14px}
+.empty h2{font-family:var(--f-display);font-weight:750;font-size:clamp(1.6rem,2.2vw,2.1rem);margin:6px 0 0}
+.empty p{margin:0;color:var(--ink-2);max-width:50ch}
+.missing{display:flex;flex-wrap:wrap;gap:6px}
+.missing button{border:1px solid var(--line);background:var(--raise);border-radius:999px;padding:5px 12px;font-size:.88rem;cursor:pointer;color:var(--ink-2)}
+.missing button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* Mobile summary bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--raise);border-top:1px solid var(--line);
+  padding:10px max(20px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));
+  display:flex;align-items:center;gap:12px}
+.mbar .t{min-width:0;flex:1;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mbar.warn .t{color:var(--risk)}
+.mbar .p{font-family:var(--f-data);font-size:1.15rem}
+.mbar a{color:var(--accent);font-weight:700;font-size:.88rem;text-decoration:none}
+@media (min-width:1040px){.mbar{display:none}}
+@media (max-width:1039px){body{padding-block-end:84px}}
+@media (max-width:600px){.examples{flex-wrap:nowrap;overflow-x:auto}.examples .eyebrow{display:none}.ex,.examples select{flex:none}.reading{padding:22px 18px 18px}}
+
+/* About sheet */
+.overlay{position:fixed;inset:0;z-index:40;background:color-mix(in srgb,var(--ink) 40%,transparent);display:flex;justify-content:flex-end}
+.sheet{width:min(620px,100%);height:100%;overflow:auto;background:var(--page);
+  padding:calc(26px + env(safe-area-inset-top,0px)) max(28px,env(safe-area-inset-right,0px)) calc(32px + env(safe-area-inset-bottom,0px)) 32px}
+.sheet header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.sheet h2{font-family:var(--f-display);font-weight:750;font-size:1.6rem;margin:6px 0 0;letter-spacing:-.01em}
+.sheet h3{font-family:var(--f-display);font-weight:650;font-size:1.02rem;margin:28px 0 8px}
+.sheet p,.sheet li{color:var(--ink-2);max-width:62ch}
+.sheet ul{padding-left:20px;margin:6px 0}
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;margin-top:10px}
+.kpi .n{font-family:var(--f-data);font-size:1.7rem}
+.kpi .d{font-size:.86rem;color:var(--ink-2);line-height:1.35}
+.ctable{width:100%;border-collapse:collapse;font-size:.9rem}
+.ctable td{padding:7px 4px;border-bottom:1px solid var(--line);color:var(--ink-2)}
+.ctable td.r{text-align:right;font-family:var(--f-data);white-space:nowrap}
+.ctable .mini{width:80px;height:4px;background:var(--track);border-radius:9px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:10px}
+.ctable .mini span{display:block;height:100%;background:var(--accent)}
+.privacy{display:flex;gap:12px;align-items:flex-start;margin-top:24px;color:var(--ink-2)}
+.privacy p{margin:0}
+dl.gloss{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:6px 0;color:var(--ink-2)}
+dl.gloss dt{font-weight:700;color:var(--ink)} dl.gloss dd{margin:0}
+
+/* Presentation mode: one screen at 1280×720 and up — compact inputs, result + options + chart, larger reading */
+body.present .brand p,body.present .record .sec:first-child,body.present .tabsBlock,body.present #newCase,body.present .compBlock,body.present .reading>.rule,body.present #resultBody>.rule{display:none!important}
+body.present .opt{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:1px;padding:10px 14px}
+body.present .opt>*{grid-column:1}
+body.present .opt .n{grid-column:2;grid-row:1/4;align-self:center;margin:0}
+body.present .opt .bar{grid-column:1/-1;margin-top:6px}
+body.present .examples{padding-bottom:2px}
+body.present{padding-block-end:12px}
+@media (max-height:740px){body.present .reading{gap:10px;padding:14px 24px 10px}body.present .top{padding-block:8px 4px}body.present .verdict h2{font-size:2rem}body.present .note{margin-bottom:6px}}
+body.present .top{padding-block:12px 8px}
+body.present .note{margin-bottom:10px}
+body.present .grid{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:20px 36px}
+body.present .reading{position:static;max-height:none;overflow:visible;padding:20px 26px 14px;gap:14px}
+body.present .sec{padding-block:0 12px}
+body.present .sec+.sec{padding-top:12px}
+body.present .scales{gap:2px;margin-top:6px}
+body.present .scale .name{font-size:.92rem}
+body.present .cog{gap:2px 24px;margin-top:6px}
+body.present .verdict h2{font-size:clamp(1.9rem,2.6vw,2.6rem);margin:0 0 4px}
+body.present #vEyebrow{display:none}
+body.present .comorb{font-size:1.06rem}
+body.present .status p{font-size:1rem}
+body.present .chart .lg{margin-top:2px}
+body.present .foot{font-size:.86rem;color:var(--ink-2)}
+body.present .scorenote{font-size:.92rem;margin-top:-4px}
+body.present .review{padding:10px 14px;gap:4px}
+body.present .reading[data-state="ok"] .review{display:none}
+body.present .reading[data-state="nc"] .conf .meter,body.present .reading[data-state="nc"] .conf .mscale{display:none}
+body.present .review .golink,body.present .review>div>p{display:none}
+body.present .reading[data-state="nc"] #conf,body.present #oorNote,body.present #chartBlock .sechead{display:none!important}
+body.present .rv-lab span{display:none}
+.pres-only{display:none} body.present .pres-only{display:inline}
+body.present .rv-row{grid-template-columns:minmax(0,.9fr) minmax(120px,1.4fr) auto}
+body.present .rv-row{padding:3px 0}
+.foot .short{display:none}
+body.present .foot .long{display:none}
+body.present .foot .short{display:inline}
+@media (max-width:1039px){body.present .grid{grid-template-columns:minmax(0,1fr)}}
+#presentBtn[aria-pressed="true"]{color:var(--accent)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@keyframes fadein{from{opacity:.35}to{opacity:1}}
+.flash .verdict,.flash .status{animation:fadein .4s ease-out}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="11" fill="var(--accent)"/>
+        <polyline points="8,27 14,21 20,24 26,12 33,17" fill="none" stroke="var(--accent-ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <h1>Perfil TDAH</h1>
+        <p>Apoyo a la decisión clínica para niñas y niños de 6 a 12 años · prototipo de investigación</p>
+      </div>
+    </div>
+    <button class="link" type="button" id="newCase">
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Nuevo caso</button>
+    <button class="link" id="presentBtn" type="button" aria-pressed="false">
+      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11v2.5M5 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span id="presentLbl">Modo presentación</span></button>
+    <button class="link" id="aboutBtn" type="button">
+      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="7.2" y="7" width="1.6" height="4.6" rx=".8" fill="currentColor"/><circle cx="8" cy="4.8" r="1" fill="currentColor"/></svg>Sobre el modelo</button>
+  </header>
+
+  <nav class="examples" aria-label="Casos de ejemplo">
+    <span class="eyebrow">Ejemplos</span>
+    <span id="caseChips" style="display:contents"></span>
+    <select id="moreProfiles" aria-label="Perfil típico de cada categoría"><option value="">Más perfiles…</option></select>
+  </nav>
+  <p class="note" id="caseNote"></p>
+
+  <div class="grid">
+    <form class="record" id="record" autocomplete="off" onsubmit="return false">
+      <section class="sec">
+        <h2>Datos del caso</h2>
+        <div class="summary" id="demoSummary">
+          <p id="demoText"></p>
+          <button type="button" class="link" id="demoEdit" aria-expanded="false" aria-controls="demoFields">Editar</button>
+        </div>
+        <p class="warnline" id="ageWarn" hidden></p>
+        <div id="demoFields" hidden>
+          <div class="fields">
+            <div class="field"><span class="lbl" id="l-edad">Edad</span>
+              <div class="stepper" role="group" aria-labelledby="l-edad">
+                <button type="button" data-step="edad:-1" aria-label="Restar un año">−</button><output id="o-edad"></output><button type="button" data-step="edad:1" aria-label="Sumar un año">+</button>
+              </div></div>
+            <div class="field"><span class="lbl" id="l-esc">Grado escolar</span>
+              <div class="stepper" role="group" aria-labelledby="l-esc">
+                <button type="button" data-step="escolaridad:-1" aria-label="Bajar un grado">−</button><output id="o-escolaridad"></output><button type="button" data-step="escolaridad:1" aria-label="Subir un grado">+</button>
+              </div></div>
+            <div class="field"><span class="lbl" id="l-sexo">Sexo</span><div class="seg" role="group" aria-labelledby="l-sexo" data-seg="sexo"></div></div>
+            <div class="field"><span class="lbl" id="l-lat">Lateralidad</span><div class="seg" role="group" aria-labelledby="l-lat" data-seg="lateralidad"></div></div>
+            <div class="field"><label for="f-antecedentes_familiares">Antecedentes familiares</label><select class="sel" id="f-antecedentes_familiares" data-sel="antecedentes_familiares"></select></div>
+            <div class="field"><label for="f-retrasos_desarrollo">Retrasos del desarrollo</label><select class="sel" id="f-retrasos_desarrollo" data-sel="retrasos_desarrollo"></select></div>
+            <div class="field" style="grid-column:1/-1"><span class="lbl" id="l-obs">Antecedentes obstétricos</span><div class="seg" role="group" aria-labelledby="l-obs" data-seg="antecedentes_obstetricos"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <h2>Escalas BASC-3 <small>puntuación T · 60–69 en riesgo · ≥ 70 clínico <span class="prog" id="prog-basc"></span></small></h2>
+        <div class="scales" id="basc"></div>
+      </section>
+
+      <section class="sec">
+        <h2>Cognición y lenguaje <small>CIT: clasificación WISC-V <span class="prog" id="prog-cog"></span></small></h2>
+        <div class="cog" id="cog"></div>
+      </section>
+    </form>
+
+    <aside class="reading" id="reading">
+      <p class="sr-only" id="live" aria-live="polite"></p>
+
+      <div class="empty" id="emptyState" hidden>
+        <span class="eyebrow">Perfil sugerido</span>
+        <h2 id="emptyTitle">Faltan datos</h2>
+        <p>El modelo necesita las 14 variables para sugerir un perfil. La sugerencia aparece en cuanto estén completas.</p>
+        <div class="missing" id="missingList"></div>
+      </div>
+
+      <div id="resultBody" style="display:contents">
+        <div class="verdict" id="verdict">
+          <div>
+            <span class="eyebrow" id="vEyebrow">Perfil sugerido</span>
+            <h2 id="vTitle">—</h2>
+            <div class="comorb" id="vComorb"></div>
+          </div>
+          <div class="pct" id="vPctBox"><div class="n" id="vPct">—</div><div class="c">puntaje del modelo</div></div>
+        </div>
+        <div class="duo" id="duo" hidden></div>
+        <p class="scorenote" id="scoreNote"><span aria-hidden="true">ⓘ</span> Puntajes del modelo, <b>sin calibrar</b>: no son probabilidades de diagnóstico.</p>
+        <p class="provisional" id="provisional" hidden></p>
+
+        <div class="conf" id="conf">
+          <div class="status"><p><strong id="confTitle"></strong><span id="confText"></span></p></div>
+          <div class="meter" aria-hidden="true"><span class="fill" id="mFill"></span><span class="thr"></span></div>
+          <div class="mscale" aria-hidden="true"><span class="a">0</span><span class="c">umbral preliminar 60</span><span class="b">100</span></div>
+        </div>
+
+        <section class="review" id="review" aria-labelledby="reviewTitle">
+          <h3 id="reviewTitle">Qué revisar ahora</h3>
+          <div id="reviewBody"></div>
+        </section>
+
+        <div class="chart" id="chartBlock">
+          <div class="sechead"><h3>Perfil BASC-3</h3><small id="chartSub">puntuaciones T</small></div>
+          <svg id="chart" viewBox="0 0 640 230" role="img" aria-label="Puntuaciones T del caso frente al perfil típico de la categoría sugerida"></svg>
+          <div class="lg"><span><i></i><span id="caseLegend">Este caso</span></span><span id="refLegend"><i class="ref"></i><span id="refName">Perfil típico</span></span></div>
+        </div>
+
+        <div class="tabsBlock" id="tabsBlock">
+          <div class="tabs" role="tablist" aria-label="Detalle de la sugerencia">
+            <button type="button" role="tab" id="t-why" aria-controls="p-why" aria-selected="true">Qué influyó</button>
+            <button type="button" role="tab" id="t-cmp" aria-controls="p-cmp" aria-selected="false" tabindex="-1">Comparar opciones</button>
+            <button type="button" role="tab" id="t-nn" aria-controls="p-nn" aria-selected="false" tabindex="-1">Casos parecidos</button>
+            <button type="button" role="tab" id="t-all" aria-controls="p-all" aria-selected="false" tabindex="-1">Puntajes</button>
+          </div>
+          <div class="tabpanel" id="p-why" role="tabpanel" aria-labelledby="t-why">
+            <p class="tabhint" id="whyHint"></p>
+            <ul class="why" id="why"></ul>
+            <p class="caveat">Describe cómo calculó el modelo su puntaje. No es una prueba diagnóstica ni indica una relación causal.</p>
+          </div>
+          <div class="tabpanel chart" id="p-cmp" role="tabpanel" aria-labelledby="t-cmp" hidden>
+            <p class="tabhint">Distancia de cada variable a su valor de referencia, en desviaciones estándar (DE). Las líneas punteadas son el perfil típico de las dos opciones con mayor puntaje.</p>
+            <svg id="cmpChart" viewBox="0 0 640 240" role="img" aria-label="Perfil del caso comparado con el perfil típico de las dos opciones con mayor puntaje"></svg>
+            <div class="lg" id="cmpLegend"></div>
+            <p class="cmpnote" id="cmpNote"></p>
+          </div>
+          <div class="tabpanel" id="p-nn" role="tabpanel" aria-labelledby="t-nn" hidden>
+            <p class="callout"><b>Referencia descriptiva.</b> Diagnósticos registrados de niños de la muestra con un perfil parecido. Se calcula aparte del modelo y <b>no confirma</b> el resultado de este caso.</p>
+            <p class="tabhint" id="nnHint"></p>
+            <ol class="alts" id="nnList"></ol>
+            <p class="cmpnote" id="nnNote"></p>
+          </div>
+          <div class="tabpanel" id="p-all" role="tabpanel" aria-labelledby="t-all" hidden>
+            <div class="sechead"><h3>Puntajes agrupados</h3></div>
+            <p class="tabhint">Cada fila suma los puntajes de varias categorías: la primera agrupa por presentación de TDAH y la segunda por condición asociada. No son partes del puntaje de la opción principal.</p>
+            <div class="comp" id="comp"></div>
+            <div class="sechead" style="margin-top:22px"><h3>Las 13 categorías</h3></div>
+            <p class="tabhint">Puntaje del modelo para cada categoría, de mayor a menor (suman 100).</p>
+            <ol class="alts" id="alts"></ol>
+          </div>
+        </div>
+        <p class="oornote" id="oorNote" hidden>Las explicaciones, la comparación entre opciones, los casos parecidos y los puntajes se ocultan mientras haya datos fuera del rango de entrenamiento.</p>
+      </div>
+
+      <p class="foot"><span class="long">Sugerencia de un modelo con validación interna (875 casos, un centro). No es un diagnóstico: la decisión es del profesional.</span><span class="short">Validación interna (875 casos, un centro). No es un diagnóstico.</span></p>
+    </aside>
+  </div>
+</div>
+
+<div class="mbar" id="mbar"><span class="t" id="mTitle">—</span><span class="p" id="mPct"></span><a href="#reading">Ver</a></div>
+
+<div class="overlay" id="about" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+    <header>
+      <div><span class="eyebrow">Ficha del modelo</span><h2 id="aboutTitle">Sobre el modelo</h2></div>
+      <button class="link" type="button" id="aboutClose">Cerrar</button>
+    </header>
+    <h3>Qué hace</h3>
+    <p>Con datos que el equipo clínico ya recoge (demografía, antecedentes, escalas BASC-3, CIT y fluidez fonológica), sugiere el perfil más probable entre 13 categorías: desarrollo típico y los tres subtipos de TDAH, solos o con una comorbilidad. Entrega un puntaje para cada categoría, indica si la sugerencia está bien diferenciada o no es concluyente, y muestra las variables que más influyeron en el cálculo.</p>
+    <dl class="gloss">
+      <dt>TND</dt><dd>Trastorno negativista desafiante</dd>
+      <dt>TEA</dt><dd>Trastorno del espectro autista</dd>
+      <dt>TEAZ</dt><dd>Trastorno específico del aprendizaje <span class="pending">(definición por confirmar)</span></dd>
+      <dt>BASC-3</dt><dd>Sistema de evaluación de la conducta; puntuación T con media 50 y DE 10</dd>
+      <dt>CIT</dt><dd>Cociente intelectual total (escala Wechsler); media 100 y DE 15</dd>
+      <dt>DE</dt><dd>Desviación estándar: distancia a la media en unidades comparables</dd>
+      <dt>Puntaje</dt><dd>Valor de 0 a 100 que el modelo asigna a cada categoría; las 13 suman 100. Aún no está calibrado</dd>
+    </dl>
+    <h3>Qué no hace</h3>
+    <ul>
+      <li>No diagnostica ni reemplaza la evaluación clínica.</li>
+      <li>No usa los índices de síntomas TDAH, porque forman parte del propio criterio diagnóstico y harían el resultado circular.</li>
+      <li>No está validado fuera del centro donde se recogieron los datos.</li>
+    </ul>
+    <h3>Desempeño en validación cruzada</h3>
+    <p>Diez particiones: cada caso se evalúa con un modelo que no lo vio durante el entrenamiento.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="n">95 %</div><div class="d">aciertos en la categoría exacta, entre 13</div></div>
+      <div class="kpi"><div class="n">99 %</div><div class="d">la categoría correcta está entre las 2 primeras opciones</div></div>
+      <div class="kpi"><div class="n">97,5 %</div><div class="d">aciertos en el subtipo de TDAH</div></div>
+      <div class="kpi"><div class="n">98,9 %</div><div class="d">aciertos cuando el puntaje supera el umbral preliminar de 60 (80 % de los casos)</div></div>
+    </div>
+    <h3>Aciertos según el puntaje del modelo</h3>
+    <p>Cuanto más alto es el puntaje, más acierta el modelo. Por debajo de 60 la interfaz marca el resultado como no concluyente y recomienda revisión clínica.</p>
+    <div class="cbins" id="cbins"></div>
+    <h3>Desempeño por categoría</h3>
+    <table class="ctable" id="ctable"></table>
+    <h3>Datos y método</h3>
+    <ul>
+      <li>875 niñas y niños de 6 a 12 años evaluados en un centro clínico.</li>
+      <li>Random Forest de 300 árboles con 14 variables; clases balanceadas por peso.</li>
+      <li>F1-macro 0,95 en validación cruzada y 0,94 en un conjunto de prueba reservado.</li>
+    </ul>
+    <h3>Limitaciones conocidas</h3>
+    <ul>
+      <li>Validación solo interna: falta probarlo con datos de otra institución.</li>
+      <li>El grupo de desarrollo típico no presenta puntuaciones en riesgo, por lo que separarlo del TDAH es más fácil que en la práctica.</li>
+      <li>El puntaje aún no está calibrado: no equivale a la probabilidad de acierto en un caso individual. El umbral de 60 es preliminar.</li>
+      <li>El modelo depende sobre todo de las escalas BASC-3.</li>
+    </ul>
+    <h3>Próximos pasos</h3>
+    <ul>
+      <li>Validación externa multicéntrica.</li>
+      <li>Calibración del puntaje y de los umbrales de derivación.</li>
+      <li>Estudio de utilidad clínica con profesionales.</li>
+    </ul>
+    <div class="privacy">
+      <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="3.5" y="9" width="13" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      <p>Los datos que ingresas se procesan en este navegador. No se envían a ningún servidor. Para la pestaña de casos parecidos, la página incluye los valores numéricos anonimizados de la muestra (escalas, CIT, fluidez, edad y diagnóstico), sin identificadores.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const M = /*__MODEL__*/null;
+
+/* ---------- Vocabulary (single place to edit clinical labels) ---------- */
+const COMORB = {
+  TND:  {short:"TND",  name:"Trastorno negativista desafiante"},
+  TEA:  {short:"TEA",  name:"Trastorno del espectro autista"},
+  TEAZ: {short:"TEAZ", name:"Trastorno específico del aprendizaje", pending:true}
+};
+const SUBTYPE_LABEL = {"Desarrollo típico":"Desarrollo típico","TDAH inatento":"TDAH presentación inatenta",
+  "TDAH hiperactivo/impulsivo":"TDAH presentación hiperactiva/impulsiva","TDAH combinado":"TDAH presentación combinada"};
+function parseClass(c){const [s,co]=c.split(" + ");return {sub:s,co:co||null};}
+function shortName(c){const p=parseClass(c);return p.co?`${p.sub} + ${p.co}`:p.sub;}
+function abbrName(c){const p=parseClass(c);return p.co?`${p.sub} + <abbr title="${COMORB[p.co].name}">${p.co}</abbr>`:p.sub;}
+
+const OPTS = {
+  sexo:[["Hombre","Masculino"],["Mujer","Femenino"]],
+  lateralidad:[["Diestro","Diestra/o"],["Zurdo","Zurda/o"],["Ambidiestro","Ambidiestra/o"]],
+  antecedentes_familiares:[["Sin antecedentes","Sin antecedentes"],["Familiares con TDAH","Familiares con TDAH"],["Otro trastorno del neurodesarrollo","Otro trastorno del neurodesarrollo"],["Otro trastorno psicopatológico","Otro trastorno psicopatológico"],["Otros","Otros"]],
+  antecedentes_obstetricos:[["No hay","Ninguno"],["Embarazo","Embarazo"],["Parto","Parto"],["Ambos","Ambos"]],
+  retrasos_desarrollo:[["No reporta","No reporta"],["Motricidad fina/gruesa","Motricidad fina o gruesa"],["Audición/lenguaje","Audición o lenguaje"],["Personal/social","Personal o social"],["Varios","Varias áreas"]]
+};
+const DEMO = ["edad","sexo","escolaridad","lateralidad","antecedentes_familiares","antecedentes_obstetricos","retrasos_desarrollo"];
+const BASC = [
+  ["problemas_atencion_basc3","Problemas de atención"],["hiperactividad_basc3","Hiperactividad"],
+  ["agresividad_basc3","Agresividad"],["problemas_conducta_basc3","Problemas de conducta"],["atipicidad_basc3","Atipicidad"]];
+const COG = [["cit","CIT",""],["fluidez_fonologica","Fluidez fonológica","palabras"]];
+const LABEL = {edad:"Edad",sexo:"Sexo",escolaridad:"Grado escolar",lateralidad:"Lateralidad",antecedentes_familiares:"Antecedentes familiares",
+  antecedentes_obstetricos:"Antecedentes obstétricos",retrasos_desarrollo:"Retrasos del desarrollo",cit:"CIT",
+  agresividad_basc3:"Agresividad",hiperactividad_basc3:"Hiperactividad",problemas_conducta_basc3:"Problemas de conducta",
+  problemas_atencion_basc3:"Problemas de atención",atipicidad_basc3:"Atipicidad",fluidez_fonologica:"Fluidez fonológica"};
+const INPUT_RANGE = {edad:[6,12],escolaridad:[1,7],cit:[40,160],fluidez_fonologica:[0,80],
+  agresividad_basc3:[10,120],hiperactividad_basc3:[10,120],problemas_conducta_basc3:[10,120],problemas_atencion_basc3:[10,120],atipicidad_basc3:[10,120]};
+const STEP_START = {edad:9,escolaridad:3};
+
+const CASES = [
+  {id:"a", label:"Caso A", data:M.demoCases["Desarrollo típico"], ref:"a partir del grupo <b>Desarrollo típico</b>, con variación realista"},
+  {id:"b", label:"Caso B", data:M.demoCases["TDAH inatento + TEA"], ref:"a partir del grupo <b>TDAH inatento + TEA</b>, con variación realista"},
+  {id:"c", label:"Caso C", data:M.demoCases["TDAH combinado + TND"], ref:"a partir del grupo <b>TDAH combinado + TND</b>, con variación realista"},
+  {id:"d", label:"Caso D", data:M.ambiguous, warn:true, ref:"entre los grupos <b>TDAH combinado</b> y <b>TDAH combinado + TEAZ</b>"}
+];
+CASES.forEach(c=>c.sub=`${c.data.sexo==="Mujer"?"niña":"niño"}, ${c.data.edad} años`);
+
+/* ---------- Model ---------- */
+const F = M.features, K = M.classes.length, T = M.trees.length;
+function encode(s){return F.map(f=> M.categorical[f] ? M.categorical[f].indexOf(s[f]) : +s[f]);}
+function explain(x){
+  const prob=new Float64Array(K), contrib=F.map(()=>new Float64Array(K));
+  for(const t of M.trees){let n=0;
+    while(t.l[n]!==-1){const f=t.f[n], c=x[f]<=t.t[n]?t.l[n]:t.r[n], a=t.v[n], b=t.v[c];
+      const row=contrib[f]; for(let k=0;k<K;k++) row[k]+=b[k]-a[k]; n=c;}
+    const v=t.v[n]; for(let k=0;k<K;k++) prob[k]+=v[k];}
+  for(let k=0;k<K;k++) prob[k]/=T; contrib.forEach(r=>{for(let k=0;k<K;k++) r[k]/=T;});
+  return {prob,contrib};
+}
+
+/* ---------- State ---------- */
+let S = {...CASES[3].data}, activeCase = "d", demoOpen = false, selectTab = ()=>{};
+const $ = id=>document.getElementById(id);
+function band(v){return v>=70?["c","Clínico"]:v>=60?["r","En riesgo"]:["n","Promedio"];}
+function gradeLabel(g){return g+".º grado";}
+function citBand(v){return v<70?["c","Extremadamente bajo"]:v<80?["r","Muy bajo"]:v<90?["m","Promedio bajo"]:v<110?["m",""]:v<120?["m","Promedio alto"]:v<130?["m","Muy alto"]:["m","Extremadamente alto"];}
+function optLabel(f,v){const o=OPTS[f].find(x=>x[0]===v);return o?o[1]:v;}
+
+/* ---------- Build form ---------- */
+function buildForm(){
+  document.querySelectorAll("[data-seg]").forEach(el=>{const k=el.dataset.seg;
+    el.innerHTML=OPTS[k].map(([v,l])=>`<button type="button" data-v="${v}" aria-pressed="false">${l}</button>`).join("");
+    el.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;set(k,b.dataset.v);});});
+  document.querySelectorAll("[data-sel]").forEach(el=>{const k=el.dataset.sel;
+    el.innerHTML=`<option value="" disabled>Selecciona…</option>`+OPTS[k].map(([v,l])=>`<option value="${v}">${l}</option>`).join("");
+    el.addEventListener("change",()=>set(k,el.value));});
+  document.querySelectorAll("[data-step]").forEach(b=>b.addEventListener("click",()=>{const [k,d]=b.dataset.step.split(":");
+    const [lo,hi]=INPUT_RANGE[k]; set(k,S[k]==null?STEP_START[k]:Math.min(hi,Math.max(lo,S[k]+(+d))));}));
+  const scaleHTML=(k,name,sub)=>{const [lo,hi]=INPUT_RANGE[k];
+    return `<div class="scale" data-k="${k}"><label class="name" for="r-${k}">${name}${sub?`<small>${sub}</small>`:""}</label>
+      <span class="bandtxt" id="b-${k}"></span>
+      <input id="n-${k}" type="number" inputmode="numeric" min="${lo}" max="${hi}" aria-label="${name}, valor">
+      <input id="r-${k}" type="range" min="${lo}" max="${hi}" step="1">
+      <span class="oor" id="w-${k}" hidden>Fuera del rango de los datos de entrenamiento (${M.ranges[k][0]}–${M.ranges[k][1]}): interpretar con cautela</span></div>`;};
+  $("basc").innerHTML=BASC.map(([k,n])=>scaleHTML(k,n)).join("");
+  $("cog").innerHTML=COG.map(([k,n,s])=>scaleHTML(k,n,s)).join("");
+  document.querySelectorAll(".scale").forEach(el=>{const k=el.dataset.k, r=el.querySelector('input[type=range]'), n=el.querySelector('input[type=number]');
+    r.addEventListener("input",()=>set(k,+r.value));
+    n.addEventListener("change",()=>{const [lo,hi]=INPUT_RANGE[k];if(n.value===""){set(k,null);return;}let v=Math.round(+n.value);if(isNaN(v))v=S[k];set(k,Math.min(hi,Math.max(lo,v)));});
+    if(k.includes("basc3")){const [lo,hi]=INPUT_RANGE[k];const p=v=>((v-lo)/(hi-lo)*100).toFixed(2);
+      // quiet ticks at T=60 and T=70 on a neutral track
+      r.style.setProperty("--trk",`linear-gradient(90deg,transparent calc(${p(60)}% - 1px),var(--risk) calc(${p(60)}% - 1px) calc(${p(60)}% + 1px),transparent calc(${p(60)}% + 1px) calc(${p(70)}% - 1px),var(--clin) calc(${p(70)}% - 1px) calc(${p(70)}% + 1px),transparent calc(${p(70)}% + 1px)),var(--track)`);}
+    if(k==="cit"){const [lo,hi]=INPUT_RANGE[k];const p=v=>((v-lo)/(hi-lo)*100).toFixed(2);
+      r.style.setProperty("--trk",`linear-gradient(90deg,transparent calc(${p(70)}% - 1px),var(--clin) calc(${p(70)}% - 1px) calc(${p(70)}% + 1px),transparent calc(${p(70)}% + 1px) calc(${p(80)}% - 1px),var(--risk) calc(${p(80)}% - 1px) calc(${p(80)}% + 1px),transparent calc(${p(80)}% + 1px)),var(--track)`);}});
+  const spark=d=>{const ys=BASC.map(([f])=>d[f]);const pts=ys.map((v,i)=>`${(2+i*10).toFixed(0)},${(16-(Math.min(100,Math.max(30,v))-30)/70*14).toFixed(1)}`).join(" ");
+    return `<svg class="spark" width="44" height="18" viewBox="0 0 44 18" aria-hidden="true"><line x1="0" x2="44" y1="${(16-(70-30)/70*14).toFixed(1)}" y2="${(16-(70-30)/70*14).toFixed(1)}" stroke="currentColor" stroke-opacity=".25" stroke-width="1"/><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`;};
+  $("caseChips").innerHTML=CASES.map(c=>`<button type="button" class="ex" data-case="${c.id}" aria-pressed="false" title="Perfil BASC-3 del ${c.label.toLowerCase()} (línea tenue: T = 70)">${c.warn?'<span class="warn" aria-hidden="true"></span>':""}<b>${c.label}</b>${c.sub}${spark(c.data)}</button>`).join("");
+  $("caseChips").addEventListener("click",e=>{const b=e.target.closest("[data-case]");if(!b)return;const c=CASES.find(x=>x.id===b.dataset.case);load(c.data,c.id);});
+  $("moreProfiles").innerHTML+=M.classes.map(c=>`<option value="${c}">${shortName(c)}</option>`).join("");
+  $("moreProfiles").addEventListener("change",e=>{if(e.target.value)load(M.profiles[e.target.value],"p:"+e.target.value);});
+  $("newCase").addEventListener("click",()=>{load(Object.fromEntries(F.map(f=>[f,null])),"nuevo");demoOpen=true;draw();
+    document.querySelector('#demoFields button').focus();});
+  $("demoEdit").addEventListener("click",()=>{demoOpen=!demoOpen;render();if(demoOpen)document.querySelector('#demoFields button').focus();});
+  // tabs
+  const tabs=[...document.querySelectorAll('[role=tab]')];
+  const select=t=>{tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;$(x.getAttribute("aria-controls")).hidden=!on;});render();};
+  selectTab=id=>{const t=$(id);select(t);requestAnimationFrame(()=>{t.scrollIntoView({block:"start",behavior:"smooth"});t.focus({preventScroll:true});});};
+  tabs.forEach(t=>{t.addEventListener("click",()=>select(t));
+    t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const i=(tabs.indexOf(t)+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;select(tabs[i]);tabs[i].focus();}});});
+}
+function load(d,id){S={...d};activeCase=id;demoOpen=false;const r=$("reading");r.classList.remove("flash");void r.offsetWidth;r.classList.add("flash");render();}
+function set(k,v){if(S[k]===v)return;S[k]=v;activeCase=activeCase&&activeCase.startsWith("nuevo")?"nuevo":null;render();}
+
+/* ---------- Render ---------- */
+let liveT=0, raf=0; function render(){cancelAnimationFrame(raf);raf=requestAnimationFrame(draw);}
+function draw(){
+  // demographics: summary line unless editing or incomplete
+  const demoMissing=DEMO.filter(f=>S[f]==null);
+  const open=demoOpen||demoMissing.length>0;
+  $("demoFields").hidden=!open; $("demoEdit").setAttribute("aria-expanded",open);
+  $("demoEdit").textContent=open?(demoMissing.length?"":"Listo"):"Editar"; $("demoEdit").hidden=open&&demoMissing.length>0;
+  $("demoText").innerHTML = demoMissing.length===DEMO.length ? "Completa los datos de la niña o el niño."
+    : demoMissing.length ? `Faltan ${demoMissing.length} de 7 datos.`
+    : `${S.sexo==="Mujer"?"Niña":"Niño"} de ${S.edad} años, ${gradeLabel(S.escolaridad)}, ${({Diestro:"diestr",Zurdo:"zurd",Ambidiestro:"ambidiestr"})[S.lateralidad]}${S.sexo==="Mujer"?"a":"o"}.<br><span>Antecedentes familiares: ${optLabel("antecedentes_familiares",S.antecedentes_familiares).toLowerCase()} · obstétricos: ${optLabel("antecedentes_obstetricos",S.antecedentes_obstetricos).toLowerCase()} · retrasos: ${optLabel("retrasos_desarrollo",S.retrasos_desarrollo).toLowerCase()}</span>`;
+
+  $("o-edad").textContent=S.edad==null?"—":S.edad+" años"; $("o-escolaridad").textContent=S.escolaridad==null?"—":gradeLabel(S.escolaridad);
+  document.querySelectorAll("[data-seg]").forEach(el=>el.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===S[el.dataset.seg])));
+  document.querySelectorAll("[data-sel]").forEach(el=>el.value=S[el.dataset.sel]??"");
+  document.querySelectorAll(".scale").forEach(el=>{const k=el.dataset.k,v=S[k],un=v==null;el.classList.toggle("unset",un);
+    const r=el.querySelector('input[type=range]'); r.value=un?(k.includes("basc3")?50:(INPUT_RANGE[k][0]+INPUT_RANGE[k][1])/2):v;
+    // an empty field must not look like a middle value: hide the thumb and dash the track
+    if(un){if(r.dataset.trk===undefined)r.dataset.trk=r.style.getPropertyValue("--trk");r.style.setProperty("--trk","repeating-linear-gradient(90deg,var(--ink-3) 0 3px,transparent 3px 8px)");}
+    else if(r.dataset.trk!==undefined){r.dataset.trk?r.style.setProperty("--trk",r.dataset.trk):r.style.removeProperty("--trk");delete r.dataset.trk;}
+    const n=el.querySelector('input[type=number]'); if(document.activeElement!==n) n.value=un?"":v; n.placeholder="—";
+    $("w-"+k).hidden=un||(v>=M.ranges[k][0]&&v<=M.ranges[k][1]);
+    const b=$("b-"+k); if(un){b.className="bandtxt m";b.textContent="Sin dato";}
+    else if(k.includes("basc3")){const [c,t]=band(v);b.className="bandtxt "+c;b.textContent=c==="n"?"":t;}
+    else if(k==="cit"){const [c,t]=citBand(v);b.className="bandtxt "+c;b.textContent=t;}
+    else {b.className="bandtxt";b.textContent="";}});
+  const progTxt=(keys)=>{const m=keys.filter(k=>S[k]==null).length;return m?`· faltan ${m} de ${keys.length}`:"";};
+  $("prog-basc").textContent=progTxt(BASC.map(b=>b[0])); $("prog-cog").textContent=progTxt(COG.map(c=>c[0]));
+  // age vs school grade: soft warning for unusual combinations (expected grade ≈ age − 5)
+  const ag=S.edad!=null&&S.escolaridad!=null&&(S.escolaridad>S.edad-4||S.escolaridad<S.edad-8);
+  $("ageWarn").hidden=!ag; if(ag)$("ageWarn").textContent=`Revisa edad y grado escolar: ${S.edad} años en ${gradeLabel(S.escolaridad)} es una combinación poco habitual en los datos.`;
+
+  const cs=CASES.find(c=>c.id===activeCase);
+  $("caseNote").innerHTML = cs ? `<b>${cs.label}</b>: perfil ilustrativo construido ${cs.ref}. No es un paciente real.`
+    : activeCase==="nuevo" ? "Caso nuevo." : activeCase&&activeCase.startsWith("p:") ? `Perfil típico (medianas) del grupo <b>${activeCase.slice(2)}</b>.` : "Caso editado.";
+  document.querySelectorAll("[data-case]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.case===activeCase));
+  $("moreProfiles").value = activeCase&&activeCase.startsWith("p:")?activeCase.slice(2):"";
+
+  const missing=F.filter(f=>S[f]==null||S[f]==="");
+  $("emptyState").hidden=missing.length===0; $("resultBody").style.display=missing.length?"none":"contents";
+  if(missing.length){$("emptyTitle").textContent=missing.length===1?"Falta 1 dato":`Faltan ${missing.length} datos`;
+    $("missingList").innerHTML=missing.map(f=>`<button type="button" data-goto="${f}">${LABEL[f]}</button>`).join("");
+    $("mTitle").textContent=$("emptyTitle").textContent; $("mPct").textContent="";
+    clearTimeout(liveT); liveT=setTimeout(()=>$("live").textContent=$("emptyTitle").textContent,700); return;}
+
+  const {prob,contrib}=explain(encode(S));
+  const order=[...prob.keys()].sort((a,b)=>prob[b]-prob[a]);
+  const top=order[0], sec=order[1], c1=M.classes[top], p1=prob[top], c2=M.classes[sec], p2=prob[sec];
+  const pc=parseClass(c1), pp2=parseClass(c2), v1=Math.round(p1*100), v2=Math.round(p2*100);
+
+  // three result states: well-differentiated · not conclusive · needs review (input outside training range)
+  const oor=F.filter(f=>M.ranges[f]&&(S[f]<M.ranges[f][0]||S[f]>M.ranges[f][1]));
+  const state=oor.length?"oor":v1<60?"nc":"ok"; // compare the same rounded number the user sees
+  const isDT=s=>s==="Desarrollo típico"; let where;
+  if(pp2.sub===pc.sub) where=`La duda está en la comorbilidad: ${pc.co||"ninguna"} frente a ${pp2.co||"ninguna"}.`;
+  else if(isDT(pc.sub)||isDT(pp2.sub)||(pp2.co||"")!==(pc.co||"")) where=`Las dos opciones difieren en subtipo y en comorbilidad.`;
+  else where=`La duda está en el subtipo: ${pc.sub} frente a ${pp2.sub}.`;
+  const gap=Math.max(1,v1-v2), p2t=p2<0.005?"menos de 1":String(v2);
+  const comorbLine=(p)=>isDT(p.sub)?"Sin indicadores de TDAH ni comorbilidad":p.co?`con <b>${COMORB[p.co].name}</b> (${p.co})${COMORB[p.co].pending?' · <span class="pending">definición por confirmar</span>':""}`:"Sin comorbilidad asociada";
+  const optCard=(k,i)=>{const c=M.classes[k],p=parseClass(c),v=Math.round(prob[k]*100);
+    return `<div class="opt"><span class="eyebrow">Opción ${i+1}</span><b>${p.sub}</b><span class="co">${isDT(p.sub)?"sin TDAH":p.co?`+ <abbr title="${COMORB[p.co].name}">${p.co}</abbr>`:"sin comorbilidad"}</span>
+      <span class="n">${v}<small>puntaje</small></span><span class="bar"><span style="width:${v}%"></span></span></div>`;};
+  $("verdict").className="verdict "+state; $("reading").classList.toggle("is-oor",state==="oor"); $("reading").dataset.state=state;
+  $("vPctBox").hidden=state!=="ok"; $("duo").hidden=state!=="nc"; $("provisional").hidden=true;
+  $("conf").hidden=state==="oor"; $("scoreNote").hidden=state==="oor";
+  $("tabsBlock").hidden=state==="oor"; $("oorNote").hidden=state!=="oor";
+  $("conf").classList.toggle("low",state!=="ok");
+  $("reviewTitle").textContent="Qué revisar ahora";
+  const goBtn=(tab,txt)=>`<button type="button" class="golink" data-tab="${tab}">${txt} <span aria-hidden="true">→</span></button>`;
+  if(state==="ok"){
+    $("vTitle").textContent=SUBTYPE_LABEL[pc.sub]; $("vComorb").innerHTML=comorbLine(pc);
+    $("vPct").innerHTML=v1+"<small>/100</small>";
+    $("confTitle").textContent="Sugerencia bien diferenciada. ";
+    $("confText").textContent=`La siguiente opción (${shortName(c2)}) tiene un puntaje de ${p2t}.`;
+    const drv=F.map((f,i)=>({f,v:contrib[i][top]})).filter(d=>d.v>0).sort((a,b)=>b.v-a.v).slice(0,2);
+    $("reviewBody").innerHTML=`<p>Confirma que los datos que más pesaron están bien ingresados: ${drv.map(d=>`<b>${LABEL[d.f].toLowerCase()} (${fmtVal(d.f)})</b>`).join(" y ")}. La sugerencia apoya, pero no reemplaza, la evaluación clínica.</p>${goBtn("t-why","Ver qué influyó")}`;
+  } else if(state==="nc"){
+    $("vTitle").textContent="Resultado no concluyente";
+    $("vComorb").innerHTML=where;
+    $("duo").innerHTML=[top,sec].map(optCard).join("");
+    $("confTitle").textContent="Revisión clínica recomendada. ";
+    $("confText").textContent=gap<20?`Las dos opciones están a ${gap} ${gap===1?"punto":"puntos"} y ninguna supera el umbral preliminar.`:`La opción principal no supera el umbral preliminar de 60.`;
+    $("reviewBody").innerHTML=separatorsHTML(c1,c2)+goBtn("t-cmp","Ver comparación completa");
+    $("reviewTitle").innerHTML='<span class="pres-only">Revisión clínica recomendada · </span>Qué revisar ahora';
+  } else {
+    const rng=oor.map(f=>`<b>${LABEL[f].toLowerCase()} = ${S[f]}</b> (datos de entrenamiento: ${M.ranges[f][0]}–${M.ranges[f][1]})`).join(", ");
+    $("vTitle").textContent="Requiere revisión";
+    $("vComorb").innerHTML=`Valor fuera del rango que conoce el modelo: ${rng}. Con datos fuera de rango el modelo no entrega una sugerencia fiable.`;
+    $("reviewBody").innerHTML=`<p>Comprueba ${oor.map(f=>`<b>${LABEL[f].toLowerCase()}</b>`).join(" y ")}. Si el valor está mal ingresado, corrígelo y el resultado se actualizará. Si es correcto, el modelo no tiene casos comparables y no debe usarse para este caso.</p>`+
+      oor.map(f=>`<button type="button" class="golink" data-goto="${f}">Ir a ${LABEL[f].toLowerCase()} <span aria-hidden="true">→</span></button>`).join(" ");
+  }
+  $("mFill").style.width=(p1*100).toFixed(1)+"%";
+
+  // grouped scores (inside the "Puntajes" tab): sum of category scores by presentation and by associated condition
+  const SUBS=[["Desarrollo típico","Típico"],["TDAH inatento","Inatento"],["TDAH hiperactivo/impulsivo","Hiperactivo/impulsivo"],["TDAH combinado","Combinado"]];
+  const COS=[[null,"Ninguna"],["TND","TND"],["TEA","TEA"],["TEAZ","TEAZ"]];
+  const agg=(list,key)=>list.map(([id,lab])=>({lab,v:M.classes.reduce((s,c,i)=>s+(parseClass(c)[key]===id?prob[i]:0),0)}));
+  const rowHTML=(name,parts)=>{const sv=parts.map(p=>p.v).sort((a,b)=>b-a), mx=sv[0], s2=sv[1];
+    return `<div class="crow"><span class="clab">${name}</span><div class="cbar" role="img" aria-label="${name}, puntaje agrupado: ${parts.map(p=>`${p.lab} ${Math.round(p.v*100)}`).join(", ")}">${
+      parts.filter(p=>p.v>=0.005).map(p=>`<span class="seg${p.v===mx?" top":(mx-p.v<0.15&&p.v===s2?" second":"")}" style="flex:${p.v.toFixed(4)} 1 0" title="${p.lab}: puntaje ${Math.round(p.v*100)}"><em>${p.lab} ${Math.round(p.v*100)}</em></span>`).join("")}</div></div>`;};
+  if(!$("p-all").hidden){
+    $("comp").innerHTML=rowHTML("Por presentación",agg(SUBS,"sub"))+rowHTML("Por condición asociada",agg(COS,"co"));
+    $("comp").querySelectorAll(".crow").forEach(row=>{const hid=[];
+      row.querySelectorAll(".seg").forEach(s=>{const e=s.firstElementChild;if(e.scrollWidth+14>s.clientWidth){s.classList.add("nolab");if(parseFloat(s.style.flexGrow)>=0.05)hid.push(e.textContent);}});
+      if(hid.length) row.insertAdjacentHTML("beforeend",`<span class="ctext">${hid.join(" · ")}</span>`);});
+  }
+  $("alts").innerHTML=order.map(k=>{const p=prob[k];
+    return `<li class="alt"><span class="lab">${abbrName(M.classes[k])}</span><span class="v">${p<0.005?"&lt;1":Math.round(p*100)}</span>
+    <span class="bar"><span style="width:${Math.max(0.5,p*100).toFixed(1)}%"></span></span></li>`;}).join("");
+
+  // what moved the score: for a clear result, contributions to the top option;
+  // for a non-conclusive one, what tilts the model towards option 1 versus option 2
+  const diffMode=state==="nc";
+  const items=F.map((f,i)=>({f,v:diffMode?contrib[i][top]-contrib[i][sec]:contrib[i][top]})).sort((a,b)=>Math.abs(b.v)-Math.abs(a.v)).slice(0,5);
+  const maxAbs=Math.max(0.05,...items.map(d=>Math.abs(d.v)));
+  $("whyHint").innerHTML=diffMode
+    ? `Qué inclina el modelo hacia cada opción, en puntos: <b>(+) hacia la opción 1</b> (${shortName(c1)}) · <b>(−) hacia la opción 2</b> (${shortName(c2)}).`
+    : `Cuánto movió cada variable el puntaje de <b>${shortName(c1)}</b>, en puntos: a favor (+) o en contra (−).`;
+  $("why").innerHTML=items.map(d=>{const w=(Math.abs(d.v)/maxAbs*50).toFixed(1);const val=fmtVal(d.f);
+    return `<li title="${LABEL[d.f]}: ${val}"><div class="t">${LABEL[d.f]}<span>${val}</span></div>
+    <div class="div" aria-hidden="true"><span class="${d.v>=0?"pos":"neg"}" style="width:${w}%"></span></div>
+    <span class="d">${d.v>=0?"+":"−"}${Math.abs(d.v*100).toFixed(0)}</span></li>`;}).join("");
+
+  drawChart(c1,state!=="oor"); if(state!=="oor"){drawCompare(c1,c2); drawNeighbors(c1,c2);}
+  $("refName").textContent="Perfil típico: "+shortName(c1); $("refLegend").hidden=state==="oor";
+  $("caseLegend").textContent=state==="oor"?"Datos ingresados":"Este caso";
+  $("chartSub").textContent=state==="oor"?"datos ingresados, sin comparación con el modelo":"puntuaciones T";
+  const mtxt = state==="ok" ? [shortName(c1), String(v1)]
+    : state==="nc" ? [`No concluyente: ${shortName(c1)} / ${shortName(c2)}`, ""] : ["Requiere revisión: dato fuera de rango", ""];
+  $("mTitle").textContent=mtxt[0]; $("mPct").textContent=mtxt[1]; $("mbar").classList.toggle("warn",state!=="ok");
+  const liveTxt = state==="ok" ? `Sugerencia bien diferenciada: ${shortName(c1)}, puntaje ${v1} sin calibrar.`
+    : state==="nc" ? `Resultado no concluyente entre ${shortName(c1)} (${v1}) y ${shortName(c2)} (${v2}).`
+    : `Requiere revisión: ${oor.map(f=>LABEL[f]).join(", ")} fuera del rango de entrenamiento.`;
+  clearTimeout(liveT); liveT=setTimeout(()=>$("live").textContent=liveTxt,700);
+}
+// compact synthesis of "Comparar opciones" for the non-conclusive state
+function separatorsHTML(c1,c2){
+  const P1=M.profiles[c1],P2=M.profiles[c2];
+  const d=ZV.map(f=>({f,a:zn(f,P1[f]),b:zn(f,P2[f]),c:zn(f,S[f])})).map(o=>({...o,gap:Math.abs(o.a-o.b)})).sort((p,q)=>q.gap-p.gap).filter(o=>o.gap>=0.4).slice(0,2);
+  if(!d.length) return `<p>Las dos opciones tienen perfiles numéricos casi iguales; la diferencia viene de los datos demográficos y de antecedentes. Revisa esos datos.</p>`;
+  const lo=Math.min(-2,...d.flatMap(o=>[o.a,o.b,o.c]).map(Math.floor)), hi=Math.max(2,...d.flatMap(o=>[o.a,o.b,o.c]).map(Math.ceil));
+  const pos=v=>((Math.min(hi,Math.max(lo,v))-lo)/(hi-lo)*100).toFixed(1)+"%";
+  const rows=d.map(o=>{const closer=Math.abs(o.c-o.a)<=Math.abs(o.c-o.b)?1:2;
+    return `<div class="rv-row"><div class="rv-lab"><b>${LABEL[o.f]}</b> <span>${fmtVal(o.f)}${o.f==="fluidez_fonologica"?" · ref.: muestra":""}</span></div>
+      <div class="strip" role="img" aria-label="${LABEL[o.f]}: este caso ${fmtz(o.c)} DE, opción 1 ${fmtz(o.a)}, opción 2 ${fmtz(o.b)}">
+        <span class="zero" style="left:${pos(0)}"></span>
+        <span class="mk o1" style="left:${pos(o.a)}" title="Opción 1: ${fmtz(o.a)} DE">1</span>
+        <span class="mk o2" style="left:${pos(o.b)}" title="Opción 2: ${fmtz(o.b)} DE">2</span>
+        <span class="mk me" style="left:${pos(o.c)}" title="Este caso: ${fmtz(o.c)} DE"></span></div>
+      <div class="rv-txt">Más cerca de la opción ${closer}</div></div>`;}).join("");
+  return `<p>Lo que más separa las dos opciones, y dónde se ubica este caso <span class="muted">(● este caso · ① ② perfil típico de cada opción)</span>:</p>${rows}<p>Comprueba esos datos y contrástalos con la evaluación clínica.</p>`;
+}
+function fmtVal(f){const v=S[f];
+  if(f.includes("basc3")) return `T ${v}${v>=60?" · "+band(v)[1].toLowerCase():""}`;
+  if(f==="edad") return v+" años"; if(f==="escolaridad") return gradeLabel(v);
+  if(f==="cit") return String(v); if(f==="fluidez_fonologica") return v+" palabras";
+  return OPTS[f]? optLabel(f,v).toLowerCase() : v;}
+
+function drawChart(cls,withRef=true){
+  const pres=document.body.classList.contains("present");
+  const W=Math.max(320,Math.round($("chartBlock").clientWidth||640));
+  // presentation: let the chart take the vertical space that is left on screen
+  const room=pres?Math.round(innerHeight-$("chartBlock").getBoundingClientRect().top-118):0;
+  const H=pres?Math.max(140,Math.min(300,room,Math.round(W*0.42))):Math.round(Math.min(250,Math.max(210,W*0.36))),L=36,R=10,Tp=20,B=34;
+  const vals=BASC.map(([f])=>S[f]); const hi=Math.max(100,Math.ceil(Math.max(...vals)/10)*10), lo=Math.min(20,Math.floor(Math.min(...vals)/10)*10);
+  $("chart").setAttribute("viewBox",`0 0 ${W} ${H}`);
+  const x=i=>L+(W-L-R)*(i+.5)/BASC.length, y=v=>Tp+(H-Tp-B)*(1-(Math.min(hi,Math.max(lo,v))-lo)/(hi-lo));
+  const ref=M.profiles[cls];
+  let s=`<rect x="${L}" y="${y(hi)}" width="${W-L-R}" height="${y(70)-y(hi)}" fill="var(--clin-soft)"/>`+
+        `<rect x="${L}" y="${y(70)}" width="${W-L-R}" height="${y(60)-y(70)}" fill="var(--risk-soft)"/>`;
+  const step=(y(60)-y(70))<16?20:10;
+  for(let t=lo;t<=hi;t+=10){s+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="${t===50?1.4:1}"/>`;
+    if((t-lo)%step===0) s+=`<text x="${L-8}" y="${y(t)+4}" text-anchor="end" font-size="11" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace">${t}</text>`;}
+  if(W>=460) s+=`<text x="${W-R-4}" y="${y(70)-6}" text-anchor="end" font-size="10.5" fill="var(--clin)" font-weight="700" letter-spacing=".04em">CLÍNICO ≥ 70</text>`;
+  if(W>=460&&y(60)-y(70)>=16) s+=`<text x="${W-R-4}" y="${y(60)-5}" text-anchor="end" font-size="10.5" fill="var(--risk)" font-weight="700" letter-spacing=".04em">EN RIESGO 60–69</text>`;
+  const pts=k=>BASC.map(([f],i)=>`${x(i).toFixed(1)},${y(k[f]).toFixed(1)}`).join(" ");
+  if(withRef) s+=`<polyline points="${pts(ref)}" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 5"/>`;
+  s+=`<polyline points="${pts(S)}" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>`;
+  const short={problemas_atencion_basc3:"Atención",hiperactividad_basc3:"Hiperactividad",agresividad_basc3:"Agresividad",problemas_conducta_basc3:"Conducta",atipicidad_basc3:"Atipicidad"};
+  BASC.forEach(([f,n],i)=>{const v=S[f];
+    s+=(withRef?`<circle cx="${x(i)}" cy="${y(ref[f])}" r="3.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1.6"/>`:"")+
+       `<g><title>${LABEL[f]}: T ${v} (${band(v)[1].toLowerCase()})${withRef?` · perfil típico del grupo: ${ref[f]}`:""}</title><circle cx="${x(i)}" cy="${y(v)}" r="12" fill="transparent"/>`+
+       `<circle cx="${x(i)}" cy="${y(v)}" r="6" fill="var(--accent)" stroke="var(--panel)" stroke-width="2"/></g>`+
+       `<text x="${x(i)}" y="${y(v)-12}" text-anchor="middle" font-size="12" font-weight="500" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${v}</text>`+
+       `<text x="${x(i)}" y="${H-10}" text-anchor="middle" font-size="12" fill="var(--ink-2)">${W<460?ZLAB_XS[f]:W<520?short[f].slice(0,9)+(short[f].length>9?".":""):n.replace("Problemas de ","Prob. ")}</text>`;});
+  $("chart").innerHTML=s;
+}
+
+/* ---------- Compare options (z-profile, EDA style) ---------- */
+const ZV=M.zvars.slice(0,7);
+const ZLAB={problemas_atencion_basc3:"Atención",hiperactividad_basc3:"Hiperact.",agresividad_basc3:"Agresiv.",problemas_conducta_basc3:"Conducta",atipicidad_basc3:"Atipicidad",cit:"CIT",fluidez_fonologica:"Fluidez"};
+const ZLAB_XS={problemas_atencion_basc3:"Aten.",hiperactividad_basc3:"Hiper.",agresividad_basc3:"Agres.",problemas_conducta_basc3:"Cond.",atipicidad_basc3:"Atip.",cit:"CIT",fluidez_fonologica:"Fluid."};
+const ZLAB_L={problemas_atencion_basc3:"Prob. atención",hiperactividad_basc3:"Hiperactividad",agresividad_basc3:"Agresividad",problemas_conducta_basc3:"Prob. conducta",atipicidad_basc3:"Atipicidad",cit:"CIT",fluidez_fonologica:"Fluidez fon."};
+const z=(f,v)=>(v-M.stats[f][0])/M.stats[f][1];
+// normative reference: BASC-3 T (50, 10), CIT (100, 15); phonological fluency has no norm → study sample
+const zn=(f,v)=>f.includes("basc3")?(v-50)/10:f==="cit"?(v-100)/15:z(f,v);
+const fmtz=v=>(v>=0?"+":"−")+Math.abs(v).toFixed(1).replace(".",",");
+function drawCompare(c1,c2){
+  const el=$("p-cmp"); if(el.hidden) return;
+  const W=Math.max(320,Math.round(el.clientWidth||640)),H=Math.round(Math.min(270,Math.max(230,W*0.4))),L=34,R=10,Tp=26,B=44;
+  const allz=[...ZV.map(f=>zn(f,S[f])),...ZV.map(f=>zn(f,M.profiles[c1][f])),...ZV.map(f=>zn(f,M.profiles[c2][f]))];
+  const lo=Math.min(-2,Math.floor(Math.min(...allz))), hi=Math.max(2,Math.ceil(Math.max(...allz)));
+  $("cmpChart").setAttribute("viewBox",`0 0 ${W} ${H}`);
+  const x=i=>L+(W-L-R)*(i+.5)/ZV.length, y=v=>Tp+(H-Tp-B)*(1-(Math.min(hi,Math.max(lo,v))-lo)/(hi-lo));
+  const P1=M.profiles[c1], P2=M.profiles[c2];
+  let s=`<rect x="${L}" y="${y(1)}" width="${W-L-R}" height="${y(-1)-y(1)}" fill="var(--track)" opacity=".45"/>`;
+  for(let t=lo;t<=hi;t++){s+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="${t===0?1.6:1}"/>`+
+    `<text x="${L-8}" y="${y(t)+4}" text-anchor="end" font-size="11" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace">${t>0?"+"+t:t===0?"0":"−"+(-t)}</text>`;}
+  s+=`<text x="${L+6}" y="${y(-1)-5}" font-size="10.5" fill="var(--ink-3)">±1 DE: rango promedio</text>`;
+  const xf=x(ZV.indexOf("fluidez_fonologica"));
+  s+=`<text x="${L}" y="12" font-size="11" font-weight="700" fill="var(--ink-2)">Referencia normativa: BASC-3 (T 50, DE 10) · CIT (100, DE 15)</text>`;
+  s+=`<rect x="${xf-(W-L-R)/ZV.length/2+2}" y="${Tp-6}" width="${(W-L-R)/ZV.length-4}" height="${H-Tp-B+6}" fill="var(--risk-soft)" opacity=".55" rx="4"/>`;
+  const pts=src=>ZV.map((f,i)=>`${x(i).toFixed(1)},${y(zn(f,src[f])).toFixed(1)}`).join(" ");
+  s+=`<polyline points="${pts(P2)}" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>`;
+  s+=`<polyline points="${pts(P1)}" fill="none" stroke="var(--ink-2)" stroke-width="2" stroke-dasharray="6 5"/>`;
+  s+=`<polyline points="${pts(S)}" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>`;
+  ZV.forEach((f,i)=>{const zc=zn(f,S[f]);
+    s+=`<g><title>${LABEL[f]}: ${S[f]} (${fmtz(zc)} DE) · ${shortName(c1)}: ${P1[f]} · ${shortName(c2)}: ${P2[f]}</title><circle cx="${x(i)}" cy="${y(zc)}" r="12" fill="transparent"/>`+
+       `<circle cx="${x(i)}" cy="${y(zc)}" r="5.5" fill="var(--accent)" stroke="var(--panel)" stroke-width="2"/></g>`+
+       `<text x="${x(i)}" y="${H-24}" text-anchor="middle" font-size="${W<420?11:12}" fill="var(--ink-2)">${W<420?ZLAB_XS[f]:W<720?ZLAB[f]:ZLAB_L[f]}</text>`+
+       (f==="fluidez_fonologica"?`<text x="${x(i)}" y="${H-9}" text-anchor="middle" font-size="10.5" font-weight="700" fill="var(--risk)">ref.: muestra</text>`:"");});
+  $("cmpChart").innerHTML=s;
+  $("cmpLegend").innerHTML=`<span><i></i>Este caso</span><span><i class="ref"></i>1.ª: ${shortName(c1)}</span><span><i class="ref2"></i>2.ª: ${shortName(c2)}</span>`;
+  // what separates the two options, and which one the case is closer to on that variable
+  const d=ZV.map(f=>({f,a:zn(f,P1[f]),b:zn(f,P2[f]),c:zn(f,S[f])})).map(o=>({...o,gap:Math.abs(o.a-o.b)})).sort((p,q)=>q.gap-p.gap);
+  const top=d.filter(o=>o.gap>=0.4).slice(0,2);
+  $("cmpNote").innerHTML = !top.length ? `Las dos opciones tienen perfiles numéricos muy parecidos; la diferencia viene de las variables demográficas y de antecedentes.`
+    : `Lo que más separa las dos opciones: ${top.map(o=>{const closer=Math.abs(o.c-o.a)<=Math.abs(o.c-o.b)?"la 1.ª":"la 2.ª";
+        return `<b>${LABEL[o.f].toLowerCase()}</b>${o.f==="fluidez_fonologica"?" (ref.: muestra)":""} (${fmtz(o.a)} frente a ${fmtz(o.b)} DE; este caso: ${fmtz(o.c)}, más cerca de ${closer})`;}).join(" y ")}. La fluidez fonológica no tiene norma disponible y se compara con la muestra del estudio (columna sombreada).`;
+}
+
+/* ---------- Similar cases in the sample (k nearest neighbours, descriptive) ---------- */
+const KNN=15;
+function drawNeighbors(c1,c2){
+  const el=$("p-nn"); if(el.hidden) return;
+  const cz=ZV.map(f=>z(f,S[f]));
+  const dist=M.sample.map(r=>{let s=0;for(let i=0;i<ZV.length;i++){const d=z(ZV[i],r[i])-cz[i];s+=d*d;}return [s,r[r.length-1]];}).sort((a,b)=>a[0]-b[0]).slice(0,KNN);
+  const cnt={}; dist.forEach(([,k])=>cnt[k]=(cnt[k]||0)+1);
+  const rows=Object.entries(cnt).map(([k,n])=>({c:M.classes[k],n})).sort((a,b)=>b.n-a.n);
+  $("nnHint").textContent=`Diagnóstico registrado de los ${KNN} niños de la muestra con el perfil más parecido en escalas BASC-3, CIT y fluidez fonológica.`;
+  $("nnList").innerHTML=rows.map((r,i)=>`<li class="alt${r.c===c1?" match":""}"><span class="lab">${abbrName(r.c)}${r.c===c1?' <span class="tag-s">sugerencia</span>':""}</span><span class="v">${r.n} de ${KNN}</span>
+    <span class="bar"><span style="width:${(r.n/KNN*100).toFixed(1)}%"></span></span></li>`).join("");
+  const m=cnt[M.classes.indexOf(c1)]||0, m2=cnt[M.classes.indexOf(c2)]||0;
+  $("nnNote").innerHTML=`${m} de ${KNN} tienen el diagnóstico de la opción 1 (${shortName(c1)})${m2?` y ${m2} el de la opción 2 (${shortName(c2)})`:""}.`;
+}
+
+/* ---------- About ---------- */
+function buildAbout(){
+  const rows=[...M.classes].sort((a,b)=>M.classStats[b].f1-M.classStats[a].f1);
+  $("ctable").innerHTML=`<tr><td style="color:var(--ink-3)">Categoría</td><td class="r" style="color:var(--ink-3)">F1</td><td class="r" style="color:var(--ink-3)">Casos</td></tr>`+
+    rows.map(c=>{const s=M.classStats[c];
+    return `<tr><td>${shortName(c)}</td><td class="r">${s.f1.toFixed(2).replace(".",",")}<span class="mini"><span style="width:${(s.f1*100).toFixed(0)}%"></span></span></td><td class="r">${s.n}</td></tr>`;}).join("");
+  $("cbins").innerHTML=M.confBins.map(b=>`<div class="cbin"><span>${b.label}</span><span class="bar"><span style="width:${(b.acc*100).toFixed(1)}%"></span></span><span class="v">${(b.acc*100).toFixed(1).replace(".",",")} % <small>· ${b.n} casos</small></span></div>`).join("");
+  const o=$("about"), open=()=>{o.hidden=false;$("aboutClose").focus();}, close=()=>{o.hidden=true;$("aboutBtn").focus();};
+  $("aboutBtn").addEventListener("click",open); $("aboutClose").addEventListener("click",close);
+  o.addEventListener("click",e=>{if(e.target===o)close();});
+  document.addEventListener("keydown",e=>{if(o.hidden)return; if(e.key==="Escape")return close();
+    if(e.key==="Tab"){const f=[...o.querySelectorAll('button,[href],input,select,[tabindex]:not([tabindex="-1"])')].filter(x=>x.offsetParent!==null);
+      if(!f.length)return; const first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+      else if(!o.contains(document.activeElement)){e.preventDefault();first.focus();}}});
+}
+
+buildForm(); buildAbout(); draw();
+function goToField(f){if(DEMO.includes(f)){demoOpen=true;draw();}
+  const el=document.querySelector(`#n-${f}, #f-${f}, [data-seg="${f}"] button, [data-step^="${f}:"]`); if(el){el.scrollIntoView({block:"center",behavior:"smooth"});el.focus({preventScroll:true});}}
+$("missingList").addEventListener("click",e=>{const b=e.target.closest("[data-goto]");if(b)goToField(b.dataset.goto);});
+$("reviewBody").addEventListener("click",e=>{const g=e.target.closest("[data-goto]");if(g)return goToField(g.dataset.goto);
+  const t=e.target.closest("[data-tab]");if(t){if(document.body.classList.contains("present"))setPresent(false);selectTab(t.dataset.tab);}});
+let rz=0; addEventListener("resize",()=>{clearTimeout(rz);rz=setTimeout(render,120);});
+function setPresent(on){document.body.classList.toggle("present",on);$("presentBtn").setAttribute("aria-pressed",on);
+  $("presentLbl").textContent=on?"Salir de presentación":"Modo presentación";render();}
+$("presentBtn").addEventListener("click",()=>setPresent(!document.body.classList.contains("present")));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("about").hidden&&document.body.classList.contains("present"))setPresent(false);});
+if(location.hash==="#presentar") setPresent(true);
+</script>

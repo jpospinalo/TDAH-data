@@ -34,3 +34,6 @@ Thumbs.db
 
 # ── Checkpoints de Jupyter ───────────────────────────────────────────────────
 .ipynb_checkpoints/
+
+# Interfaz: modelo entrenado y datos intermedios (se regeneran con app/construir_modelo_y_app.py)
+app/salida/

@@ -2,6 +2,8 @@
 
 Análisis exploratorio, modelamiento predictivo e informe técnico sobre una muestra clínica de niños de 6 a 12 años evaluados para TDAH.
 
+**Interfaz (prototipo):** <https://jpospinalo.github.io/TDAH-data/> · apoyo a la decisión clínica construido sobre el modelo Random Forest. Ver [Interfaz](#interfaz).
+
 ## Datos
 
 | | |
@@ -54,7 +56,17 @@ El informe técnico completo se encuentra en `EDA-TDAH/`. Documenta el proceso a
 | **Random Forest** | **0.953** | **0.018** | **0.942** | **0.954** |
 | XGBoost | 0.934 | 0.022 | 0.941 | 0.949 |
 
+Random Forest se eligió por su mayor F1-macro en validación cruzada. En el conjunto de prueba, XGBoost queda prácticamente empatado (la diferencia equivale a un caso de 175).
+
 El bloque BASC-3 concentra la mayor parte del poder discriminante: retirarlo reduce el F1-macro de 0.942 a 0.268. Los errores se concentran en la frontera entre subtipos con perfiles sintomáticos cercanos.
+
+## Interfaz
+
+Prototipo web que usa el modelo Random Forest para sugerir el perfil de un caso entre las 13 categorías. Muestra si la sugerencia está bien diferenciada, no es concluyente o requiere revisión, junto con las variables que más influyeron y comparaciones con la muestra. Corre completamente en el navegador, sin servidor, y se publica con GitHub Pages desde `docs/`.
+
+- **Enlace:** <https://jpospinalo.github.io/TDAH-data/>
+- **Código y cómo regenerarla:** [`app/README.md`](app/README.md)
+- Es un prototipo de investigación con validación interna; **no es una herramienta diagnóstica**.
 
 ## Notas metodológicas
 
@@ -73,6 +85,9 @@ TDAH-data/
 │   ├── raw/                          # Datos originales (xlsx, csv, equivalencias)
 │   └── processed/
 │       └── processed_data.csv        # Dataset limpio listo para análisis
+├── app/                              # Interfaz: script de construcción y plantilla
+├── docs/
+│   └── index.html                    # Interfaz publicada con GitHub Pages
 ├── notebooks/
 │   ├── preprocessing.ipynb
 │   ├── eda_univariate.ipynb
