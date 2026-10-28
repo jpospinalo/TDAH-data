@@ -58,17 +58,19 @@ La calidad de los notebooks de EDA se evalúa con `notebooks/rubrica_calidad_eda
 
 El informe técnico completo se encuentra en `EDA-TDAH/`. Documenta el proceso analítico de principio a fin: preprocesamiento, EDA bivariado, comparación de modelos, importancia de variables, análisis de errores, estudio de ablación, conclusiones y limitaciones.
 
-**Resultados principales** (según el informe técnico):
+**Resultados principales** (validación cruzada de 5 particiones y conjunto de prueba del 20 %):
 
 | Modelo | CV F1-macro | DE | Test F1-macro | Test Accuracy |
 |---|:---:|:---:|:---:|:---:|
 | Regresión logística | 0.841 | 0.024 | 0.851 | 0.874 |
-| **Random Forest** | **0.953** | **0.018** | **0.942** | **0.954** |
+| **Random Forest** | **0.953** | **0.018** | **0.952** | **0.954** |
 | XGBoost | 0.934 | 0.022 | 0.941 | 0.949 |
 
-Random Forest se eligió por su mayor F1-macro en validación cruzada (0.953 frente a 0.934 de XGBoost). En el conjunto de prueba ambos quedan prácticamente empatados. Entre las ejecuciones de los distintos notebooks, el F1-macro de prueba de Random Forest varía entre 0.942 y 0.952.
+Valores de `model_13clases.ipynb`. Random Forest (300 árboles, `min_samples_leaf=2`, clases balanceadas) obtuvo el mejor F1-macro tanto en validación cruzada (0.953 frente a 0.934 de XGBoost) como en prueba (0.952 frente a 0.941). Es el modelo que usa la interfaz.
 
-El bloque BASC-3 concentra la mayor parte del poder discriminante: retirarlo reduce el F1-macro de prueba de 0.942 a 0.258 (`ablation_study.ipynb`). Los errores se concentran en la frontera entre subtipos con perfiles sintomáticos cercanos.
+`error_analysis.ipynb` y `ablation_study.ipynb` usan una variante con `min_samples_leaf=1` (F1-macro de prueba 0.942, 10 errores sobre 175). El notebook integrador obtiene 0.943 con Random Forest y deja a XGBoost levemente adelante (0.945); la diferencia está dentro de la variación entre ejecuciones.
+
+El bloque BASC-3 concentra la mayor parte del poder discriminante: en la ablación, retirarlo reduce el F1-macro de prueba de 0.942 a 0.258. Los errores se concentran en la frontera entre subtipos con perfiles sintomáticos cercanos.
 
 ## Interfaz
 
