@@ -2,7 +2,7 @@
 
 Interfaz web de apoyo a la decisión clínica construida sobre el modelo Random Forest de `notebooks/model_13clases.ipynb`. Se publica con GitHub Pages desde `docs/index.html`.
 
-- **Para qué sirve:** sugiere el perfil más probable entre las 13 categorías diagnósticas a partir de 14 variables (demografía, antecedentes, BASC-3, CIT y fluidez fonológica). Indica si la sugerencia está bien diferenciada, no es concluyente o requiere revisión por datos fuera de rango.
+- **Para qué sirve:** indica qué categoría, entre las 13 diagnósticas, recibe el mayor puntaje del modelo a partir de 14 variables (demografía, antecedentes, BASC-3, CIT y fluidez fonológica). Indica si la sugerencia está bien diferenciada, no es concluyente o requiere revisión por datos fuera de rango.
 - **Cómo funciona:** los 300 árboles del modelo van dentro de la página y se evalúan en el navegador. No hay servidor y los datos ingresados no salen del equipo de quien la usa.
 - **Estado:** prototipo de investigación con validación interna (875 casos, un centro). **No es una herramienta diagnóstica.**
 

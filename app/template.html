@@ -241,6 +241,9 @@ abbr{text-decoration:none;border-bottom:1px dotted var(--ink-3);cursor:help}
 .chart .lg i{display:inline-block;width:18px;height:0;border-top:2.5px solid var(--accent);margin-right:6px;vertical-align:4px}
 .chart .lg i.ref{border-top:2px dashed var(--ink-3)}
 .chart .lg i.ref2{border-top:2px dotted var(--ink-3)}
+.chart .lg i.zone{border:0;width:12px;height:10px;border-radius:2px;vertical-align:-1px}
+.chart .lg i.zr{background:var(--risk-soft);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--risk) 45%,transparent)}
+.chart .lg i.zc{background:var(--clin-soft);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--clin) 45%,transparent)}
 .cmpnote{font-size:.9rem;color:var(--ink-2);margin:12px 0 0;max-width:62ch}
 .cmpnote b{color:var(--ink)}
 
@@ -288,7 +291,7 @@ dl.gloss{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:6px 0;c
 dl.gloss dt{font-weight:700;color:var(--ink)} dl.gloss dd{margin:0}
 
 /* Presentation mode: one screen at 1280×720 and up — compact inputs, result + options + chart, larger reading */
-body.present .brand p,body.present .record .sec:first-child,body.present .tabsBlock,body.present #newCase,body.present .compBlock,body.present .reading>.rule,body.present #resultBody>.rule{display:none!important}
+body.present .record .sec:first-child,body.present .tabsBlock,body.present #newCase,body.present .compBlock,body.present .reading>.rule,body.present #resultBody>.rule{display:none!important}
 body.present .opt{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:1px;padding:10px 14px}
 body.present .opt>*{grid-column:1}
 body.present .opt .n{grid-column:2;grid-row:1/4;align-self:center;margin:0}
@@ -306,16 +309,20 @@ body.present .scales{gap:2px;margin-top:6px}
 body.present .scale .name{font-size:.92rem}
 body.present .cog{gap:2px 24px;margin-top:6px}
 body.present .verdict h2{font-size:clamp(1.9rem,2.6vw,2.6rem);margin:0 0 4px}
-body.present #vEyebrow{display:none}
 body.present .comorb{font-size:1.06rem}
 body.present .status p{font-size:1rem}
 body.present .chart .lg{margin-top:2px}
 body.present .foot{font-size:.86rem;color:var(--ink-2)}
 body.present .scorenote{font-size:.92rem;margin-top:-4px}
 body.present .review{padding:10px 14px;gap:4px}
-body.present .reading[data-state="ok"] .review{display:none}
+body.present .reading[data-state="ok"] .review h3{display:none}
+.drv-pres{display:none} body.present .drv-pres{display:block} body.present .drv-norm{display:none}
 body.present .reading[data-state="nc"] .conf .meter,body.present .reading[data-state="nc"] .conf .mscale{display:none}
-body.present .review .golink,body.present .review>div>p{display:none}
+body.present .review .golink,body.present .review>div>p:not(.drv-pres):not(.rv-legend){display:none}
+body.present .rv-legend{font-size:.84rem}
+/* uncertainty scene: the comparison strips replace the BASC chart, which would otherwise shrink to a sliver */
+body.present .reading[data-state="nc"] #chartBlock{display:none}
+body.present .brand>div{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 14px}
 body.present .reading[data-state="nc"] #conf,body.present #oorNote,body.present #chartBlock .sechead{display:none!important}
 body.present .rv-lab span{display:none}
 .pres-only{display:none} body.present .pres-only{display:inline}
@@ -341,7 +348,7 @@ body.present .foot .short{display:inline}
       </svg>
       <div>
         <h1>Perfil TDAH</h1>
-        <p>Apoyo a la decisión clínica para niñas y niños de 6 a 12 años · prototipo de investigación</p>
+        <p>Apoyo a la evaluación clínica · niñas y niños de 6 a 12 años · prototipo de investigación</p>
       </div>
     </div>
     <button class="link" type="button" id="newCase">
@@ -355,7 +362,7 @@ body.present .foot .short{display:inline}
   <nav class="examples" aria-label="Casos de ejemplo">
     <span class="eyebrow">Ejemplos</span>
     <span id="caseChips" style="display:contents"></span>
-    <select id="moreProfiles" aria-label="Perfil típico de cada categoría"><option value="">Más perfiles…</option></select>
+    <select id="moreProfiles" aria-label="Mediana de cada categoría"><option value="">Medianas…</option></select>
   </nav>
   <p class="note" id="caseNote"></p>
 
@@ -402,7 +409,7 @@ body.present .foot .short{display:inline}
       <p class="sr-only" id="live" aria-live="polite"></p>
 
       <div class="empty" id="emptyState" hidden>
-        <span class="eyebrow">Perfil sugerido</span>
+        <span class="eyebrow">Sugerencia del modelo</span>
         <h2 id="emptyTitle">Faltan datos</h2>
         <p>El modelo necesita las 14 variables para sugerir un perfil. La sugerencia aparece en cuanto estén completas.</p>
         <div class="missing" id="missingList"></div>
@@ -411,7 +418,7 @@ body.present .foot .short{display:inline}
       <div id="resultBody" style="display:contents">
         <div class="verdict" id="verdict">
           <div>
-            <span class="eyebrow" id="vEyebrow">Perfil sugerido</span>
+            <span class="eyebrow" id="vEyebrow">Sugerencia del modelo para revisión clínica</span>
             <h2 id="vTitle">—</h2>
             <div class="comorb" id="vComorb"></div>
           </div>
@@ -434,8 +441,8 @@ body.present .foot .short{display:inline}
 
         <div class="chart" id="chartBlock">
           <div class="sechead"><h3>Perfil BASC-3</h3><small id="chartSub">puntuaciones T</small></div>
-          <svg id="chart" viewBox="0 0 640 230" role="img" aria-label="Puntuaciones T del caso frente al perfil típico de la categoría sugerida"></svg>
-          <div class="lg"><span><i></i><span id="caseLegend">Este caso</span></span><span id="refLegend"><i class="ref"></i><span id="refName">Perfil típico</span></span></div>
+          <svg id="chart" viewBox="0 0 640 230" role="img" aria-label="Puntuaciones T del caso frente a la mediana del grupo de la categoría sugerida"></svg>
+          <div class="lg"><span><i></i><span id="caseLegend">Este caso</span></span><span id="refLegend"><i class="ref"></i><span id="refName">Mediana del grupo</span></span><span><i class="zone zr"></i>En riesgo 60–69</span><span><i class="zone zc"></i>Clínico ≥ 70</span></div>
         </div>
 
         <div class="tabsBlock" id="tabsBlock">
@@ -451,8 +458,8 @@ body.present .foot .short{display:inline}
             <p class="caveat">Describe cómo calculó el modelo su puntaje. No es una prueba diagnóstica ni indica una relación causal.</p>
           </div>
           <div class="tabpanel chart" id="p-cmp" role="tabpanel" aria-labelledby="t-cmp" hidden>
-            <p class="tabhint">Distancia de cada variable a su valor de referencia, en desviaciones estándar (DE). Las líneas punteadas son el perfil típico de las dos opciones con mayor puntaje.</p>
-            <svg id="cmpChart" viewBox="0 0 640 240" role="img" aria-label="Perfil del caso comparado con el perfil típico de las dos opciones con mayor puntaje"></svg>
+            <p class="tabhint">Distancia de cada variable a su valor de referencia, en desviaciones estándar (DE). Las líneas punteadas son la mediana del grupo de las dos opciones con mayor puntaje.</p>
+            <svg id="cmpChart" viewBox="0 0 640 240" role="img" aria-label="Perfil del caso comparado con la mediana del grupo de las dos opciones con mayor puntaje"></svg>
             <div class="lg" id="cmpLegend"></div>
             <p class="cmpnote" id="cmpNote"></p>
           </div>
@@ -488,7 +495,7 @@ body.present .foot .short{display:inline}
       <button class="link" type="button" id="aboutClose">Cerrar</button>
     </header>
     <h3>Qué hace</h3>
-    <p>Con datos que el equipo clínico ya recoge (demografía, antecedentes, escalas BASC-3, CIT y fluidez fonológica), sugiere el perfil más probable entre 13 categorías: desarrollo típico y los tres subtipos de TDAH, solos o con una comorbilidad. Entrega un puntaje para cada categoría, indica si la sugerencia está bien diferenciada o no es concluyente, y muestra las variables que más influyeron en el cálculo.</p>
+    <p>Con datos que el equipo clínico ya recoge (demografía, antecedentes, escalas BASC-3, CIT y fluidez fonológica), indica qué categoría, entre 13, recibe el mayor puntaje del modelo: desarrollo típico y las tres presentaciones de TDAH, solas o con una condición asociada. Entrega un puntaje para cada categoría, indica si la sugerencia está bien diferenciada o no es concluyente, y muestra las variables que más influyeron en el cálculo.</p>
     <dl class="gloss">
       <dt>TND</dt><dd>Trastorno negativista desafiante</dd>
       <dt>TEA</dt><dd>Trastorno del espectro autista</dd>
@@ -509,11 +516,11 @@ body.present .foot .short{display:inline}
     <div class="kpis">
       <div class="kpi"><div class="n">95 %</div><div class="d">aciertos en la categoría exacta, entre 13</div></div>
       <div class="kpi"><div class="n">99 %</div><div class="d">la categoría correcta está entre las 2 primeras opciones</div></div>
-      <div class="kpi"><div class="n">97,5 %</div><div class="d">aciertos en el subtipo de TDAH</div></div>
+      <div class="kpi"><div class="n">97,5 %</div><div class="d">aciertos en la presentación de TDAH o desarrollo típico</div></div>
       <div class="kpi"><div class="n">98,9 %</div><div class="d">aciertos cuando el puntaje supera el umbral preliminar de 60 (80 % de los casos)</div></div>
     </div>
     <h3>Aciertos según el puntaje del modelo</h3>
-    <p>Cuanto más alto es el puntaje, más acierta el modelo. Por debajo de 60 la interfaz marca el resultado como no concluyente y recomienda revisión clínica.</p>
+    <p>Cuanto más alto es el puntaje, más acierta el modelo. Si el puntaje mostrado (redondeado a entero) es menor que 60, la interfaz marca el resultado como no concluyente y recomienda revisión clínica.</p>
     <div class="cbins" id="cbins"></div>
     <h3>Desempeño por categoría</h3>
     <table class="ctable" id="ctable"></table>
@@ -548,9 +555,9 @@ const M = /*__MODEL__*/null;
 
 /* ---------- Vocabulary (single place to edit clinical labels) ---------- */
 const COMORB = {
-  TND:  {short:"TND",  name:"Trastorno negativista desafiante"},
-  TEA:  {short:"TEA",  name:"Trastorno del espectro autista"},
-  TEAZ: {short:"TEAZ", name:"Trastorno específico del aprendizaje", pending:true}
+  TND:  {short:"TND",  name:"Trastorno negativista desafiante", desc:"negativista desafiante"},
+  TEA:  {short:"TEA",  name:"Trastorno del espectro autista", desc:"espectro autista"},
+  TEAZ: {short:"TEAZ", name:"Trastorno específico del aprendizaje", desc:"aprendizaje (por confirmar)", pending:true}
 };
 const SUBTYPE_LABEL = {"Desarrollo típico":"Desarrollo típico","TDAH inatento":"TDAH presentación inatenta",
   "TDAH hiperactivo/impulsivo":"TDAH presentación hiperactiva/impulsiva","TDAH combinado":"TDAH presentación combinada"};
@@ -600,7 +607,8 @@ function explain(x){
 }
 
 /* ---------- State ---------- */
-let S = {...CASES[3].data}, activeCase = "d", demoOpen = false, selectTab = ()=>{};
+const CLAMP={};
+let S = {...CASES[1].data}, activeCase = "b", demoOpen = false, selectTab = ()=>{};
 const $ = id=>document.getElementById(id);
 function band(v){return v>=70?["c","Clínico"]:v>=60?["r","En riesgo"]:["n","Promedio"];}
 function gradeLabel(g){return g+".º grado";}
@@ -622,12 +630,16 @@ function buildForm(){
       <span class="bandtxt" id="b-${k}"></span>
       <input id="n-${k}" type="number" inputmode="numeric" min="${lo}" max="${hi}" aria-label="${name}, valor">
       <input id="r-${k}" type="range" min="${lo}" max="${hi}" step="1">
+      <span class="oor" id="c-${k}" role="status" hidden></span>
       <span class="oor" id="w-${k}" hidden>Fuera del rango de los datos de entrenamiento (${M.ranges[k][0]}–${M.ranges[k][1]}): interpretar con cautela</span></div>`;};
   $("basc").innerHTML=BASC.map(([k,n])=>scaleHTML(k,n)).join("");
   $("cog").innerHTML=COG.map(([k,n,s])=>scaleHTML(k,n,s)).join("");
   document.querySelectorAll(".scale").forEach(el=>{const k=el.dataset.k, r=el.querySelector('input[type=range]'), n=el.querySelector('input[type=number]');
-    r.addEventListener("input",()=>set(k,+r.value));
-    n.addEventListener("change",()=>{const [lo,hi]=INPUT_RANGE[k];if(n.value===""){set(k,null);return;}let v=Math.round(+n.value);if(isNaN(v))v=S[k];set(k,Math.min(hi,Math.max(lo,v)));});
+    r.addEventListener("input",()=>{CLAMP[k]=null;set(k,+r.value);});
+    // typing updates the result as soon as the value is valid; leaving the field fixes invalid values and says so
+    n.addEventListener("input",()=>{const [lo,hi]=INPUT_RANGE[k];const v=Math.round(+n.value);CLAMP[k]=null;if(n.value!==""&&!isNaN(v)&&v>=lo&&v<=hi)set(k,v);else render();});
+    n.addEventListener("change",()=>{const [lo,hi]=INPUT_RANGE[k];if(n.value===""){set(k,null);return;}let v=Math.round(+n.value);if(isNaN(v))v=S[k];const c=Math.min(hi,Math.max(lo,v));
+      CLAMP[k]=c!==v?`Se ajustó a ${c}: el campo admite valores de ${lo} a ${hi}.`:null;n.value=c;set(k,c);render();});
     if(k.includes("basc3")){const [lo,hi]=INPUT_RANGE[k];const p=v=>((v-lo)/(hi-lo)*100).toFixed(2);
       // quiet ticks at T=60 and T=70 on a neutral track
       r.style.setProperty("--trk",`linear-gradient(90deg,transparent calc(${p(60)}% - 1px),var(--risk) calc(${p(60)}% - 1px) calc(${p(60)}% + 1px),transparent calc(${p(60)}% + 1px) calc(${p(70)}% - 1px),var(--clin) calc(${p(70)}% - 1px) calc(${p(70)}% + 1px),transparent calc(${p(70)}% + 1px)),var(--track)`);}
@@ -649,7 +661,7 @@ function buildForm(){
   tabs.forEach(t=>{t.addEventListener("click",()=>select(t));
     t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const i=(tabs.indexOf(t)+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;select(tabs[i]);tabs[i].focus();}});});
 }
-function load(d,id){S={...d};activeCase=id;demoOpen=false;const r=$("reading");r.classList.remove("flash");void r.offsetWidth;r.classList.add("flash");render();}
+function load(d,id){S={...d};for(const k in CLAMP)CLAMP[k]=null;activeCase=id;demoOpen=false;const r=$("reading");r.classList.remove("flash");void r.offsetWidth;r.classList.add("flash");render();}
 function set(k,v){if(S[k]===v)return;S[k]=v;activeCase=activeCase&&activeCase.startsWith("nuevo")?"nuevo":null;render();}
 
 /* ---------- Render ---------- */
@@ -674,6 +686,7 @@ function draw(){
     else if(r.dataset.trk!==undefined){r.dataset.trk?r.style.setProperty("--trk",r.dataset.trk):r.style.removeProperty("--trk");delete r.dataset.trk;}
     const n=el.querySelector('input[type=number]'); if(document.activeElement!==n) n.value=un?"":v; n.placeholder="—";
     $("w-"+k).hidden=un||(v>=M.ranges[k][0]&&v<=M.ranges[k][1]);
+    $("c-"+k).hidden=!CLAMP[k]; $("c-"+k).textContent=CLAMP[k]||"";
     const b=$("b-"+k); if(un){b.className="bandtxt m";b.textContent="Sin dato";}
     else if(k.includes("basc3")){const [c,t]=band(v);b.className="bandtxt "+c;b.textContent=c==="n"?"":t;}
     else if(k==="cit"){const [c,t]=citBand(v);b.className="bandtxt "+c;b.textContent=t;}
@@ -686,7 +699,7 @@ function draw(){
 
   const cs=CASES.find(c=>c.id===activeCase);
   $("caseNote").innerHTML = cs ? `<b>${cs.label}</b>: perfil ilustrativo construido ${cs.ref}. No es un paciente real.`
-    : activeCase==="nuevo" ? "Caso nuevo." : activeCase&&activeCase.startsWith("p:") ? `Perfil típico (medianas) del grupo <b>${activeCase.slice(2)}</b>.` : "Caso editado.";
+    : activeCase==="nuevo" ? "Caso nuevo." : activeCase&&activeCase.startsWith("p:") ? `Mediana del grupo <b>${activeCase.slice(2)}</b>.` : "Caso editado.";
   document.querySelectorAll("[data-case]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.case===activeCase));
   $("moreProfiles").value = activeCase&&activeCase.startsWith("p:")?activeCase.slice(2):"";
 
@@ -706,13 +719,13 @@ function draw(){
   const oor=F.filter(f=>M.ranges[f]&&(S[f]<M.ranges[f][0]||S[f]>M.ranges[f][1]));
   const state=oor.length?"oor":v1<60?"nc":"ok"; // compare the same rounded number the user sees
   const isDT=s=>s==="Desarrollo típico"; let where;
-  if(pp2.sub===pc.sub) where=`La duda está en la comorbilidad: ${pc.co||"ninguna"} frente a ${pp2.co||"ninguna"}.`;
-  else if(isDT(pc.sub)||isDT(pp2.sub)||(pp2.co||"")!==(pc.co||"")) where=`Las dos opciones difieren en subtipo y en comorbilidad.`;
-  else where=`La duda está en el subtipo: ${pc.sub} frente a ${pp2.sub}.`;
+  if(pp2.sub===pc.sub) where=`La duda está en la condición asociada: ${pc.co||"ninguna"} frente a ${pp2.co||"ninguna"}.`;
+  else if(isDT(pc.sub)||isDT(pp2.sub)||(pp2.co||"")!==(pc.co||"")) where=`Las dos opciones difieren en la presentación y en la condición asociada.`;
+  else where=`La duda está en la presentación: ${pc.sub} frente a ${pp2.sub}.`;
   const gap=Math.max(1,v1-v2), p2t=p2<0.005?"menos de 1":String(v2);
-  const comorbLine=(p)=>isDT(p.sub)?"Sin indicadores de TDAH ni comorbilidad":p.co?`con <b>${COMORB[p.co].name}</b> (${p.co})${COMORB[p.co].pending?' · <span class="pending">definición por confirmar</span>':""}`:"Sin comorbilidad asociada";
+  const comorbLine=(p)=>isDT(p.sub)?"Categoría sin TDAH ni condición asociada":p.co?`con <b>${COMORB[p.co].name}</b> (${p.co})${COMORB[p.co].pending?' · <span class="pending">definición por confirmar</span>':""}`:"Sin condición asociada en esta categoría";
   const optCard=(k,i)=>{const c=M.classes[k],p=parseClass(c),v=Math.round(prob[k]*100);
-    return `<div class="opt"><span class="eyebrow">Opción ${i+1}</span><b>${p.sub}</b><span class="co">${isDT(p.sub)?"sin TDAH":p.co?`+ <abbr title="${COMORB[p.co].name}">${p.co}</abbr>`:"sin comorbilidad"}</span>
+    return `<div class="opt"><span class="eyebrow">Opción ${i+1}</span><b>${p.sub}</b><span class="co">${isDT(p.sub)?"sin TDAH":p.co?`+ ${p.co} · ${COMORB[p.co].desc}`:"sin condición asociada"}</span>
       <span class="n">${v}<small>puntaje</small></span><span class="bar"><span style="width:${v}%"></span></span></div>`;};
   $("verdict").className="verdict "+state; $("reading").classList.toggle("is-oor",state==="oor"); $("reading").dataset.state=state;
   $("vPctBox").hidden=state!=="ok"; $("duo").hidden=state!=="nc"; $("provisional").hidden=true;
@@ -727,7 +740,8 @@ function draw(){
     $("confTitle").textContent="Sugerencia bien diferenciada. ";
     $("confText").textContent=`La siguiente opción (${shortName(c2)}) tiene un puntaje de ${p2t}.`;
     const drv=F.map((f,i)=>({f,v:contrib[i][top]})).filter(d=>d.v>0).sort((a,b)=>b.v-a.v).slice(0,2);
-    $("reviewBody").innerHTML=`<p>Confirma que los datos que más pesaron están bien ingresados: ${drv.map(d=>`<b>${LABEL[d.f].toLowerCase()} (${fmtVal(d.f)})</b>`).join(" y ")}. La sugerencia apoya, pero no reemplaza, la evaluación clínica.</p>${goBtn("t-why","Ver qué influyó")}`;
+    const drvTxt=drv.map(d=>`<b>${LABEL[d.f].toLowerCase()} (${fmtVal(d.f)})</b>`).join(" y ");
+    $("reviewBody").innerHTML=`<p class="drv-norm">Confirma que los datos que más pesaron están bien ingresados: ${drvTxt}. La sugerencia apoya, pero no reemplaza, la evaluación clínica.</p><p class="drv-pres">Lo que más pesó en el puntaje: ${drvTxt}. Describe el cálculo del modelo, no una causa.</p>${goBtn("t-why","Ver qué influyó")}`;
   } else if(state==="nc"){
     $("vTitle").textContent="Resultado no concluyente";
     $("vComorb").innerHTML=where;
@@ -776,7 +790,7 @@ function draw(){
     <span class="d">${d.v>=0?"+":"−"}${Math.abs(d.v*100).toFixed(0)}</span></li>`;}).join("");
 
   drawChart(c1,state!=="oor"); if(state!=="oor"){drawCompare(c1,c2); drawNeighbors(c1,c2);}
-  $("refName").textContent="Perfil típico: "+shortName(c1); $("refLegend").hidden=state==="oor";
+  $("refName").textContent="Mediana del grupo "+shortName(c1); $("refLegend").hidden=state==="oor";
   $("caseLegend").textContent=state==="oor"?"Datos ingresados":"Este caso";
   $("chartSub").textContent=state==="oor"?"datos ingresados, sin comparación con el modelo":"puntuaciones T";
   const mtxt = state==="ok" ? [shortName(c1), String(v1)]
@@ -801,8 +815,8 @@ function separatorsHTML(c1,c2){
         <span class="mk o1" style="left:${pos(o.a)}" title="Opción 1: ${fmtz(o.a)} DE">1</span>
         <span class="mk o2" style="left:${pos(o.b)}" title="Opción 2: ${fmtz(o.b)} DE">2</span>
         <span class="mk me" style="left:${pos(o.c)}" title="Este caso: ${fmtz(o.c)} DE"></span></div>
-      <div class="rv-txt">Más cerca de la opción ${closer}</div></div>`;}).join("");
-  return `<p>Lo que más separa las dos opciones, y dónde se ubica este caso <span class="muted">(● este caso · ① ② perfil típico de cada opción)</span>:</p>${rows}<p>Comprueba esos datos y contrástalos con la evaluación clínica.</p>`;
+      <div class="rv-txt">Valor más cercano a la opción ${closer}</div></div>`;}).join("");
+  return `<p class="rv-legend">Lo que más separa las dos opciones y dónde se ubica este caso <span class="muted">(● este caso · ① ② mediana del grupo de cada opción · la cercanía es descriptiva y no equivale al puntaje)</span>:</p>${rows}<p>Comprueba esos datos y contrástalos con la evaluación clínica.</p>`;
 }
 function fmtVal(f){const v=S[f];
   if(f.includes("basc3")) return `T ${v}${v>=60?" · "+band(v)[1].toLowerCase():""}`;
@@ -815,7 +829,8 @@ function drawChart(cls,withRef=true){
   const W=Math.max(320,Math.round($("chartBlock").clientWidth||640));
   // presentation: let the chart take the vertical space that is left on screen
   const room=pres?Math.round(innerHeight-$("chartBlock").getBoundingClientRect().top-118):0;
-  const H=pres?Math.max(140,Math.min(300,room,Math.round(W*0.42))):Math.round(Math.min(250,Math.max(210,W*0.36))),L=36,R=10,Tp=20,B=34;
+  const fs=pres?1.25:1; // larger chart text when projected
+  const H=pres?Math.max(140,Math.min(300,room,Math.round(W*0.42))):Math.round(Math.min(250,Math.max(210,W*0.36))),L=pres?42:36,R=10,Tp=pres?24:20,B=pres?40:34;
   const vals=BASC.map(([f])=>S[f]); const hi=Math.max(100,Math.ceil(Math.max(...vals)/10)*10), lo=Math.min(20,Math.floor(Math.min(...vals)/10)*10);
   $("chart").setAttribute("viewBox",`0 0 ${W} ${H}`);
   const x=i=>L+(W-L-R)*(i+.5)/BASC.length, y=v=>Tp+(H-Tp-B)*(1-(Math.min(hi,Math.max(lo,v))-lo)/(hi-lo));
@@ -824,19 +839,17 @@ function drawChart(cls,withRef=true){
         `<rect x="${L}" y="${y(70)}" width="${W-L-R}" height="${y(60)-y(70)}" fill="var(--risk-soft)"/>`;
   const step=(y(60)-y(70))<16?20:10;
   for(let t=lo;t<=hi;t+=10){s+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)" stroke-width="${t===50?1.4:1}"/>`;
-    if((t-lo)%step===0) s+=`<text x="${L-8}" y="${y(t)+4}" text-anchor="end" font-size="11" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace">${t}</text>`;}
-  if(W>=460) s+=`<text x="${W-R-4}" y="${y(70)-6}" text-anchor="end" font-size="10.5" fill="var(--clin)" font-weight="700" letter-spacing=".04em">CLÍNICO ≥ 70</text>`;
-  if(W>=460&&y(60)-y(70)>=16) s+=`<text x="${W-R-4}" y="${y(60)-5}" text-anchor="end" font-size="10.5" fill="var(--risk)" font-weight="700" letter-spacing=".04em">EN RIESGO 60–69</text>`;
+    if((t-lo)%step===0) s+=`<text x="${L-8}" y="${y(t)+4}" text-anchor="end" font-size="${11*fs}" fill="var(--ink-3)" font-family="IBM Plex Mono, monospace">${t}</text>`;}
   const pts=k=>BASC.map(([f],i)=>`${x(i).toFixed(1)},${y(k[f]).toFixed(1)}`).join(" ");
   if(withRef) s+=`<polyline points="${pts(ref)}" fill="none" stroke="var(--ink-3)" stroke-width="2" stroke-dasharray="5 5"/>`;
   s+=`<polyline points="${pts(S)}" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>`;
   const short={problemas_atencion_basc3:"Atención",hiperactividad_basc3:"Hiperactividad",agresividad_basc3:"Agresividad",problemas_conducta_basc3:"Conducta",atipicidad_basc3:"Atipicidad"};
   BASC.forEach(([f,n],i)=>{const v=S[f];
     s+=(withRef?`<circle cx="${x(i)}" cy="${y(ref[f])}" r="3.5" fill="var(--panel)" stroke="var(--ink-3)" stroke-width="1.6"/>`:"")+
-       `<g><title>${LABEL[f]}: T ${v} (${band(v)[1].toLowerCase()})${withRef?` · perfil típico del grupo: ${ref[f]}`:""}</title><circle cx="${x(i)}" cy="${y(v)}" r="12" fill="transparent"/>`+
+       `<g><title>${LABEL[f]}: T ${v} (${band(v)[1].toLowerCase()})${withRef?` · mediana del grupo: ${ref[f]}`:""}</title><circle cx="${x(i)}" cy="${y(v)}" r="12" fill="transparent"/>`+
        `<circle cx="${x(i)}" cy="${y(v)}" r="6" fill="var(--accent)" stroke="var(--panel)" stroke-width="2"/></g>`+
-       `<text x="${x(i)}" y="${y(v)-12}" text-anchor="middle" font-size="12" font-weight="500" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${v}</text>`+
-       `<text x="${x(i)}" y="${H-10}" text-anchor="middle" font-size="12" fill="var(--ink-2)">${W<460?ZLAB_XS[f]:W<520?short[f].slice(0,9)+(short[f].length>9?".":""):n.replace("Problemas de ","Prob. ")}</text>`;});
+       `<text x="${x(i)}" y="${y(v)-12}" text-anchor="middle" font-size="${12*fs}" font-weight="500" fill="var(--ink)" font-family="IBM Plex Mono, monospace">${v}</text>`+
+       `<text x="${x(i)}" y="${H-10}" text-anchor="middle" font-size="${12*fs}" fill="var(--ink-2)">${W<460?ZLAB_XS[f]:W<520?short[f].slice(0,9)+(short[f].length>9?".":""):n.replace("Problemas de ","Prob. ")}</text>`;});
   $("chart").innerHTML=s;
 }
 
@@ -899,12 +912,13 @@ function drawNeighbors(c1,c2){
 }
 
 /* ---------- About ---------- */
+const BIN_LABELS=["Puntaje < 50","Puntaje 50–59","Puntaje 60–69","Puntaje ≥ 70"];
 function buildAbout(){
   const rows=[...M.classes].sort((a,b)=>M.classStats[b].f1-M.classStats[a].f1);
   $("ctable").innerHTML=`<tr><td style="color:var(--ink-3)">Categoría</td><td class="r" style="color:var(--ink-3)">F1</td><td class="r" style="color:var(--ink-3)">Casos</td></tr>`+
     rows.map(c=>{const s=M.classStats[c];
     return `<tr><td>${shortName(c)}</td><td class="r">${s.f1.toFixed(2).replace(".",",")}<span class="mini"><span style="width:${(s.f1*100).toFixed(0)}%"></span></span></td><td class="r">${s.n}</td></tr>`;}).join("");
-  $("cbins").innerHTML=M.confBins.map(b=>`<div class="cbin"><span>${b.label}</span><span class="bar"><span style="width:${(b.acc*100).toFixed(1)}%"></span></span><span class="v">${(b.acc*100).toFixed(1).replace(".",",")} % <small>· ${b.n} casos</small></span></div>`).join("");
+  $("cbins").innerHTML=M.confBins.map((b,i)=>`<div class="cbin"><span>${BIN_LABELS[i]}</span><span class="bar"><span style="width:${(b.acc*100).toFixed(1)}%"></span></span><span class="v">${(b.acc*100).toFixed(1).replace(".",",")} % <small>· ${b.n} casos</small></span></div>`).join("");
   const o=$("about"), open=()=>{o.hidden=false;$("aboutClose").focus();}, close=()=>{o.hidden=true;$("aboutBtn").focus();};
   $("aboutBtn").addEventListener("click",open); $("aboutClose").addEventListener("click",close);
   o.addEventListener("click",e=>{if(e.target===o)close();});
@@ -928,4 +942,6 @@ function setPresent(on){document.body.classList.toggle("present",on);$("presentB
 $("presentBtn").addEventListener("click",()=>setPresent(!document.body.classList.contains("present")));
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("about").hidden&&document.body.classList.contains("present"))setPresent(false);});
 if(location.hash==="#presentar") setPresent(true);
+// web fonts change line heights: lay the chart out again once they are ready
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(render);
 </script>

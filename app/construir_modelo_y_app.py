@@ -135,7 +135,7 @@ for a, b in [("TDAH combinado", "TDAH inatento + TND"), ("TDAH combinado + TEAZ"
 ambiguous = {k: (int(v) if k in NUM else v) for k, v in best[1].items()}
 
 f1c = f1_score(y, pred, average=None)
-bins = [(0, .5, "Menos de 50 %"), (.5, .6, "50–59 %"), (.6, .7, "60–69 %"), (.7, 1.01, "70 % o más")]
+bins = [(0, .5, "Puntaje < 50"), (.5, .6, "Puntaje 50–59"), (.6, .7, "Puntaje 60–69"), (.7, 1.01, "Puntaje ≥ 70")]
 payload = {
     "features": FEATURES,
     "categorical": {c: list(map(str, cats)) for c, cats in zip(CAT, enc.categories_)},

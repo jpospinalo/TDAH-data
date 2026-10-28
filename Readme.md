@@ -74,7 +74,7 @@ El bloque BASC-3 concentra la mayor parte del poder discriminante: en la ablaci�
 
 ## Interfaz
 
-Prototipo web que usa el modelo Random Forest para sugerir el perfil de un caso entre las 13 categorías. Muestra si la sugerencia está bien diferenciada, no es concluyente o requiere revisión, junto con las variables que más influyeron y comparaciones con la muestra. Corre completamente en el navegador, sin servidor, y se publica con GitHub Pages desde `docs/`.
+Prototipo web que usa el modelo Random Forest para indicar qué categoría, entre las 13, recibe el mayor puntaje para un caso. La salida es una sugerencia para revisión clínica. Muestra si la sugerencia está bien diferenciada, no es concluyente o requiere revisión, junto con las variables que más influyeron y comparaciones con la muestra. Corre completamente en el navegador, sin servidor, y se publica con GitHub Pages desde `docs/`.
 
 - **Enlace:** <https://jpospinalo.github.io/TDAH-data/> · modo presentación: <https://jpospinalo.github.io/TDAH-data/#presentar>
 - **Código y cómo regenerarla:** [`app/README.md`](app/README.md)
