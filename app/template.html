@@ -331,6 +331,7 @@ body.present .scale .name{font-size:.92rem}
 body.present .cog{gap:2px 24px;margin-top:6px}
 body.present .verdict h2{font-size:clamp(1.9rem,2.6vw,2.6rem);margin:0 0 4px}
 body.present .comorb{font-size:1.06rem}
+body.present #vEyebrow{font-size:.8rem}
 body.present .status p{font-size:1rem}
 body.present .chart .lg{margin-top:2px}
 body.present .foot{font-size:.86rem;color:var(--ink-2)}
@@ -574,12 +575,12 @@ body.present .foot .short{display:inline}
         <li>No está validado fuera del centro donde se recogieron los datos.</li>
       </ul>
       <h3>Desempeño en validación cruzada</h3>
-      <p>Diez particiones: cada caso se evalúa con un modelo que no lo vio durante el entrenamiento.</p>
+      <p>875 casos, diez particiones: cada caso se evalúa con un modelo que no lo vio durante el entrenamiento. Los puntajes se agrupan con la misma regla de redondeo que usa la interfaz.</p>
       <div class="kpis">
         <div class="kpi"><div class="n">95 %</div><div class="d">aciertos en la categoría exacta, entre 13</div></div>
         <div class="kpi"><div class="n">99 %</div><div class="d">la categoría correcta está entre las 2 primeras opciones</div></div>
         <div class="kpi"><div class="n">97,5 %</div><div class="d">aciertos en la presentación de TDAH o desarrollo típico</div></div>
-        <div class="kpi"><div class="n">98,9 %</div><div class="d">aciertos cuando el puntaje supera el umbral preliminar de 60 (80 % de los casos)</div></div>
+        <div class="kpi"><div class="n">98,9 %</div><div class="d">aciertos cuando el puntaje mostrado es 60 o más (81 % de los casos)</div></div>
       </div>
       <h3>Aciertos según el puntaje del modelo</h3>
       <p>Cuanto más alto es el puntaje, más acierta el modelo. Si el puntaje mostrado (redondeado a entero) es menor que 60, la interfaz marca el resultado como no concluyente y recomienda revisión clínica.</p>
@@ -590,7 +591,7 @@ body.present .foot .short{display:inline}
       <ul>
         <li>875 niñas y niños de 6 a 12 años evaluados en un centro clínico.</li>
         <li>Random Forest de 300 árboles con 14 variables; clases balanceadas por peso.</li>
-        <li>F1-macro 0,95 en validación cruzada y en un conjunto de prueba reservado.</li>
+        <li>F1-macro 0,95 en validación cruzada de diez particiones y 0,95 en un conjunto de prueba reservado del 20 % (notebook <code>model_13clases</code> del repositorio).</li>
       </ul>
       <h3>Limitaciones conocidas</h3>
       <ul>
@@ -700,7 +701,8 @@ function buildForm(){
   document.querySelectorAll(".scale").forEach(el=>{const k=el.dataset.k, r=el.querySelector('input[type=range]'), n=el.querySelector('input[type=number]');
     r.addEventListener("input",()=>{CLAMP[k]=null;set(k,+r.value);});
     // typing updates the result as soon as the value is valid; leaving the field fixes invalid values and says so
-    n.addEventListener("input",()=>{const [lo,hi]=INPUT_RANGE[k];const v=Math.round(+n.value);CLAMP[k]=null;if(n.value!==""&&!isNaN(v)&&v>=lo&&v<=hi)set(k,v);else render();});
+    n.addEventListener("input",()=>{const [lo,hi]=INPUT_RANGE[k];const v=Math.round(+n.value);if(n.value!==""&&!isNaN(v)&&v>=lo&&v<=hi){CLAMP[k]=null;set(k,v);}
+      else{CLAMP[k]=n.value===""?null:`Valor no admitido (rango ${lo}–${hi}). El resultado sigue usando ${S[k]??"el valor anterior"} hasta que lo corrijas.`;render();}});
     n.addEventListener("change",()=>{const [lo,hi]=INPUT_RANGE[k];if(n.value===""){set(k,null);return;}let v=Math.round(+n.value);if(isNaN(v))v=S[k];const c=Math.min(hi,Math.max(lo,v));
       CLAMP[k]=c!==v?`Se ajustó a ${c}: el campo admite valores de ${lo} a ${hi}.`:null;n.value=c;set(k,c);render();});
     if(k.includes("basc3")){const [lo,hi]=INPUT_RANGE[k];const p=v=>((v-lo)/(hi-lo)*100).toFixed(2);
@@ -804,7 +806,7 @@ function draw(){
     $("confText").textContent=`La siguiente opción (${shortName(c2)}) tiene un puntaje de ${p2t}.`;
     const drv=F.map((f,i)=>({f,v:contrib[i][top]})).filter(d=>d.v>0).sort((a,b)=>b.v-a.v).slice(0,2);
     const drvTxt=drv.map(d=>`<b>${LABEL[d.f].toLowerCase()} (${fmtVal(d.f)})</b>`).join(" y ");
-    $("reviewBody").innerHTML=`<p class="drv-norm">Confirma que los datos que más pesaron están bien ingresados: ${drvTxt}. La sugerencia apoya, pero no reemplaza, la evaluación clínica.</p><p class="drv-pres">Lo que más pesó en el puntaje: ${drvTxt}. Describe el cálculo del modelo, no una causa.</p>${goBtn("t-why","Ver qué influyó")}`;
+    $("reviewBody").innerHTML=`<p class="drv-norm">Confirma que están bien ingresadas las variables que más aportaron a favor de esta categoría: ${drvTxt}. La sugerencia apoya, pero no reemplaza, la evaluación clínica.</p><p class="drv-pres">Variables que más aportaron a favor de esta categoría: ${drvTxt}. Describe el cálculo del modelo, no una causa.</p>${goBtn("t-why","Ver qué influyó")}`;
   } else if(state==="nc"){
     $("vTitle").textContent="Resultado no concluyente";
     $("vComorb").innerHTML=where;

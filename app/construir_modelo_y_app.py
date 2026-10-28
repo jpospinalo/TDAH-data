@@ -77,8 +77,9 @@ print(f"F1-macro            : {f1_score(y, pred, average='macro'):.3f}")
 print(f"Correcta en top-2   : {np.mean([y[i] in top2[i] for i in range(len(y))]):.3f}")
 print(f"Acierto subtipo     : {np.mean([sub(a) == sub(b) for a, b in zip(C[y], C[pred])]):.3f}")
 print(f"Acierto comorbilidad: {np.mean([com(a) == com(b) for a, b in zip(C[y], C[pred])]):.3f}")
-hi = conf >= 0.6
-print(f"Confianza >= 60 %   : cobertura {hi.mean():.2f}, acierto {ok[hi].mean():.3f}")
+shown = np.floor(conf * 100 + 0.5)  # mismo redondeo que la interfaz (Math.round)
+hi = shown >= 60
+print(f"Puntaje mostrado >= 60: cobertura {hi.mean():.3f}, acierto {ok[hi].mean():.3f}")
 
 # ---- 1. Modelo final con los 875 casos ----
 rf.fit(X.values, y)
@@ -135,7 +136,7 @@ for a, b in [("TDAH combinado", "TDAH inatento + TND"), ("TDAH combinado + TEAZ"
 ambiguous = {k: (int(v) if k in NUM else v) for k, v in best[1].items()}
 
 f1c = f1_score(y, pred, average=None)
-bins = [(0, .5, "Puntaje < 50"), (.5, .6, "Puntaje 50–59"), (.6, .7, "Puntaje 60–69"), (.7, 1.01, "Puntaje ≥ 70")]
+bins = [(0, 50, "Puntaje < 50"), (50, 60, "Puntaje 50–59"), (60, 70, "Puntaje 60–69"), (70, 101, "Puntaje ≥ 70")]
 payload = {
     "features": FEATURES,
     "categorical": {c: list(map(str, cats)) for c, cats in zip(CAT, enc.categories_)},
@@ -145,8 +146,8 @@ payload = {
     "ranges": {c: [int(df[c].min()), int(df[c].max())] for c in NUM},
     "classStats": {c: {"n": int((df.etiqueta == c).sum()), "f1": round(float(f1c[i]), 3)} for i, c in enumerate(classes)},
     "ambiguous": ambiguous,
-    "confBins": [{"label": l, "n": int(((conf >= lo) & (conf < h)).sum()),
-                  "acc": round(float(ok[(conf >= lo) & (conf < h)].mean()), 3)} for lo, h, l in bins],
+    "confBins": [{"label": l, "n": int(((shown >= lo) & (shown < h)).sum()),
+                  "acc": round(float(ok[(shown >= lo) & (shown < h)].mean()), 3)} for lo, h, l in bins],
     "zvars": ZVARS,
     "stats": {v: [round(float(df[v].mean()), 3), round(float(df[v].std()), 3)] for v in ZVARS},
     "sample": [[int(r[v]) for v in ZVARS] + [classes.index(r["etiqueta"])] for _, r in df.iterrows()],
