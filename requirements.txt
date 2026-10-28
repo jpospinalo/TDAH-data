@@ -1,0 +1,11 @@
+# Dependencias de los notebooks (notebooks/*.ipynb).
+# La interfaz usa versiones exactas en app/requirements.txt.
+pandas
+numpy
+scipy
+scikit-learn
+xgboost
+scikit-posthocs
+matplotlib
+seaborn
+jupyterlab
