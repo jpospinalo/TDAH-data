@@ -268,6 +268,14 @@ abbr{text-decoration:none;border-bottom:1px dotted var(--ink-3);cursor:help}
 @media (max-width:1039px){body{padding-block-end:84px}}
 @media (max-width:600px){.examples{flex-wrap:nowrap;overflow-x:auto}.examples .eyebrow{display:none}.ex,.examples select{flex:none}.reading{padding:22px 18px 18px}}
 
+/* Welcome line (first visit, hidden when presenting) */
+.intro{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--ink-2);background:var(--panel);border-radius:12px;padding:6px 6px 6px 14px;margin:0 0 14px}
+.intro p{margin:0;flex:1;min-width:0}
+.intro .golink{font-size:inherit;padding:0}
+.intro .x{border:0;background:none;cursor:pointer;color:var(--ink-3);width:34px;height:34px;border-radius:50%;font-size:1.25rem;line-height:1;flex:none}
+.intro .x:hover{background:var(--track);color:var(--ink)}
+body.present .intro{display:none!important}
+
 /* About sheet */
 .overlay{position:fixed;inset:0;z-index:40;background:color-mix(in srgb,var(--ink) 40%,transparent);display:flex;justify-content:flex-end}
 .sheet{width:min(620px,100%);height:100%;overflow:auto;background:var(--page);
@@ -289,6 +297,19 @@ abbr{text-decoration:none;border-bottom:1px dotted var(--ink-3);cursor:help}
 .privacy p{margin:0}
 dl.gloss{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:6px 0;color:var(--ink-2)}
 dl.gloss dt{font-weight:700;color:var(--ink)} dl.gloss dd{margin:0}
+.gtabs{margin-top:20px}
+@media (max-width:420px){.gtabs{gap:14px}.gtabs button{font-size:.9rem}}
+.gpanel{padding-top:6px}
+.gpanel>h3:first-child{margin-top:18px}
+.steps{list-style:none;counter-reset:st;padding:0;margin:20px 0;display:flex;flex-direction:column;gap:16px}
+.steps li{counter-increment:st;display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;max-width:none}
+.steps li::before{content:counter(st);width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:.85rem;display:grid;place-items:center}
+.steps b{color:var(--ink)} .steps p{margin:2px 0 0}
+.states{display:flex;flex-direction:column;gap:10px;margin:8px 0}
+.st{display:grid;grid-template-columns:10px minmax(0,1fr);gap:12px}
+.st i{width:10px;height:10px;border-radius:50%;margin-top:7px;background:var(--ok)} .st i.w{background:var(--risk)}
+.st p{margin:0} .st b{color:var(--ink)}
+.sheet .callout{margin:4px 0 14px}
 
 /* Presentation mode: one screen at 1280×720 and up — compact inputs, result + options + chart, larger reading */
 body.present .record .sec:first-child,body.present .tabsBlock,body.present #newCase,body.present .compBlock,body.present .reading>.rule,body.present #resultBody>.rule{display:none!important}
@@ -356,8 +377,10 @@ body.present .foot .short{display:inline}
     <button class="link" id="presentBtn" type="button" aria-pressed="false">
       <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11v2.5M5 14h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span id="presentLbl">Modo presentación</span></button>
     <button class="link" id="aboutBtn" type="button">
-      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="7.2" y="7" width="1.6" height="4.6" rx=".8" fill="currentColor"/><circle cx="8" cy="4.8" r="1" fill="currentColor"/></svg>Sobre el modelo</button>
+      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><rect x="7.2" y="7" width="1.6" height="4.6" rx=".8" fill="currentColor"/><circle cx="8" cy="4.8" r="1" fill="currentColor"/></svg>Guía</button>
   </header>
+
+  <div class="intro" id="intro" hidden><p>Prototipo de investigación para apoyar la evaluación clínica: sugiere una categoría a partir de 14 datos del caso. Prueba los ejemplos o <button type="button" class="golink" id="introGuide">mira cómo se usa</button>.</p><button type="button" class="x" id="introClose" aria-label="Cerrar este aviso">×</button></div>
 
   <nav class="examples" aria-label="Casos de ejemplo">
     <span class="eyebrow">Ejemplos</span>
@@ -491,12 +514,45 @@ body.present .foot .short{display:inline}
 <div class="overlay" id="about" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
     <header>
-      <div><span class="eyebrow">Ficha del modelo</span><h2 id="aboutTitle">Sobre el modelo</h2></div>
+      <div><span class="eyebrow">Perfil TDAH · prototipo de investigación</span><h2 id="aboutTitle">Guía de uso</h2></div>
       <button class="link" type="button" id="aboutClose">Cerrar</button>
     </header>
-    <h3>Qué hace</h3>
-    <p>Con datos que el equipo clínico ya recoge (demografía, antecedentes, escalas BASC-3, CIT y fluidez fonológica), indica qué categoría, entre 13, recibe el mayor puntaje del modelo: desarrollo típico y las tres presentaciones de TDAH, solas o con una condición asociada. Entrega un puntaje para cada categoría, indica si la sugerencia está bien diferenciada o no es concluyente, y muestra las variables que más influyeron en el cálculo.</p>
-    <dl class="gloss">
+    <div class="tabs gtabs" role="tablist" aria-label="Secciones de la guía">
+      <button type="button" role="tab" id="g-t-use" aria-controls="g-use" aria-selected="true">Cómo se usa</button>
+      <button type="button" role="tab" id="g-t-read" aria-controls="g-read" aria-selected="false" tabindex="-1">Leer el resultado</button>
+      <button type="button" role="tab" id="g-t-model" aria-controls="g-model" aria-selected="false" tabindex="-1">El modelo</button>
+    </div>
+    <div class="gpanel" id="g-use" role="tabpanel" aria-labelledby="g-t-use">
+      <ol class="steps">
+        <li><div><b>Elige un caso.</b><p>Los casos A a D son perfiles ilustrativos construidos a partir de los datos; no son pacientes reales. «Medianas…» carga la mediana de cualquiera de las 13 categorías y «Nuevo caso» empieza en blanco.</p></div></li>
+        <li><div><b>Ingresa o ajusta los datos.</b><p>Son 14: edad, sexo, grado escolar, lateralidad y antecedentes (botón «Editar»), las cinco escalas BASC-3 en puntuación T, el CIT y la fluidez fonológica. Arrastra el control o escribe el valor: el resultado se actualiza en el momento. Si falta algún dato, el panel indica cuál.</p></div></li>
+        <li><div><b>Lee la sugerencia.</b><p>El panel de la derecha (debajo, en el celular) muestra la categoría con mayor puntaje del modelo, su puntaje y si la sugerencia está bien diferenciada.</p></div></li>
+        <li><div><b>Revisa el detalle.</b><p>«Qué revisar ahora» señala los datos que conviene comprobar. Las pestañas muestran qué influyó en el puntaje, la comparación entre las dos primeras opciones, casos parecidos de la muestra y los puntajes de las 13 categorías.</p></div></li>
+        <li><div><b>Para proyectar, usa el modo presentación.</b><p>Reúne el caso y el resultado en una sola pantalla. Sal con «Salir de presentación» o con la tecla Esc.</p></div></li>
+      </ol>
+      <p class="callout"><b>La herramienta sugiere; la decisión diagnóstica es del profesional.</b> Los datos que ingresas se procesan en este navegador y no se envían a ningún servidor.</p>
+      <button type="button" class="golink" data-gtab="g-t-read">Cómo leer el resultado <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="gpanel" id="g-read" role="tabpanel" aria-labelledby="g-t-read" hidden>
+      <h3>Los tres estados del resultado</h3>
+      <div class="states">
+        <div class="st"><i aria-hidden="true"></i><p><b>Sugerencia bien diferenciada.</b> La primera opción tiene un puntaje mostrado de 60 o más. Se indican la categoría, su puntaje y el de la siguiente opción.</p></div>
+        <div class="st"><i class="w" aria-hidden="true"></i><p><b>Resultado no concluyente.</b> Ninguna opción llega a 60. Se muestran las dos opciones con mayor puntaje y las variables que más las separan.</p></div>
+        <div class="st"><i class="w" aria-hidden="true"></i><p><b>Requiere revisión.</b> Algún dato está fuera del rango de los casos de entrenamiento. No se entrega sugerencia: corrige el dato o, si es correcto, el modelo no aplica a este caso.</p></div>
+      </div>
+      <h3>El puntaje</h3>
+      <p>Valor de 0 a 100 que el modelo asigna a cada categoría; las 13 suman 100. Aún no está calibrado: no es la probabilidad de que el diagnóstico sea correcto. En «El modelo» se ve cuánto acierta según el puntaje. El umbral de 60 es preliminar.</p>
+      <h3>El gráfico BASC-3</h3>
+      <p>La línea continua es el caso y la punteada, la mediana del grupo de la categoría sugerida. Las franjas marcan las zonas en riesgo (T 60–69) y clínica (T ≥ 70).</p>
+      <h3>Las pestañas de detalle</h3>
+      <dl class="gloss">
+        <dt>Qué influyó</dt><dd>Cuánto subió o bajó cada variable el puntaje. Describe el cálculo del modelo, no una causa.</dd>
+        <dt>Comparar opciones</dt><dd>El caso y las dos primeras opciones, en desviaciones estándar respecto a la norma (la fluidez, respecto a la muestra).</dd>
+        <dt>Casos parecidos</dt><dd>Diagnóstico registrado de los 15 niños de la muestra con el perfil más parecido. Es una referencia descriptiva, calculada aparte del modelo.</dd>
+        <dt>Puntajes</dt><dd>Las 13 categorías y sus sumas por presentación y por condición asociada.</dd>
+      </dl>
+      <h3>Siglas</h3>
+      <dl class="gloss">
       <dt>TND</dt><dd>Trastorno negativista desafiante</dd>
       <dt>TEA</dt><dd>Trastorno del espectro autista</dd>
       <dt>TEAZ</dt><dd>Trastorno específico del aprendizaje <span class="pending">(definición por confirmar)</span></dd>
@@ -505,47 +561,54 @@ body.present .foot .short{display:inline}
       <dt>DE</dt><dd>Desviación estándar: distancia a la media en unidades comparables</dd>
       <dt>Puntaje</dt><dd>Valor de 0 a 100 que el modelo asigna a cada categoría; las 13 suman 100. Aún no está calibrado</dd>
     </dl>
-    <h3>Qué no hace</h3>
-    <ul>
-      <li>No diagnostica ni reemplaza la evaluación clínica.</li>
-      <li>No usa los índices de síntomas TDAH, porque forman parte del propio criterio diagnóstico y harían el resultado circular.</li>
-      <li>No está validado fuera del centro donde se recogieron los datos.</li>
-    </ul>
-    <h3>Desempeño en validación cruzada</h3>
-    <p>Diez particiones: cada caso se evalúa con un modelo que no lo vio durante el entrenamiento.</p>
-    <div class="kpis">
-      <div class="kpi"><div class="n">95 %</div><div class="d">aciertos en la categoría exacta, entre 13</div></div>
-      <div class="kpi"><div class="n">99 %</div><div class="d">la categoría correcta está entre las 2 primeras opciones</div></div>
-      <div class="kpi"><div class="n">97,5 %</div><div class="d">aciertos en la presentación de TDAH o desarrollo típico</div></div>
-      <div class="kpi"><div class="n">98,9 %</div><div class="d">aciertos cuando el puntaje supera el umbral preliminar de 60 (80 % de los casos)</div></div>
+      <h3>Lo que sigue a cargo del profesional</h3>
+      <p>Confirmar los datos, integrarlos con la entrevista, la observación y otras pruebas, y decidir el diagnóstico.</p>
     </div>
-    <h3>Aciertos según el puntaje del modelo</h3>
-    <p>Cuanto más alto es el puntaje, más acierta el modelo. Si el puntaje mostrado (redondeado a entero) es menor que 60, la interfaz marca el resultado como no concluyente y recomienda revisión clínica.</p>
-    <div class="cbins" id="cbins"></div>
-    <h3>Desempeño por categoría</h3>
-    <table class="ctable" id="ctable"></table>
-    <h3>Datos y método</h3>
-    <ul>
-      <li>875 niñas y niños de 6 a 12 años evaluados en un centro clínico.</li>
-      <li>Random Forest de 300 árboles con 14 variables; clases balanceadas por peso.</li>
-      <li>F1-macro 0,95 en validación cruzada y en un conjunto de prueba reservado.</li>
-    </ul>
-    <h3>Limitaciones conocidas</h3>
-    <ul>
-      <li>Validación solo interna: falta probarlo con datos de otra institución.</li>
-      <li>El grupo de desarrollo típico no presenta puntuaciones en riesgo, por lo que separarlo del TDAH es más fácil que en la práctica.</li>
-      <li>El puntaje aún no está calibrado: no equivale a la probabilidad de acierto en un caso individual. El umbral de 60 es preliminar.</li>
-      <li>El modelo depende sobre todo de las escalas BASC-3.</li>
-    </ul>
-    <h3>Próximos pasos</h3>
-    <ul>
-      <li>Validación externa multicéntrica.</li>
-      <li>Calibración del puntaje y de los umbrales de derivación.</li>
-      <li>Estudio de utilidad clínica con profesionales.</li>
-    </ul>
-    <div class="privacy">
-      <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="3.5" y="9" width="13" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-      <p>Los datos que ingresas se procesan en este navegador. No se envían a ningún servidor. Para la pestaña de casos parecidos, la página incluye los valores numéricos anonimizados de la muestra (escalas, CIT, fluidez, edad y diagnóstico), sin identificadores.</p>
+    <div class="gpanel" id="g-model" role="tabpanel" aria-labelledby="g-t-model" hidden>
+      <h3>Qué hace</h3>
+      <p>Con datos que el equipo clínico ya recoge (demografía, antecedentes, escalas BASC-3, CIT y fluidez fonológica), indica qué categoría, entre 13, recibe el mayor puntaje del modelo: desarrollo típico y las tres presentaciones de TDAH, solas o con una condición asociada. Entrega un puntaje para cada categoría, indica si la sugerencia está bien diferenciada o no es concluyente, y muestra las variables que más influyeron en el cálculo.</p>
+      <h3>Qué no hace</h3>
+      <ul>
+        <li>No diagnostica ni reemplaza la evaluación clínica.</li>
+        <li>No usa los índices de síntomas TDAH, porque forman parte del propio criterio diagnóstico y harían el resultado circular.</li>
+        <li>No está validado fuera del centro donde se recogieron los datos.</li>
+      </ul>
+      <h3>Desempeño en validación cruzada</h3>
+      <p>Diez particiones: cada caso se evalúa con un modelo que no lo vio durante el entrenamiento.</p>
+      <div class="kpis">
+        <div class="kpi"><div class="n">95 %</div><div class="d">aciertos en la categoría exacta, entre 13</div></div>
+        <div class="kpi"><div class="n">99 %</div><div class="d">la categoría correcta está entre las 2 primeras opciones</div></div>
+        <div class="kpi"><div class="n">97,5 %</div><div class="d">aciertos en la presentación de TDAH o desarrollo típico</div></div>
+        <div class="kpi"><div class="n">98,9 %</div><div class="d">aciertos cuando el puntaje supera el umbral preliminar de 60 (80 % de los casos)</div></div>
+      </div>
+      <h3>Aciertos según el puntaje del modelo</h3>
+      <p>Cuanto más alto es el puntaje, más acierta el modelo. Si el puntaje mostrado (redondeado a entero) es menor que 60, la interfaz marca el resultado como no concluyente y recomienda revisión clínica.</p>
+      <div class="cbins" id="cbins"></div>
+      <h3>Desempeño por categoría</h3>
+      <table class="ctable" id="ctable"></table>
+      <h3>Datos y método</h3>
+      <ul>
+        <li>875 niñas y niños de 6 a 12 años evaluados en un centro clínico.</li>
+        <li>Random Forest de 300 árboles con 14 variables; clases balanceadas por peso.</li>
+        <li>F1-macro 0,95 en validación cruzada y en un conjunto de prueba reservado.</li>
+      </ul>
+      <h3>Limitaciones conocidas</h3>
+      <ul>
+        <li>Validación solo interna: falta probarlo con datos de otra institución.</li>
+        <li>El grupo de desarrollo típico no presenta puntuaciones en riesgo, por lo que separarlo del TDAH es más fácil que en la práctica.</li>
+        <li>El puntaje aún no está calibrado: no equivale a la probabilidad de acierto en un caso individual. El umbral de 60 es preliminar.</li>
+        <li>El modelo depende sobre todo de las escalas BASC-3.</li>
+      </ul>
+      <h3>Próximos pasos</h3>
+      <ul>
+        <li>Validación externa multicéntrica.</li>
+        <li>Calibración del puntaje y de los umbrales de derivación.</li>
+        <li>Estudio de utilidad clínica con profesionales.</li>
+      </ul>
+      <div class="privacy">
+        <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><rect x="3.5" y="9" width="13" height="9" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 9V6.5a3.5 3.5 0 0 1 7 0V9" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <p>Los datos que ingresas se procesan en este navegador. No se envían a ningún servidor. Para la pestaña de casos parecidos, la página incluye los valores numéricos anonimizados de la muestra (escalas, CIT, fluidez, edad y diagnóstico), sin identificadores.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -655,7 +718,7 @@ function buildForm(){
     document.querySelector('#demoFields button').focus();});
   $("demoEdit").addEventListener("click",()=>{demoOpen=!demoOpen;render();if(demoOpen)document.querySelector('#demoFields button').focus();});
   // tabs
-  const tabs=[...document.querySelectorAll('[role=tab]')];
+  const tabs=[...document.querySelectorAll('#tabsBlock [role=tab]')];
   const select=t=>{tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;$(x.getAttribute("aria-controls")).hidden=!on;});render();};
   selectTab=id=>{const t=$(id);select(t);requestAnimationFrame(()=>{t.scrollIntoView({block:"start",behavior:"smooth"});t.focus({preventScroll:true});});};
   tabs.forEach(t=>{t.addEventListener("click",()=>select(t));
@@ -911,7 +974,8 @@ function drawNeighbors(c1,c2){
   $("nnNote").innerHTML=`${m} de ${KNN} tienen el diagnóstico de la opción 1 (${shortName(c1)})${m2?` y ${m2} el de la opción 2 (${shortName(c2)})`:""}.`;
 }
 
-/* ---------- About ---------- */
+/* ---------- Guide (about sheet) ---------- */
+let openGuide=()=>{};
 const BIN_LABELS=["Puntaje < 50","Puntaje 50–59","Puntaje 60–69","Puntaje ≥ 70"];
 function buildAbout(){
   const rows=[...M.classes].sort((a,b)=>M.classStats[b].f1-M.classStats[a].f1);
@@ -919,8 +983,19 @@ function buildAbout(){
     rows.map(c=>{const s=M.classStats[c];
     return `<tr><td>${shortName(c)}</td><td class="r">${s.f1.toFixed(2).replace(".",",")}<span class="mini"><span style="width:${(s.f1*100).toFixed(0)}%"></span></span></td><td class="r">${s.n}</td></tr>`;}).join("");
   $("cbins").innerHTML=M.confBins.map((b,i)=>`<div class="cbin"><span>${BIN_LABELS[i]}</span><span class="bar"><span style="width:${(b.acc*100).toFixed(1)}%"></span></span><span class="v">${(b.acc*100).toFixed(1).replace(".",",")} % <small>· ${b.n} casos</small></span></div>`).join("");
-  const o=$("about"), open=()=>{o.hidden=false;$("aboutClose").focus();}, close=()=>{o.hidden=true;$("aboutBtn").focus();};
-  $("aboutBtn").addEventListener("click",open); $("aboutClose").addEventListener("click",close);
+  const o=$("about"), sheet=o.querySelector(".sheet"), gtabs=[...o.querySelectorAll("[role=tab]")];
+  const gsel=id=>{gtabs.forEach(t=>{const on=t.id===id;t.setAttribute("aria-selected",on);t.tabIndex=on?0:-1;$(t.getAttribute("aria-controls")).hidden=!on;});};
+  gtabs.forEach(t=>{t.addEventListener("click",()=>{gsel(t.id);});
+    t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const i=(gtabs.indexOf(t)+(e.key==="ArrowRight"?1:-1)+gtabs.length)%gtabs.length;gsel(gtabs[i].id);gtabs[i].focus();}});});
+  o.addEventListener("click",e=>{const g=e.target.closest("[data-gtab]");if(g){gsel(g.dataset.gtab);sheet.scrollTop=0;$(g.dataset.gtab).focus();}});
+  const close=()=>{o.hidden=true;$("aboutBtn").focus();};
+  openGuide=(id="g-t-use")=>{gsel(id);o.hidden=false;sheet.scrollTop=0;$("aboutClose").focus();};
+  $("aboutBtn").addEventListener("click",()=>openGuide());
+  // first visit: one dismissible line pointing to the guide (per-viewer memory, best effort)
+  const IK="perfilTDAH.intro.v1"; let seen=false; try{seen=localStorage.getItem(IK)==="1";}catch(e){}
+  const dismiss=()=>{$("intro").hidden=true;try{localStorage.setItem(IK,"1");}catch(e){}};
+  $("intro").hidden=seen; $("introClose").addEventListener("click",dismiss);
+  $("introGuide").addEventListener("click",()=>{dismiss();openGuide("g-t-use");}); $("aboutClose").addEventListener("click",close);
   o.addEventListener("click",e=>{if(e.target===o)close();});
   document.addEventListener("keydown",e=>{if(o.hidden)return; if(e.key==="Escape")return close();
     if(e.key==="Tab"){const f=[...o.querySelectorAll('button,[href],input,select,[tabindex]:not([tabindex="-1"])')].filter(x=>x.offsetParent!==null);
